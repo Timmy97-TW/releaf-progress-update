@@ -329,3 +329,123 @@ dl.spec dd { margin: 0; font-family: var(--font-mono); font-size: .9em; color: v
 .instr__more[open] > summary::after { content: "－"; }
 .instr__more[open] > summary { border-bottom: 1px solid var(--gray-200); }
 .instr__more > summary b { color: var(--leaf-900); font-weight: 650; }
+
+/* ============================================================== figures ====
+   Interactive plots (assets/js/figures.js). One frame for all three: a control
+   bar, a plot that scrolls sideways on a narrow screen rather than shrinking
+   its own type, and a read-out strip that the pointer writes into.
+   ========================================================================== */
+.plot {
+  border: 1px solid var(--gray-200); border-radius: var(--radius);
+  background: var(--white); overflow: hidden;
+}
+.plot__bar {
+  display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-3);
+  align-items: center;
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--gray-200); background: var(--gray-50);
+}
+.plot__grp { display: flex; border: 1px solid var(--gray-300); border-radius: 999px; overflow: hidden; background: var(--white); }
+.plot__grp button, .plot__tog {
+  appearance: none; border: 0; background: transparent; cursor: pointer;
+  font: inherit; font-size: var(--text-xs); font-weight: 600;
+  padding: .3rem .75rem; color: var(--gray-600); white-space: nowrap;
+}
+.plot__grp button + button { border-left: 1px solid var(--gray-200); }
+.plot__grp button[aria-pressed="true"] { background: var(--leaf-700); color: var(--white); }
+.plot__tog {
+  border: 1px solid var(--gray-300); border-radius: 999px; background: var(--white);
+}
+.plot__tog[aria-pressed="true"] { background: var(--leaf-100); border-color: var(--leaf-500); color: var(--leaf-900); }
+.plot__tog::before { content: "○ "; }
+.plot__tog[aria-pressed="true"]::before { content: "● "; }
+.plot__grp button:focus-visible, .plot__tog:focus-visible { outline: 2px solid var(--leaf-500); outline-offset: 2px; }
+
+.plot__scroll { overflow-x: auto; overscroll-behavior-x: contain; }
+.plot__stage { padding: var(--sp-3) var(--sp-4) 0; }
+.plot__stage svg { font-family: var(--font-body); }
+
+.plot__read {
+  margin: 0; padding: .55rem var(--sp-4) .7rem;
+  border-top: 1px solid var(--gray-100);
+  font-size: var(--text-xs); line-height: 1.5; color: var(--gray-700);
+  min-height: 2.6em;
+}
+.plot__read b { font-family: var(--font-mono); color: var(--black); font-weight: 600; }
+.plot__read .dim { color: var(--gray-500); }
+
+/* a figure whose content is a plot rather than a photograph */
+.fig--plot { margin: var(--sp-5) 0; }
+.fig--plot figcaption { margin-top: var(--sp-3); }
+
+/* the small print under a figure: method, n, instrument, date */
+.srcline {
+  margin: var(--sp-2) 0 0; padding-left: var(--sp-3);
+  border-left: 2px solid var(--gray-200);
+  font-size: var(--text-xs); line-height: 1.6; color: var(--gray-500);
+}
+.srcline b { color: var(--gray-600); font-weight: 650; }
+
+/* ============================================ what this page is here to do ==
+   Six numbered lines in the hero. They double as the page's first navigation:
+   the reader should be able to see the whole intent without scrolling, and
+   jump straight to whichever part they came for.
+   ========================================================================== */
+.intent__title {
+  margin: var(--sp-5) 0 var(--sp-3);
+  font-size: var(--text-xs); font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--leaf-200);
+}
+.intent { margin: 0; padding: 0; list-style: none; counter-reset: intent; }
+.intent li {
+  counter-increment: intent;
+  position: relative; padding: .38rem 0 .38rem 2.1rem;
+  font-size: var(--text-sm); line-height: 1.6;
+  border-top: 1px solid rgb(255 255 255 / .15);
+}
+.intent li:first-child { border-top: 0; }
+.intent li::before {
+  content: counter(intent);
+  position: absolute; left: 0; top: .5rem;
+  width: 1.35rem; height: 1.35rem; border-radius: 999px;
+  display: grid; place-items: center;
+  font-family: var(--font-mono); font-size: .7rem; font-weight: 600;
+  background: rgb(255 255 255 / .16); color: var(--white);
+}
+.intent a {
+  color: var(--white); text-decoration: none;
+  border-bottom: 1px solid rgb(255 255 255 / .25);
+}
+.intent a:hover { border-bottom-color: var(--white); }
+.hero2__ask .intent + p { margin-top: var(--sp-5); }
+
+/* ------------------------------------------------------------- visit ------ */
+/* Section 8 repeats the thank-you and makes the actual ask. It gets the dark
+   panel the old inline block had, now as a full section.                     */
+.sec--visit { padding: var(--sp-6); background: var(--leaf-900); border-radius: var(--radius); }
+.sec--visit h2, .sec--visit h2 span { color: var(--white); }
+.sec--visit .sec__no { color: var(--leaf-500); }
+.sec--visit .lede { color: var(--white); }
+.sec--visit p { color: var(--leaf-200); }
+.sec--visit .todo { background: rgb(255 255 255 / .16); color: var(--white); border-color: transparent; }
+.visit__dl {
+  display: grid; grid-template-columns: max-content 1fr; gap: .5rem var(--sp-5);
+  margin: var(--sp-6) 0 0; font-size: var(--text-sm); line-height: 1.6;
+}
+.visit__dl dt { color: var(--leaf-200); }
+.visit__dl dd { margin: 0; color: var(--white); }
+@media (max-width: 560px) {
+  .sec--visit { padding: var(--sp-5); }
+  .visit__dl { grid-template-columns: 1fr; gap: .1rem; }
+  .visit__dl dt { margin-top: var(--sp-3); font-size: var(--text-xs); }
+}
+
+/* the sideways-scroll hint only means anything when the plot actually
+   overflows, which is where the stage's min-width bites                      */
+.plot__hint { display: none; }
+@media (max-width: 760px) {
+  .plot__hint {
+    display: block; margin: 0; padding: .3rem var(--sp-4) 0;
+    font-size: var(--text-xs); color: var(--gray-400); text-align: center;
+  }
+}
