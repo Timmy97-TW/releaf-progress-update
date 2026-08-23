@@ -75,7 +75,7 @@
         <li><a href="#ledger"><span class="zh">謝謝您上次的指導，並回報您提的每一項現在走到哪裡</span><span class="en">Thank you, and report back on every item you raised</span></a></li>
         <li><a href="#versions"><span class="zh">更新反應器進度：從您看到的 V2 到現在的 V5</span><span class="en">Update the reactor: from the V2 you saw to today&rsquo;s V5</span></a></li>
         <li><a href="#instruments"><span class="zh">分享反應器的實驗數據，包含 434 小時生長曲線與 TiO₂ 校正</span><span class="en">Share the reactor data: a 434-hour growth curve and the TiO&#8322; calibration</span></a></li>
-        <li><a href="#milestones"><span class="zh">分享專案進度，以及 11 月飛巴黎比賽之前的目標</span><span class="en">Share where the project stands and what we aim to have before Paris in November</span></a></li>
+        <li><a href="#milestones"><span class="zh">分享專案進度，以及 10/21 wiki freeze、11/13 巴黎比賽之前的目標</span><span class="en">Share where the project stands and the targets before the 21 Oct wiki freeze and Paris on 13 Nov</span></a></li>
         <li><a href="#questions"><span class="zh">請教您七個問題</span><span class="en">Ask you seven questions</span></a></li>
         <li><a href="#visit"><span class="zh">請問您什麼時候方便，讓幾位學生和老師一起到東海大學您的實驗室參訪交流</span><span class="en">Ask when you might be free for a few of us to visit your laboratory at Tunghai</span></a></li>
       </ol>
@@ -519,44 +519,158 @@
     <article class="instr" id="i2">
       <header class="instr__head">
         <span class="instr__no">02</span>
-        <h3 class="instr__title"><span class="zh">膜模組換成 200 cm²</span><span class="en">The module moved to 200 cm²</span></h3>
+        <h3 class="instr__title"><span class="zh">200 cm² 模組與它的水力特性</span><span class="en">The 200 cm² module, characterised</span></h3>
         <span class="chip chip--done">Record example tests</span>
       </header>
-      <details class="instr__more">
-        <summary><span class="zh"><b>結果：</b>200 cm² 模組規格待登錄；被取代的 150 cm² 模組規格完整，含我們自己更正的兩處錯誤。</span><span class="en"><b>Result:</b> the 200 cm² spec is still to be recorded; the 150 cm² module it replaces is fully specified, including two errors we corrected ourselves.</span></summary>
+      <details class="instr__more" open>
+        <summary><span class="zh"><b>結果：</b>8/16 量了壓降對流量。扣掉管路本身之後，模組的行為和 11 根 1 mm 管子並聯的理論值差 0.90–0.96 倍，沒有纖維阻塞。建議操作點 263 mL/min。</span><span class="en"><b>Result:</b> pressure drop against flow, 16 August. With the rig&rsquo;s own contribution subtracted, the module sits at 0.90&ndash;0.96 of the eleven-parallel-tube prediction and no fibre is blocked. Recommended operating point 263 mL/min.</span></summary>
         <div class="instr__body">
+
         <div class="field">
           <b><span class="zh">起因</span><span class="en">Why</span></b>
           <p class="zh">放大策略固定壁面剪切率與操作通量，靠增加面積提高處理量（見 <a href="#calc">4</a>）。
-          面積是唯一會動的量，所以必須完整記錄。</p>
+          面積是唯一會動的量。而且模組換了，剪切率、壓降、可用的流量範圍全部要重新量，不能沿用舊模組的數字。</p>
           <p class="en">Our scale-up holds wall shear and flux constant and adds throughput by adding area
-          (see <a href="#calc">4</a>). Area is the one quantity that moves, so it has to be recorded in full.</p>
+          (see <a href="#calc">4</a>). Area is the one quantity that moves. And once the module changes, shear,
+          pressure drop and the usable flow range all have to be measured again rather than carried over.</p>
         </div>
+
         <div class="field">
           <b><span class="zh">規格</span><span class="en">Specification</span></b>
-          <p class="zh"><b>換上的 200 cm² 模組</b></p>
-          <p class="en"><b>The 200 cm² module now fitted</b></p>
-          <p class="scaffold">填：廠牌型號、材質、孔徑、纖維數、lumen 內徑、有效長度、額定體積與流量、接頭、耐壓上限。</p>
-          <p class="zh" style="margin-top:1rem"><b>被取代的 150 cm² 模組（2026-07-04 凍結）</b></p>
-          <p class="en" style="margin-top:1rem"><b>The 150 cm² module it replaces (frozen 4 July 2026)</b></p>
+          <p class="zh"><b>換上的 200 cm² 模組</b>　以參數描述，不以型號描述：放大論證靠的是幾何與操作點，
+          換成任何同規格的模組結論都一樣。</p>
+          <p class="en"><b>The 200 cm² module now fitted.</b> Described by its parameters rather than by a part number:
+          the scale-up argument rests on the geometry and the operating point, and any module of the same specification
+          gives the same conclusion.</p>
           <dl class="spec">
-            <dt><span class="zh">型號</span><span class="en">Model</span></dt><dd>科百特 Biophsep™ mPES · HF-E-MI-M020-10-60-P</dd>
-            <dt><span class="zh">孔徑</span><span class="en">Pore</span></dt><dd>0.2 µm</dd>
-            <dt><span class="zh">面積 / 纖維</span><span class="en">Area / fibres</span></dt><dd>150 cm² · 8</dd>
-            <dt><span class="zh">lumen 內徑</span><span class="en">Lumen ID</span></dt><dd>1.0 mm</dd>
-            <dt><span class="zh">有效長度</span><span class="en">Effective length</span></dt><dd>595.7 mm</dd>
-            <dt><span class="zh">額定流量</span><span class="en">Rated flow</span></dt><dd>94 mL/min @ 2000 s⁻¹ · 282 mL/min @ 6000 s⁻¹</dd>
-            <dt><span class="zh">耐壓</span><span class="en">Rating</span></dt><dd>&lt; 0.25 MPa</dd>
+            <dt><span class="zh">材質 / 孔徑</span><span class="en">Material / pore</span></dt><dd><span class="zh">PES · 0.2 µm 微濾</span><span class="en">PES · 0.2 µm microfiltration</span></dd>
+            <dt><span class="zh">面積 / 纖維數</span><span class="en">Area / fibres</span></dt><dd>200 cm² (0.02 m²) · 11</dd>
+            <dt><span class="zh">lumen 內徑</span><span class="en">Lumen ID</span></dt><dd><span class="zh">1.0 mm 標稱（r = 0.5 mm）</span><span class="en">1.0 mm nominal (r = 0.5 mm)</span></dd>
+            <dt><span class="zh">有效長度</span><span class="en">Effective length</span></dt><dd>0.60 m</dd>
+            <dt><span class="zh">完整性規格</span><span class="en">Integrity spec</span></dt><dd><span class="zh">0.7 bar 下擴散流 &lt; 10 mL/min</span><span class="en">diffusive flow &lt; 10 mL/min at 0.7 bar</span></dd>
+            <dt><span class="zh">建議操作點</span><span class="en">Recommended point</span></dt><dd><span class="zh">263 mL/min · γ̇ 4 060 s⁻¹ · TMP 0.30 bar</span><span class="en">263 mL/min · γ̇ 4 060 s⁻¹ · TMP 0.30 bar</span></dd>
+            <dt><span class="zh">操作上限</span><span class="en">Ceilings</span></dt><dd><span class="zh">流量 300 mL/min · TMP 0.5 bar</span><span class="en">300 mL/min flow · 0.5 bar TMP</span></dd>
+            <dt><span class="zh">通量換算</span><span class="en">Flux conversion</span></dt><dd>J (LMH) = Q<sub>perm</sub> (mL/min) &times; 3</dd>
           </dl>
         </div>
+
+        <div class="field">
+          <b><span class="zh">獨立測試</span><span class="en">Standalone test</span></b>
+          <p class="zh">2026-08-16，22 °C 純水，量的是壓降對流量。做了兩組：一組裝著模組，一組把模組換成一段矽膠管，
+          其餘閥、接頭、流通比色管全部保留。兩組相減，剩下的就是模組本身。八個泵 PWM 設定，每點一次。
+          壓力由壓力變送器讀、流量由流速計讀，不靠泵轉速推算。</p>
+          <p class="en">16 August 2026, pure water at 22 °C, pressure drop against flow. Two configurations: one with
+          the module fitted, one with the module replaced by a length of silicone tubing and every valve, fitting and
+          flow cuvette left in place. Subtract the two and what remains is the module. Eight pump PWM settings, one
+          reading each. Pressure came from the transducer and flow from the flow meter, so neither is inferred from
+          pump speed.</p>
+        </div>
+
+        <figure class="fig fig--plot">
+          <div data-fig="hydro"></div>
+          <figcaption><b><span class="zh">圖 6.</span><span class="en">Figure 6.</span></b>
+            <span class="zh">200 cm² 模組的水力特性，2026-08-16。三個檢視：兩組原始壓降與扣除、扣掉管路後與理論值的比較、
+            以及可以操作的流量範圍。粉色區是不建議操作的區間。</span>
+            <span class="en">Hydraulic characterisation of the 200 cm² module, 16 August 2026. Three views: the two
+            configurations and the subtraction, the module against theory once the rig is removed, and the flow range
+            it may be run over. The pink band is not recommended.</span>
+          </figcaption>
+          <p class="srcline">
+            <span class="zh"><b>模型與統計：</b>ΔP = aQ + bQ²，強制過原點（零流量必然零壓降，這是物理限制不是擬合選擇）。
+            HFM R² 0.9954、殘差 SD 0.0101 bar；背景 R² 0.9950、殘差 SD 0.0057 bar。
+            兩組的流量點不重合，所以不能逐列相減，是先各自擬合再在相同流量下相比。
+            理論值取 22 °C、11 根並聯的 Hagen–Poiseuille 斜率 3.537 × 10⁻⁴ bar/(mL/min)。
+            113–263 mL/min 之間比值 0.90–0.96，推得有效纖維數 n<sub>eff</sub> ≈ 11（9–13 都算正常）。</span>
+            <span class="en"><b>Model and statistics:</b> ΔP = aQ + bQ², forced through the origin, because zero flow
+            must give zero pressure drop; that is physics, not a fitting choice. HFM R² 0.9954, residual SD 0.0101 bar;
+            background R² 0.9950, residual SD 0.0057 bar. The two sets do not share flow points, so they are fitted
+            separately and compared at matched flows rather than subtracted row by row. Theory is the Hagen&ndash;Poiseuille
+            slope for eleven fibres in parallel at 22 °C, 3.537 &times; 10⁻⁴ bar/(mL/min). Over 113&ndash;263 mL/min the
+            ratio is 0.90&ndash;0.96, giving an effective fibre count n<sub>eff</sub> &asymp; 11 (9&ndash;13 is normal).</span>
+          </p>
+        </figure>
+
+        <div class="field">
+          <b><span class="zh">為什麼要扣背景</span><span class="en">Why the rig has to be subtracted</span></b>
+          <p class="zh">閥、接頭和流通比色管本身佔了總壓降的 46 % 到 55 %，而且流量越高佔比越大。
+          不扣掉的話，模組的水力阻力會被高估將近兩倍，之後所有的積垢判斷都會跟著錯。
+          這也給了一個現成的改善方向：背景的二次項在 275 mL/min 貢獻 0.071 bar，
+          換成內徑 ≥ 3 mm 的接頭應該可以把背景佔比從 50 % 壓到 30 % 以下。</p>
+          <p class="en">Valves, fittings and the flow cuvette account for 46&ndash;55 % of the total pressure drop, and
+          their share grows with flow. Without subtracting them the module&rsquo;s hydraulic resistance is overstated by
+          nearly a factor of two, and every later fouling judgement inherits that error. It also points at an easy
+          improvement: the background&rsquo;s quadratic term contributes 0.071 bar at 275 mL/min, and fittings of
+          &ge; 3 mm bore should bring the background share from 50 % down below 30 %.</p>
+        </div>
+
+        <div class="field">
+          <b><span class="zh">一個免費的交叉檢查</span><span class="en">A cross-check that came for free</span></b>
+          <p class="zh">剪切率有兩條互相獨立的算法。一條從流量走：γ̇ = 4Q<sub>fibre</sub>/(πr³)，需要知道流量怎麼分配到 11 根纖維。
+          另一條從壓降走：τ<sub>w</sub> = ΔP<sub>net</sub>·r/(2L)，完全不需要知道分配。
+          在 263 mL/min，流量路線給 γ̇ = 4 064 s⁻¹（換算 τ<sub>w</sub> = 3.88 Pa），壓降路線給 3.99 Pa，兩者差 2.8 %。
+          兩條路線同時對上，表示 n<sub>eff</sub> 和內徑的假設都成立。這件事我們沒有多做一次實驗就得到了。</p>
+          <p class="en">Shear rate has two independent routes. One goes through flow, γ̇ = 4Q<sub>fibre</sub>/(πr³),
+          and needs to know how flow splits across the eleven fibres. The other goes through pressure,
+          τ<sub>w</sub> = ΔP<sub>net</sub>·r/(2L), and needs no such assumption. At 263 mL/min the flow route gives
+          γ̇ = 4 064 s⁻¹ (τ<sub>w</sub> = 3.88 Pa) and the pressure route gives 3.99 Pa, a difference of 2.8 %. Both
+          agreeing confirms n<sub>eff</sub> and the bore at once, and it cost no extra experiment.</p>
+        </div>
+
+        <div class="field field--caveat">
+          <b><span class="zh">已知誤差</span><span class="en">Known error</span></b>
+          <p class="zh">四件。第一，每個流量點只做一次，所以上面的殘差 SD 是趨勢的粗略指標，不是重複性。
+          第二，擬合裡的 a 和 b 相關係數 −0.97，兩項幾乎分不開，個別係數的信賴區間很寬；
+          第 6.2 節那條逐點分析不受影響，但要引用單一係數就必須連同不確定度一起寫。
+          第三，缺 60–120 mL/min 的低流量點，那正是分離 a 和 b 最有效的區間，所以有效內徑還不能定案。
+          第四，312.7 mL/min 那點的殘差 +0.0176 bar，是殘差 SD 的 1.7 倍，該點要重量。</p>
+          <p class="en">Four. Each flow point was run once, so the residual SDs above indicate the spread of a trend
+          rather than repeatability. The fit&rsquo;s a and b correlate at &minus;0.97 and are nearly inseparable, leaving
+          wide confidence intervals on the individual coefficients; the point-by-point analysis does not inherit this,
+          but quoting a single coefficient means quoting its uncertainty with it. There are no points below
+          113 mL/min, and 60&ndash;120 mL/min is exactly where a and b separate best, so the effective bore is not
+          final. And the residual at 312.7 mL/min is +0.0176 bar, 1.7&times; the residual SD; that point wants
+          re-measuring.</p>
+          <p class="zh">還有一件是我們自己報告裡的不一致：τ<sub>w</sub> 用的是擬合模型的淨壓降，
+          軸向非均勻度用的是逐點的淨壓降。在 263 mL/min 兩者是 0.096 對 0.084 bar，差 12 %。
+          上面的圖一律用逐點值，報告要統一過來。</p>
+          <p class="en">One more is an inconsistency in our own report: τ<sub>w</sub> uses the net pressure drop from
+          the fitted model while the axial non-uniformity uses the point-by-point net. At 263 mL/min those are 0.096
+          and 0.084 bar, 12 % apart. The figure above uses the point-by-point value throughout, and the report should
+          be brought into line.</p>
+        </div>
+
+        <div class="field">
+          <b><span class="zh">還沒做的，照這個順序做</span><span class="en">What comes next, in this order</span></b>
+          <p class="zh">(1) 補 60–120 mL/min 的點並且每點做三次；(2) 0.7 bar 擴散流完整性測試，確認 11 根纖維的封裝都完好；
+          (3) 量標準水通量當基準；(4) 0.5 M NaOH 消毒 60 分鐘；(5) 消毒後重測水通量與完整性，<b>基準線在這一步才定下來</b>；
+          (6) 用真實發酵液做臨界通量測定。第 5 步的順序不能動：PES 經 0.5 M NaOH 處理後親水性上升，
+          通量通常會漲 5–15 %，拿消毒前的值當基準會讓後續比較看起來像是通量變好了。</p>
+          <p class="en">(1) Add points at 60&ndash;120 mL/min with three replicates each. (2) A 0.7 bar diffusive-flow
+          integrity test to confirm all eleven fibres are potted intact. (3) A normalised water permeability baseline.
+          (4) Sanitise with 0.5 M NaOH for 60 minutes. (5) Repeat permeability and integrity after sanitisation, which
+          is where <b>the real baseline is set</b>. (6) Critical-flux determination in actual broth. Step 5 cannot move:
+          PES becomes more hydrophilic after 0.5 M NaOH and permeability typically rises 5&ndash;15 %, so a
+          pre-sanitisation baseline would make later comparisons look like an improvement in flux.</p>
+          <p class="zh">另外，這套背景模型的前提是流路除了模組以外沒有任何改變。<b>換管、加閥、改管長、換接頭、移動壓力取樣點，
+          都會讓背景模型失效，必須重量。</b>我們會把標了現行背景係數的管路儀器圖貼在機台旁邊。</p>
+          <p class="en">The background model also rests on nothing but the module changing between configurations.
+          <b>Replacing tubing, adding a valve, altering tubing length, changing a fitting or moving a pressure tap all
+          invalidate it and require re-measurement.</b> We are posting a P&amp;ID annotated with the current background
+          coefficients at the system itself.</p>
+        </div>
+
         <div class="field field--caveat">
           <b><span class="zh">我們更正過的紀錄</span><span class="en">Two records we corrected</span></b>
-          <p class="zh">7/4 凍結規格時更正了自己先前兩處錯誤。舊紀錄寫的「50 kDa MWCO」是錯的，這是 0.2 µm 微濾不是超濾。
-          先前宣稱「可以擋住 OMV」也是錯的：0.2 µm 讓 ACC deaminase（約 36 kDa）通過，同時也讓小型 OMV 與細胞碎片通過。
-          這關係到<a href="#containment">生物防護</a>。</p>
-          <p class="en">Freezing the spec on 4 July corrected two of our own errors. The old record said 50 kDa MWCO;
-          it is 0.2 µm microfiltration, not ultrafiltration. And the earlier claim that it blocks OMVs is wrong: at
-          0.2 µm, ACC deaminase (~36 kDa) passes, and so do small OMVs and cell debris. This bears on
+          <p class="zh">7/4 凍結上一顆 150 cm² 模組（科百特 Biophsep™ mPES · HF-E-MI-M020-10-60-P，8 根纖維、
+          lumen 內徑 1.0 mm、有效長度 595.7 mm、耐壓 &lt; 0.25 MPa）的規格時，更正了自己先前兩處錯誤。
+          舊紀錄寫的「50 kDa MWCO」是錯的，這是 0.2 µm 微濾不是超濾。先前宣稱「可以擋住 OMV」也是錯的：
+          0.2 µm 讓 ACC deaminase（約 36 kDa）通過，同時也讓小型 OMV（約 20–200 nm）與細胞碎片通過。
+          這道屏障擋的是細胞，不是分子。這關係到<a href="#containment">生物防護</a>。</p>
+          <p class="en">Freezing the spec of the previous 150 cm² module on 4 July (科百特 Biophsep™ mPES ·
+          HF-E-MI-M020-10-60-P, 8 fibres, 1.0 mm lumen, 595.7 mm effective length, rated &lt; 0.25 MPa) corrected two of
+          our own errors. The old record said 50 kDa MWCO; it is 0.2 µm microfiltration, not ultrafiltration. And the
+          earlier claim that it blocks OMVs is wrong: at 0.2 µm, ACC deaminase (~36 kDa) passes, and so do small OMVs
+          (roughly 20&ndash;200 nm) and cell debris. The barrier is cellular, not molecular. This bears on
           <a href="#containment">containment</a>.</p>
         </div>
       </div>
@@ -571,7 +685,7 @@
         <span class="chip chip--done">Make UI</span>
       </header>
       <details class="instr__more">
-        <summary><span class="zh"><b>結果：</b>7/12 起可即時量測跨膜壓力；訊號上疊著泵脈動，原因已確認。</span><span class="en"><b>Result:</b> live TMP since 12 July. The trace carries pump pulsation, cause confirmed.</span></summary>
+        <summary><span class="zh"><b>結果：</b>7/12 起可即時量測跨膜壓力。8/16 用它做了整套壓降對流量的量測（<a href="#i2">圖 6</a>）。訊號上疊著泵脈動，原因已確認。</span><span class="en"><b>Result:</b> live TMP since 12 July, and on 16 August it carried the whole pressure-drop characterisation (<a href="#i2">Figure 6</a>). The trace still carries pump pulsation, cause confirmed.</span></summary>
         <div class="instr__body">
         <div class="field">
           <b><span class="zh">起因</span><span class="en">Why</span></b>
@@ -589,18 +703,32 @@
             <dt><span class="zh">溫漂</span><span class="en">Temp drift</span></dt><dd>0.03 % / °C</dd>
             <dt><span class="zh">讀取 / 韌體</span><span class="en">Acquisition / firmware</span></dt><dd><span class="zh">Arduino Uno R4，14-bit ADC，3.3 V 需分壓 · Pressure_sensor_v0.26</span><span class="en">Arduino Uno R4, 14-bit ADC, 3.3 V divider · Pressure_sensor_v0.26</span></dd>
           </dl>
-          <p class="scaffold">填：脫離反應器的獨立測試方法與結果（施加已知壓力的方式、上下行程點數、線性度、重複性、與標稱值的偏差）。</p>
+        </div>
+        <div class="field">
+          <b><span class="zh">獨立測試</span><span class="en">Standalone test</span></b>
+          <p class="zh">這支感測器的驗收不是靠廠商規格，是靠它量出來的東西站不站得住。8/16 用它跑完
+          <a href="#i2">圖 6</a> 那組壓降對流量：兩個構型各八點，通過原點的二次模型 R² 都是 0.995，殘差沒有系統性趨勢，
+          扣掉背景之後和 Hagen–Poiseuille 理論值差 0.90–0.96 倍。一支讀不準的感測器做不出這種結果。</p>
+          <p class="en">What qualifies this sensor is not its data sheet but whether what it measures holds together.
+          On 16 August it produced the pressure&ndash;flow characterisation in <a href="#i2">Figure 6</a>: eight points in
+          each of two configurations, a through-origin quadratic at R² 0.995 for both, residuals with no systematic
+          trend, and net values within 0.90&ndash;0.96 of the Hagen&ndash;Poiseuille prediction once the rig is subtracted.
+          A sensor that did not read true would not produce that.</p>
+          <p class="zh">還沒做的是往上追溯的校正：用已知壓力源做上下行程比對，取得線性度、遲滯與重複性。
+          目前只有 1.0 % FS 這個廠商值。</p>
+          <p class="en">What is still missing is traceable calibration: an up-and-down sweep against a known pressure
+          source for linearity, hysteresis and repeatability. All we have on those is the vendor&rsquo;s 1.0 % FS.</p>
         </div>
         <div class="two">
           <figure class="fig">
             <img src="assets/img/pressure-first-live.jpg" alt="壓力感測器接上 Arduino，電腦螢幕顯示即時壓力數據。" />
-            <figcaption><b><span class="zh">圖 6.</span><span class="en">Figure 6.</span></b>
+            <figcaption><b><span class="zh">圖 7.</span><span class="en">Figure 7.</span></b>
               <span class="zh">2026-07-12，第一次看到即時壓力數據。</span>
               <span class="en">12 July 2026, the first live pressure reading.</span></figcaption>
           </figure>
           <figure class="fig">
             <img src="assets/img/pressure-testing.jpg" alt="學生與指導老師測試反應器上的壓力感測器。" />
-            <figcaption><b><span class="zh">圖 7.</span><span class="en">Figure 7.</span></b>
+            <figcaption><b><span class="zh">圖 8.</span><span class="en">Figure 8.</span></b>
               <span class="zh">2026-08-13，感測器在反應器上測試。</span>
               <span class="en">13 August 2026, under test on the reactor.</span></figcaption>
           </figure>
@@ -608,10 +736,13 @@
         <div class="field field--caveat">
           <b><span class="zh">已知誤差</span><span class="en">Known error</span></b>
           <p class="zh">壓力訊號上疊著蠕動泵的脈動。原因已由本團隊的 Dr. Pak K. Yuet 確認，是已知假象不是不明雜訊。
-          目前尚未濾波，也沒有用泵轉速做同步扣除。</p>
+          目前尚未濾波，也沒有用泵轉速做同步扣除。另外，1.0 % FS 用在 0–1 MPa 的量程上是 ±10 kPa 絕對誤差，
+          而我們實際操作的 TMP 只有 30 kPa 左右，相對誤差因此很大。要精細控制 TMP 的話應該換一支量程更小的感測器。</p>
           <p class="en">The trace carries the peristaltic pump&rsquo;s pulsation. Dr. Pak K. Yuet confirmed the cause,
           so it is a documented artefact rather than unexplained noise. We have not filtered it or subtracted it
-          against pump speed.</p>
+          against pump speed. Separately, 1.0 % FS on a 0&ndash;1 MPa range is ±10 kPa absolute, while the TMP we
+          actually run at is around 30 kPa, so the relative error is large. Tight TMP control would want a
+          lower-range sensor.</p>
         </div>
       </div>
     </details>
@@ -622,10 +753,10 @@
       <header class="instr__head">
         <span class="instr__no">04</span>
         <h3 class="instr__title"><span class="zh">流速計與介面</span><span class="en">Flow meter</span></h3>
-        <span class="chip chip--wip">Make UI</span>
+        <span class="chip chip--done">Make UI</span>
       </header>
       <details class="instr__more">
-        <summary><span class="zh"><b>結果：</b>介面可用，但這張卡目前只有「為什麼需要它」是實的。型號、獨立測試、誤差三格都還空著。</span><span class="en"><b>Result:</b> the interface works, and &ldquo;why&rdquo; is the only field on this card with anything real in it. Model, standalone test and error are all still empty.</span></summary>
+        <summary><span class="zh"><b>結果：</b>8/16 它和壓力變送器一起量完整條 ΔP–Q 曲線（<a href="#i2">圖 6</a>），八個流量點涵蓋 113–450 mL/min。型號還沒登錄。</span><span class="en"><b>Result:</b> on 16 August it produced the whole ΔP&ndash;Q curve alongside the transducer (<a href="#i2">Figure 6</a>), eight flow points spanning 113&ndash;450 mL/min. The model number is still unrecorded.</span></summary>
         <div class="instr__body">
         <div class="field">
           <b><span class="zh">起因</span><span class="en">Why</span></b>
@@ -634,12 +765,25 @@
           <p class="en">Cross-flow sets γ̇<sub>w</sub> = 32Q₁/(πd<sub>i</sub>³), the one quantity our scale-up refuses to
           move. No flow measurement means no shear rate, and the whole argument in section 4 has nothing to stand on.</p>
         </div>
+        <div class="field">
+          <b><span class="zh">它已經做到的事</span><span class="en">What it has already done</span></b>
+          <p class="zh">8/16 那組量測刻意不用泵轉速去推流量，而是直接讀流速計，就是為了避開「用 PWM 推流量」這個常見誤差來源。
+          結果自己驗證了自己：同一組數據算出來的剪切率，和完全不依賴流量分配的壓降路線只差 2.8 %（見 <a href="#i2">02</a>）。
+          流量讀值如果有系統性偏差，這兩條路線不會對上。</p>
+          <p class="en">The 16 August measurements deliberately read the flow meter rather than inferring flow from
+          pump speed, to avoid the usual PWM-to-flow error. The result validates itself: the shear rate computed from
+          those flow readings agrees to 2.8 % with the pressure route, which makes no use of flow at all
+          (see <a href="#i2">02</a>). A systematic flow error would break that agreement.</p>
+        </div>
         <div class="field field--caveat">
           <b><span class="zh">還沒有的東西</span><span class="en">What is missing</span></b>
-          <p class="scaffold">填：型號與原理、量程、精度、輸出與取樣率；量筒加碼表的體積法比對（涵蓋流量範圍、每點重複次數、偏差）；泵脈動與氣泡對這支流速計的影響。</p>
-          <p class="zh">這一格會在 8 月底前補齊。在補齊之前，第 4 節的剪切率是算出來的，不是量出來的。</p>
-          <p class="en">This gets filled in before the end of August. Until then the shear rate in section 4 is
-          computed, not measured.</p>
+          <p class="zh">型號與原理、量程、精度、取樣率都還沒登錄，<span class="todo">待填</span>。
+          也還沒做量筒加碼表的體積法比對，所以流速計只有相對一致性、沒有絕對追溯。
+          泵脈動與氣泡對讀值的影響也還沒量過。</p>
+          <p class="en">Model, principle, range, accuracy and sampling rate are all still unrecorded,
+          <span class="todo">TBD</span>. There is no volumetric check against a graduated cylinder and a stopwatch
+          either, so the meter has relative consistency and no absolute traceability. The effect of pump pulsation and
+          of bubbles on the reading is also unmeasured.</p>
         </div>
       </div>
     </details>
@@ -681,7 +825,7 @@
 
         <figure class="fig fig--plot">
           <div data-fig="cal"></div>
-          <figcaption><b><span class="zh">圖 8.</span><span class="en">Figure 8.</span></b>
+          <figcaption><b><span class="zh">圖 9.</span><span class="en">Figure 9.</span></b>
             <span class="zh">2026-08-23，TiO₂ 累積添加序列。三個檢視：對質量的線性、兩台儀器直接對照、以及差值對平均。
             第二、三個檢視裡的實心點是 OD ≤ 1.2，也就是 <i>B. subtilis</i> 培養實際會走過的範圍。</span>
             <span class="en">The TiO&#8322; addition series of 23 August. Three views: linearity against mass, the two
@@ -728,10 +872,10 @@
 
         <figure class="fig">
           <img src="assets/img/tio2-calibration.jpg" alt="一位穿實驗衣的學生把 TiO2 懸浮液加入攪拌中的瓶子，管路接到桌上的光度計與 Arduino；指導老師在旁邊看著手寫紀錄表。" />
-          <figcaption><b><span class="zh">圖 9.</span><span class="en">Figure 9.</span></b>
-            <span class="zh">2026-08-23，做圖 8 那條序列。TiO₂ 逐次加入攪拌中的 400 mL 迴路，經流通比色管循環回來，
+          <figcaption><b><span class="zh">圖 10.</span><span class="en">Figure 10.</span></b>
+            <span class="zh">2026-08-23，做圖 9 那條序列。TiO₂ 逐次加入攪拌中的 400 mL 迴路，經流通比色管循環回來，
             指導老師 Chars 在旁邊逐點記錄。序列是累加的，所以誤差會沿著序列累積，這一點寫在下面的已知誤差裡。</span>
-            <span class="en">23 August 2026, running the series in Figure 8. TiO&#8322; goes into the stirred 400 mL loop
+            <span class="en">23 August 2026, running the series in Figure 9. TiO&#8322; goes into the stirred 400 mL loop
             one addition at a time and circulates back through the flow cuvette, with Chars recording each point
             alongside. The additions are cumulative, so error accumulates along the series; that is in the known-error
             field below.</span></figcaption>
@@ -774,11 +918,62 @@
     <h2><span class="sec__no">4</span><span class="zh">操作點與放大</span><span class="en">Operating point and scale</span></h2>
 
     <p class="lede">
-      <span class="zh">下面的數字來自我們自己寫的 Bioreactor Invariant Explorer，幾何固定為 150 cm² 模組
-      （N = 8、dᵢ = 1.0 mm、L = 595.7 mm）。200 cm² 模組的幾何登錄之後要重算。</span>
-      <span class="en">These come from the Bioreactor Invariant Explorer we built, with geometry fixed to the
-      150 cm² module (N = 8, d&#7522; = 1.0 mm, L = 595.7 mm). They need recomputing once the 200 cm² geometry is
-      recorded.</span>
+      <span class="zh">這一節分兩半：<b>量到的</b>和<b>算出來的</b>。8/16 之後我們有了實測的操作點，
+      所以先寫量到的；下面 4.1 起的模型數字還掛在舊的 150 cm² 幾何上，等 permeate 流量定下來要重算。</span>
+      <span class="en">This section has two halves: <b>measured</b> and <b>computed</b>. Since 16 August we have a
+      measured operating point, so that comes first. The model numbers from 4.1 onwards still sit on the old
+      150 cm² geometry and need recomputing once the permeate flow is set.</span>
+    </p>
+
+    <h3><span class="zh">4.0　量到的：200 cm² 模組的操作點</span><span class="en">4.0　Measured: the operating point of the 200 cm² module</span></h3>
+
+    <p class="zh">全部來自 <a href="#i2">圖 6</a> 那組量測，22 °C 純水，八個流量點。</p>
+    <p class="en">All of these come from the measurements in <a href="#i2">Figure 6</a>: pure water at 22 °C,
+    eight flow points.</p>
+
+    <div class="kn">
+      <div><b>263 mL/min</b><span class="zh">建議交叉流量，上限 300</span><span class="en">Recommended cross-flow, ceiling 300</span></div>
+      <div><b>4 064 s⁻¹</b><span class="zh">壁面剪切率，落在廠商校準的 2000–6000 帶中段</span><span class="en">Wall shear, mid-range of the vendor-calibrated 2000&ndash;6000 band</span></div>
+      <div><b>531</b><span class="zh">Re，層流帶（&lt; 2300）</span><span class="en">Re, laminar (&lt; 2300)</span></div>
+      <div><b>0.084 bar</b><span class="zh">模組淨壓降，實測</span><span class="en">Net module pressure drop, measured</span></div>
+      <div><b>28 %</b><span class="zh">TMP 0.30 bar 下的軸向非均勻度，20 % 以下算均勻</span><span class="en">Axial TMP non-uniformity at 0.30 bar; below 20 % counts as uniform</span></div>
+      <div><b>≈ 11</b><span class="zh">有效纖維數，標稱 11，沒有阻塞</span><span class="en">Effective fibre count against a nominal 11; none blocked</span></div>
+    </div>
+
+    <p class="zh">這六個數字裡只有一個沒有餘裕：軸向非均勻度 28 %。它的意思是模組進口端的 TMP 比出口端高，
+    沿著纖維長度不是同一個驅動壓力。20 % 以下可以當成均勻；20–50 % 表示進口端過濾比較強、餅層分布不均；
+    超過 50 % 出口端可能已經沒有淨過濾，那樣連臨界通量都測不準。我們選 263 mL/min 就是為了把它壓在 28 %。
+    要再降只能降流量，但降流量會同時降剪切率，這是這台反應器目前最實在的一個取捨。</p>
+    <p class="en">One of those six has no margin: 28 % axial non-uniformity. It means TMP at the module inlet is
+    higher than at the outlet, so the driving pressure is not the same along the fibre. Below 20 % counts as uniform;
+    20&ndash;50 % means filtration is stronger at the inlet and the cake builds unevenly; above 50 % the outlet may have
+    no net filtration at all, which would invalidate a critical-flux determination. We picked 263 mL/min to hold it at
+    28 %. Lowering it further means lowering flow, which lowers shear at the same time. That is the most concrete
+    trade-off in the reactor right now.</p>
+
+    <p class="note">
+      <span class="zh">積垢的判準也定下來了：監測水力阻力 R = ΔP<sub>net</sub>/Q 而不是 ΔP 本身，因為 ΔP 上升有可能只是流量上升。
+      R 超過基準線 2 倍就停機清洗。通量換算 J (LMH) = Q<sub>perm</sub> (mL/min) × 3；溫度每差 1 °C 黏度差 2–3 %，
+      所以比較之前一律換算到 25 °C（22 → 25 °C 的因子是 1.073），不然 3 °C 的室溫飄移會被誤讀成積垢。</span>
+      <span class="en">The fouling criterion is settled too: track hydraulic resistance R = ΔP<sub>net</sub>/Q rather
+      than ΔP itself, because a rise in ΔP may only be a rise in flow. R above twice baseline means stop and clean.
+      Flux converts as J (LMH) = Q<sub>perm</sub> (mL/min) &times; 3, and since viscosity moves 2&ndash;3 % per degree,
+      everything is normalised to 25 °C before comparison (the 22 &rarr; 25 °C factor is 1.073). Otherwise a 3 °C drift
+      in room temperature reads as fouling.</span>
+    </p>
+
+    <h3><span class="zh">4.1　算出來的：操作點與放大</span><span class="en">4.1　Computed: operating point and scale</span></h3>
+
+    <p class="lede">
+      <span class="zh">下面的數字來自我們自己寫的
+      <a href="https://timmy97-tw.github.io/releaf-invariant-explorer/">Bioreactor Invariant Explorer</a>，幾何固定為<b>舊的</b> 150 cm² 模組
+      （N = 8、dᵢ = 1.0 mm、L = 595.7 mm）。換上 200 cm² 之後纖維數從 8 變 11，
+      所以 4.0 的實測值和下面這組算出來的值不能直接對照，等 permeate 流量 Q<sub>p</sub> 定下來會整組重算。</span>
+      <span class="en">These come from the
+      <a href="https://timmy97-tw.github.io/releaf-invariant-explorer/">Bioreactor Invariant Explorer</a> we built, with
+      geometry fixed to the <b>old</b> 150 cm² module (N = 8, d&#7522; = 1.0 mm, L = 595.7 mm). The 200 cm² module has 11 fibres rather than 8,
+      so the measured values in 4.0 and the computed ones below are not directly comparable. The whole set gets
+      recomputed once the permeate flow Q<sub>p</sub> is fixed.</span>
     </p>
 
     <p class="note">
@@ -806,7 +1001,7 @@
     perfusion. Whether that band transfers to <i>B. subtilis</i> we cannot say, so it sits in
     <a href="#q1">Question 1</a>.</p>
 
-    <h3 id="scale"><span class="zh">4.1　複製模組到 10 倍與 100 倍</span><span class="en">4.1　Replicating to 10&times; and 100&times;</span></h3>
+    <h3 id="scale"><span class="zh">4.2　複製模組到 10 倍與 100 倍</span><span class="en">4.2　Replicating to 10&times; and 100&times;</span></h3>
 
     <p class="zh">放大策略是固定 γ̇<sub>w</sub> 與 J、複製固定幾何的模組（van Reis 線性放大），
     犧牲整體系統的幾何相似性。把工作體積與 permeate 流量一起等比放大，模型給的結果是這樣：</p>
@@ -851,16 +1046,34 @@
       literature-typical rather than strain-specific. All of them want replacing with measurements.</span>
     </p>
 
-    <h3 id="containment"><span class="zh">4.2　生物防護</span><span class="en">4.2　Containment</span></h3>
-    <p class="zh">第一層是尺寸排阻：<i>B. subtilis</i> 約 1–2 µm，0.2 µm 的膜完全截留。
-    第二層不存在。7/16 指導老師提出「就算 B. sub 穿過膜，我們還是要有東西接住它」，至今沒有設計被記錄下來。</p>
-    <p class="en">The first barrier is size exclusion: <i>B. subtilis</i> is 1&ndash;2 µm and the 0.2 µm membrane
-    retains it completely. The second does not exist. On 16 July our instructors said that even if <i>B. subtilis</i>
-    got through, something has to catch it. No design has been recorded since.</p>
+    <h3 id="containment"><span class="zh">4.3　生物防護</span><span class="en">4.3　Containment</span></h3>
+    <p class="zh">第一層是尺寸排阻：<i>B. subtilis</i> 約 1–2 µm，0.2 µm 的膜完全截留。要注意這道屏障擋的是<b>細胞，不是分子</b>：
+    ACC deaminase（約 36 kDa）本來就要通過，小型 OMV（約 20–200 nm）與細胞碎片也會一起通過。</p>
+    <p class="en">The first barrier is size exclusion: <i>B. subtilis</i> is 1&ndash;2 µm and the 0.2 µm membrane retains
+    it completely. The barrier is <b>cellular, not molecular</b>: ACC deaminase (~36 kDa) is meant to pass, and small
+    OMVs (roughly 20&ndash;200 nm) and cell debris pass with it.</p>
+
+    <p class="zh">第二層現在有方案了：在 shell 側再串一顆濾器接住萬一穿過來的菌。7/16 指導老師提的那句
+    「就算 B. sub 穿過膜，我們還是要有東西接住它」，這是回應。但目前只到概念，
+    孔徑、材質、它會增加多少壓降、更換週期、以及它自己壞掉時我們怎麼知道，都還沒定。
+    這也是<a href="#q1">問題 1</a>想請教您的一部分。</p>
+    <p class="en">The second barrier now has a design: a further filter in series on the shell side to catch anything
+    that gets through. That answers what our instructors said on 16 July, that something has to catch <i>B. subtilis</i>
+    even if it passes the membrane. It is still only a concept: pore size, material, how much pressure drop it adds,
+    its change-out interval, and how we would know it had failed are all undecided. That is part of what
+    <a href="#q1">Question 1</a> asks you.</p>
+
+    <p class="note">
+      <span class="zh">防護要寫成數字才有意義：對數截留值 LRV = log₁₀(C<sub>feed</sub>/C<sub>permeate</sub>)，
+      以及每次部署預期逃逸的菌數 = C<sub>feed</sub> × V<sub>permeate</sub> × 10⁻ᴸᴿⱽ。這兩個數我們還沒量。</span>
+      <span class="en">Containment only means anything as a number: a log reduction value
+      LRV = log₁₀(C<sub>feed</sub>/C<sub>permeate</sub>), and expected escaped cells per deployment =
+      C<sub>feed</sub> &times; V<sub>permeate</sub> &times; 10⁻ᴸᴿⱽ. We have measured neither.</span>
+    </p>
 
     <figure class="fig fig--wide">
       <img src="assets/img/design-full.png" alt="生物反應器的完整系統設計圖。" />
-      <figcaption><b><span class="zh">圖 10.</span><span class="en">Figure 10.</span></b>
+      <figcaption><b><span class="zh">圖 11.</span><span class="en">Figure 11.</span></b>
         <span class="zh">2026-08-04 的完整系統設計。</span>
         <span class="en">The full system as of 4 August 2026.</span></figcaption>
     </figure>
@@ -891,24 +1104,26 @@
           <tr><td><span class="zh">膜面積 / 模組數</span><span class="en">Area / modules</span></td><td class="num">200 cm² × 1</td><td><span class="todo">待填</span></td></tr>
           <tr><td><span class="zh">工作體積 / 每日 permeate</span><span class="en">Working volume / daily permeate</span></td><td class="num">400 mL · 3.6 L/d @ 2.5 mL/min</td><td><span class="todo">待填</span></td></tr>
           <tr><td><span class="zh">操作者</span><span class="en">Operator</span></td><td><span class="zh">受訓學生，隨時有人</span><span class="en">Trained students, always attended</span></td><td><span class="zh">農民，無人看顧</span><span class="en">A farmer, unattended</span></td></tr>
-          <tr class="is-open"><td><span class="zh">生物防護</span><span class="en">Containment</span></td><td><span class="zh">僅膜截留</span><span class="en">Membrane only</span></td><td><span class="todo">待填</span></td></tr>
+          <tr class="is-open"><td><span class="zh">生物防護</span><span class="en">Containment</span></td><td><span class="zh">僅膜截留</span><span class="en">Membrane only</span></td><td><span class="zh">膜截留 + shell 側第二顆濾器（規格未定）</span><span class="en">Membrane plus a second filter on the shell side (unspecified)</span></td></tr>
         </tbody>
       </table>
     </div>
 
     <p class="note">
-      <span class="zh">還沒定的六項：可服務的株數或面積、耗材更換週期、無菌需求怎麼在無人看顧下滿足、單位成本目標、
-      第二層生物防護、以及模組數要往一台大的還是很多台小的走。最後一項是 <a href="#q5">問題 5</a>，
-      其餘幾項都會被您對 <a href="#q3">問題 3</a> 和 <a href="#q6">問題 6</a> 的回答改寫。</span>
-      <span class="en">Six things are open: plants or area served, change-out interval, how sterility is met with
-      nobody watching, target unit cost, the second containment barrier, and whether module count grows into one large
-      machine or many small ones. The last of those is <a href="#q5">Question 5</a>; your answers to
-      <a href="#q3">Question 3</a> and <a href="#q6">Question 6</a> rewrite most of the rest.</span>
+      <span class="zh">還沒定的五項：可服務的株數或面積、耗材更換週期、無菌需求怎麼在無人看顧下滿足、單位成本目標，
+      以及模組數要往一台大的還是很多台小的走。最後一項是 <a href="#q5">問題 5</a>，
+      其餘幾項都會被您對 <a href="#q3">問題 3</a> 和 <a href="#q6">問題 6</a> 的回答改寫。
+      膜面積與工作體積這兩格要等 permeate 流量 Q<sub>p</sub> 定下來，那也是 <a href="#calc">4.1</a> 整組數字重算的前提。</span>
+      <span class="en">Five things are open: plants or area served, change-out interval, how sterility is met with
+      nobody watching, target unit cost, and whether module count grows into one large machine or many small ones. The
+      last of those is <a href="#q5">Question 5</a>; your answers to <a href="#q3">Question 3</a> and
+      <a href="#q6">Question 6</a> rewrite most of the rest. Membrane area and working volume both wait on the permeate
+      flow Q<sub>p</sub>, which is also what <a href="#calc">4.1</a> needs before it can be recomputed.</span>
     </p>
 
     <figure class="fig">
       <img src="assets/img/students-design.jpg" alt="學生與指導老師在白板前討論反應器腔體設計。" />
-      <figcaption><b><span class="zh">圖 11.</span><span class="en">Figure 11.</span></b>
+      <figcaption><b><span class="zh">圖 12.</span><span class="en">Figure 12.</span></b>
         <span class="zh">2026-08-15，討論下一代腔體設計。</span>
         <span class="en">15 August 2026, working through the next chamber design.</span></figcaption>
     </figure>
@@ -925,11 +1140,11 @@
     </p>
 
     <p class="note">
-      <span class="zh">10/21 是團隊自訂的內部截止日，抓在 11 月巴黎 Grand Jamboree 之前。官方的 wiki freeze 與 Jamboree 確切日期
-      <span class="todo">待確認</span>，確認後整段時程要往回重排。</span>
-      <span class="en">21 October is our own internal deadline, set ahead of the Paris Grand Jamboree in November. The
-      official wiki freeze and Jamboree dates are <span class="todo">to be confirmed</span>, and the schedule
-      re-anchors once they are.</span>
+      <span class="zh">Wiki freeze 10/21，巴黎 Grand Jamboree 11/13。10/21 因此同時是我們的內部截止日和硬期限：
+      那天之後 wiki 不能再動，所有要給評審看的東西必須在那天以前寫完。從 11/13 往回算，中間只剩三週做展示與答辯準備。</span>
+      <span class="en">Wiki freeze is 21 October and the Paris Grand Jamboree is 13 November, so 21 October is both
+      our internal deadline and a hard one: nothing on the wiki moves after it, and everything a judge will read has to
+      be written by then. Counting back from 13 November leaves three weeks for the presentation and for defending it.</span>
     </p>
 
     <div class="track">
@@ -937,19 +1152,24 @@
         <div class="track__when">8/23 – 8/31</div>
         <div class="track__what">
           <b><span class="zh">A · 硬體</span><span class="en">A &middot; Hardware</span></b>
-          <p class="zh">200 cm² 模組上機，流速計規格與獨立測試補齊，無菌填裝流程書面化，第二層生物防護提出方案。</p>
-          <p class="en">Fit the 200 cm² module, finish the flow meter&rsquo;s spec and standalone test, write down the aseptic fill procedure, propose a second containment barrier.</p>
+          <p class="zh">補 60–120 mL/min 的低流量點並且每點做三次；0.7 bar 擴散流完整性測試；消毒前後各量一次標準水通量；
+          流速計規格與體積法比對補齊；無菌填裝流程書面化。</p>
+          <p class="en">Add flow points at 60&ndash;120 mL/min with three replicates each; a 0.7 bar diffusive-flow integrity
+          test; normalised water permeability before and after sanitisation; the flow meter&rsquo;s spec and a volumetric
+          check; and the aseptic fill procedure written down.</p>
           <p class="track__crit"><b><span class="zh">驗收：</span><span class="en">Acceptance:</span></b>
-            <span class="zh">一份任何組員照著做都能重現的填裝 SOP；第二層防護有具名方案與它擋得住什麼的說明。</span>
-            <span class="en">A fill SOP any team member can reproduce; a named barrier proposal stating what it stops.</span></p>
+            <span class="zh">消毒<b>之後</b>的水通量與完整性數據成為正式基準線（順序不能顛倒，見 <a href="#i2">02</a>）；
+            一份任何組員照著做都能重現的填裝 SOP。</span>
+            <span class="en">The post-sanitisation permeability and integrity numbers become the official baseline; that
+            order cannot be reversed (see <a href="#i2">02</a>). Plus a fill SOP any team member can reproduce.</span></p>
         </div>
       </div>
       <div class="track__row">
         <div class="track__when">9/1 – 9/14</div>
         <div class="track__what">
           <b><span class="zh">B · 量測</span><span class="en">B &middot; Measurement</span></b>
-          <p class="zh">TiO₂ 那條已經做完（<a href="#i5">圖 8</a>）。剩下兩件：菌的稀釋序列對乾重或平板計數，以及每點做重複量測。</p>
-          <p class="en">The TiO&#8322; series is done (<a href="#i5">Figure 8</a>). Two pieces left: a dilution series of cells against dry weight or plate counts, and replicates at every point.</p>
+          <p class="zh">TiO₂ 那條已經做完（<a href="#i5">圖 9</a>）。剩下兩件：菌的稀釋序列對乾重或平板計數，以及每點做重複量測。</p>
+          <p class="en">The TiO&#8322; series is done (<a href="#i5">Figure 9</a>). Two pieces left: a dilution series of cells against dry weight or plate counts, and replicates at every point.</p>
           <p class="track__crit"><b><span class="zh">驗收：</span><span class="en">Acceptance:</span></b>
             <span class="zh">一條 OD 0.05–1.2 的菌體校正曲線，附殘差、R²、每點重複量測標準差，n ≥ 3；並給出偵測極限。
             TiO₂ 那條給的是線性，這一條才把讀值接到菌數，兩條都齊了 Best Measurement 才站得住。</span>
@@ -963,8 +1183,26 @@
           <p class="zh">ACC deaminase 在 <i>B. subtilis</i> 168 內組成型表現，permeate 側測到活性。</p>
           <p class="en">Constitutive ACC deaminase in <i>B. subtilis</i> 168, with activity on the permeate side.</p>
           <p class="track__crit"><b><span class="zh">驗收：</span><span class="en">Acceptance:</span></b>
-            <span class="zh">permeate 側活性 ≥ <span class="todo">待填</span>，對照未轉型菌株，n = 3。</span>
-            <span class="en">Permeate-side activity &ge; <span class="todo">TBD</span> against an untransformed control, n = 3.</span></p>
+            <span class="zh">10/5 前，ACCD 於 <i>B. subtilis</i> 168 以組成型 P<sub>veg</sub> 表現，
+            cell-free permeate 於 pH 8.5 標準 DNPH assay（≥ 2 h incubation）測得體積活性
+            <b>≥ 1 mU/mL</b>（= 60 nmol α-ketobutyrate mL⁻¹ h⁻¹），n = 3，
+            且 ≥ 3× empty-vector permeate 與 minus-ACC blank。同時報告三件：
+            (a) 以 permeate Bradford 蛋白量正規化後的比活性，對照 Penrose–Glick 的 20 nmol α-KB mg⁻¹ h⁻¹ 門檻；
+            (b) 同一批培養的 lysate 活性與分泌比例 f<sub>sec</sub>；(c) 反應器實際 pH 下的活性比 f<sub>pH</sub>。</span>
+            <span class="en">By 5 October, ACC deaminase expressed from a constitutive P<sub>veg</sub> in
+            <i>B. subtilis</i> 168, with cell-free permeate giving a volumetric activity of <b>&ge; 1 mU/mL</b>
+            (= 60 nmol α-ketobutyrate mL⁻¹ h⁻¹) in the standard DNPH assay at pH 8.5 with &ge; 2 h incubation, n = 3,
+            and &ge; 3&times; both the empty-vector permeate and the minus-ACC blank. Three things reported alongside:
+            (a) specific activity normalised to permeate Bradford protein, against the Penrose&ndash;Glick threshold of
+            20 nmol α-KB mg⁻¹ h⁻¹; (b) lysate activity from the same culture and the secreted fraction
+            f<sub>sec</sub>; (c) the activity ratio f<sub>pH</sub> at the reactor&rsquo;s actual pH.</span></p>
+          <p class="note">
+            <span class="zh">(b) 和 (c) 是為了讓這個數字可以被質疑：分泌比例說明有多少酵素其實留在細胞裡沒送出去，
+            pH 比說明 assay 的 pH 8.5 和反應器實際的 pH 差多少。少了這兩個，1 mU/mL 只是一個在最佳條件下量到的數字。</span>
+            <span class="en">(b) and (c) exist so the number can be argued with: the secreted fraction says how much
+            enzyme stayed inside the cells, and the pH ratio says how far the assay&rsquo;s pH 8.5 is from what the reactor
+            actually runs at. Without them, 1 mU/mL is just a number measured under the friendliest conditions.</span>
+          </p>
         </div>
       </div>
       <div class="track__row">
@@ -992,14 +1230,16 @@
       </div>
     </div>
 
-    <h3><span class="zh">6.1　10/21 要拿得出手的三件事</span><span class="en">6.1　Three things to show on 21 October</span></h3>
+    <h3><span class="zh">6.1　10/21 要拿得出手的四件事</span><span class="en">6.1　Four things to show on 21 October</span></h3>
     <ol class="zh">
       <li>一台會自己回報狀態的反應器：壓力、流速、菌體濃度三條連續曲線，加上它標出自己什麼時候不可信的那一段紀錄。</li>
+      <li>一份完整的模組水力特性：扣掉管路背景、對得上理論值、有效纖維數與剪切率互相驗證，加上消毒後定下來的通量基準線。</li>
       <li>一條經得起檢驗的校正曲線：TiO₂ 給線性，菌體序列給菌數，兩條合起來涵蓋 OD 0.05 到 1.2，附殘差與重複性。</li>
       <li>一條從逆境到蛋白的完整因果鏈：光照切換與 permeate 側活性出現的時間關係，在同一張圖上。</li>
     </ol>
     <ol class="en">
       <li>A reactor that reports its own state: three continuous traces, plus the stretch where it flagged its own readings as untrustworthy.</li>
+      <li>A full hydraulic characterisation of the module: the rig subtracted, agreement with theory, fibre count and shear rate cross-validating each other, and a permeability baseline set after sanitisation.</li>
       <li>A calibration that survives inspection: TiO&#8322; for linearity and a cell series for cell count, together covering OD 0.05 to 1.2, with residuals and repeatability.</li>
       <li>One unbroken chain from stress to protein: light switching and permeate-side activity on the same plot.</li>
     </ol>
@@ -1102,11 +1342,11 @@
       <p class="qcard__no">Q5</p>
       <p class="qcard__q zh">我們的模型說膜不會先壞，先壞的是供電和控制迴路。實務上是這樣嗎？</p>
       <p class="qcard__q en">Our model says the membrane is not what breaks first, power and the control loop are. Does that match practice?</p>
-      <p class="qcard__ctx zh">複製模組到 10 倍與 100 倍時，剪切率、通量、臨界通量餘裕、跨膜壓力完全不變（見 <a href="#scale">4.1</a>）。
+      <p class="qcard__ctx zh">複製模組到 10 倍與 100 倍時，剪切率、通量、臨界通量餘裕、跨膜壓力完全不變（見 <a href="#scale">4.2</a>）。
       θ/τ 從 0.67 走到 2.53，供電從 0.9 片 45 W 板變成 14.9 片。所以模型指向控制與能源。
       我們沒有的直覺是：真實工廠裡先卡住的是這兩個，還是耗材成本、無菌操作人力，或是我們根本沒想到的東西？</p>
       <p class="qcard__ctx en">Replicating to 10× and 100×, shear, flux, critical-flux margin and TMP do not move
-      (see <a href="#scale">4.1</a>). θ/τ goes from 0.67 to 2.53 and the panel count from 0.9 to 14.9, so the model
+      (see <a href="#scale">4.2</a>). θ/τ goes from 0.67 to 2.53 and the panel count from 0.9 to 14.9, so the model
       points at control and energy. What we have no instinct for is whether those are what jam first in a real plant,
       or whether it is consumable cost, the labour of aseptic operation, or something we have not thought of.</p>
       <p class="qcard__why"><b><span class="zh">會改變什麼：</span><span class="en">What it changes:</span></b>
@@ -1157,25 +1397,26 @@
       produced is on this page.</span>
     </p>
 
-    <p class="zh">我們希望有機會帶幾位學生和老師一起到東海大學您的實驗室，參訪並向您請教。
+    <p class="zh">我們希望有機會帶 4 到 6 位學生、2 到 3 位老師一起到東海大學您的實驗室，參訪並向您請教。
     我們原本打算等反應器組完、ACCD 實驗做完再來，但那邊還有未知數，有可能再延。
     與其帶著做完的東西來報告，不如在動手之前先請教，這樣您的意見還來得及改變我們接下來做什麼。
-    不知道您什麼時候方便？</p>
-    <p class="en">We would like to bring a few students and our instructors to your laboratory at Tunghai University,
+    不知道您什麼時候方便？時間可以直接在 LINE 群組裡討論。</p>
+    <p class="en">We would like to bring four to six students and two or three instructors to your laboratory at Tunghai University,
     to see it and to ask you these questions in person. We had planned to come after the reactor was assembled and the
     ACC deaminase run was done, but there are unknowns there and it may slip. Rather than arrive with finished work, we
-    would rather consult you while your view can still change what we do next. When might suit you?</p>
+    would rather consult you while your view can still change what we do next. When might suit you? We can settle a
+    time in the LINE group.</p>
 
     <dl class="visit__dl">
       <dt><span class="zh">時間</span><span class="en">When</span></dt>
-      <dd><span class="zh">依您方便，我們配合　<span class="todo">待填：我們可以先提 3–4 個具體時段供您勾選</span></span><span class="en">Whenever suits you &middot; <span class="todo">TBD: offer 3&ndash;4 concrete slots</span></span></dd>
+      <dd><span class="zh">看您方便，我們配合。可以直接在已經建立的 LINE 群組裡討論</span><span class="en">Whenever suits you; we will fit around it. We can settle it in the LINE group we already have</span></dd>
       <dt><span class="zh">地點</span><span class="en">Where</span></dt>
       <dd><span class="zh">東海大學，您的實驗室。若能看一次實際運轉中的反應器，對我們幫助最大</span><span class="en">Tunghai University, your laboratory. Seeing a reactor actually running would help us most</span></dd>
       <dt><span class="zh">長度</span><span class="en">Length</span></dt><dd><span class="zh">60 至 90 分鐘，或依您方便</span><span class="en">60 to 90 minutes, or whatever you can spare</span></dd>
-      <dt><span class="zh">誰去</span><span class="en">Who</span></dt><dd><span class="zh">學生 <span class="todo">待填</span> 位，指導老師 <span class="todo">待填</span> 位</span><span class="en"><span class="todo">TBD</span> students and <span class="todo">TBD</span> instructors</span></dd>
+      <dt><span class="zh">誰去</span><span class="en">Who</span></dt><dd><span class="zh">學生 4 至 6 位，指導老師 2 至 3 位</span><span class="en">Four to six students and two to three instructors</span></dd>
       <dt><span class="zh">我們可以帶</span><span class="en">We can bring</span></dt>
       <dd><span class="zh">反應器實體、三個介面的即時展示、這頁所有圖的原始數據</span><span class="en">The reactor itself, a live demonstration of the three interfaces, and the raw data behind every figure on this page</span></dd>
-      <dt><span class="zh">聯絡</span><span class="en">Contact</span></dt><dd><span class="todo">待填</span></dd>
+      <dt><span class="zh">聯絡</span><span class="en">Contact</span></dt><dd><span class="zh">已建立的 LINE 群組</span><span class="en">The LINE group we already have</span></dd>
     </dl>
   </section>
 
@@ -1184,26 +1425,36 @@
     <h2><span class="sec__no">9</span><span class="zh">附錄</span><span class="en">Appendix</span></h2>
     <div class="grid">
       <div class="card2">
-        <h4>Bioreactor Invariant Explorer</h4>
-        <p class="zh">十個參數的互動頁面，第 4 節的數字由它算出。<span class="todo">待填連結</span></p>
-        <p class="en">The interactive page behind section 4. <span class="todo">TBD link</span></p>
+        <h4><a href="https://timmy97-tw.github.io/releaf-invariant-explorer/">Bioreactor Invariant Explorer</a></h4>
+        <p class="zh">十個參數的互動頁面，4.1 那組數字由它算出。改一個參數，Re、剪切率、通量餘裕、
+        跨膜壓力、k<sub>L</sub>a、CSPR、控制迴路死區比、供電需求會一起更新。<br />
+        背後的設計不變量總表（參數表、方程式表、每個不變量的逐項說明）還沒放上網，見面時可以帶紙本。</p>
+        <p class="en">The ten-parameter interactive page the numbers in 4.1 come from. Change one input and Re, wall
+        shear, critical-flux margin, TMP, k<sub>L</sub>a, CSPR, the control dead-time ratio and the power requirement
+        all move together.<br />
+        The dossier behind it (parameter table, equation sheet, and an invariant-by-invariant explanation) is not
+        online; we can bring a copy.</p>
       </div>
       <div class="card2">
-        <h4><span class="zh">TFF 放大論述</span><span class="en">TFF scale-up statement</span></h4>
-        <p class="zh">4.1 論證的完整版本與計算步驟。<span class="todo">待填連結</span></p>
-        <p class="en">The full version of the argument in 4.1. <span class="todo">TBD link</span></p>
+        <h4><span class="zh">模組水力特性報告</span><span class="en">Module hydraulics report</span></h4>
+        <p class="zh">2026-08-16 那組量測的完整報告：模型推導、背景扣除、逐點分析、限制與後續步驟。
+        圖 6 由它的原始數據直接繪出。同樣還沒放上網。</p>
+        <p class="en">The full write-up of the 16 August measurements: model derivation, background subtraction,
+        point-by-point analysis, limitations and next steps. Figure 6 is drawn from its raw data. Also not online yet.</p>
       </div>
       <div class="card2">
         <h4><span class="zh">原始資料</span><span class="en">Raw data</span></h4>
-        <p class="zh">434 小時紀錄 <code>od600_log_20260721_034533.csv</code>（2 720 筆）與 TiO₂ 校正序列，
-        圖 3、4、8 都由這兩份直接繪出。<span class="todo">待填連結</span></p>
-        <p class="en">The 434-hour log <code>od600_log_20260721_034533.csv</code> (2 720 rows) and the TiO&#8322;
-        series. Figures 3, 4 and 8 are drawn straight from these two. <span class="todo">TBD link</span></p>
+        <p class="zh">434 小時紀錄 <code>od600_log_20260721_034533.csv</code>（2 720 筆）、TiO₂ 校正序列（60 點）、
+        壓降對流量（兩個構型各 8 點）。這頁所有的圖都由這三份直接繪出，沒有中間的手動整理。
+        目前不公開，見面時可以直接給您。</p>
+        <p class="en">The 434-hour log <code>od600_log_20260721_034533.csv</code> (2 720 rows), the 60-point TiO&#8322;
+        series, and the pressure&ndash;flow data (8 points in each of two configurations). Every figure on this page is
+        drawn straight from these three with no manual step in between. Not public; we can hand them over in person.</p>
       </div>
       <div class="card2">
         <h4>ReLeaf wiki</h4>
-        <p class="zh">團隊的完整 wiki，含硬體 24 週 DBTL 時間軸。<span class="todo">待填連結</span></p>
-        <p class="en">The full wiki, including the 24-week hardware DBTL timeline. <span class="todo">TBD link</span></p>
+        <p class="zh">還沒有。10/21 wiki freeze 之前會建好，屆時會補上連結。</p>
+        <p class="en">Does not exist yet. It will be built before the 21 October wiki freeze, and the link will go here.</p>
       </div>
     </div>
 
@@ -1214,7 +1465,9 @@
         <li>Field, R.W., Wu, D., Howell, J.A., &amp; Gupta, B.B. (1995). Critical flux concept for microfiltration fouling. <i>Journal of Membrane Science</i> 100(3): 259&ndash;272.</li>
         <li>van Reis, R., &amp; Zydney, A. (2007). Bioprocess membrane technology. <i>Journal of Membrane Science</i> 297(1&ndash;2): 16&ndash;50.</li>
         <li>Bland, J.M., &amp; Altman, D.G. (1986). Statistical methods for assessing agreement between two methods of clinical measurement. <i>The Lancet</i> 327(8476): 307&ndash;310.</li>
-        <li>Castillo-Hair, S.M., <i>et al.</i> (2019). Optogenetic characterization of the CcaS&ndash;CcaR system. <span class="note"><span class="zh">（Hill n、K½、t½ 參數來源，<span class="todo">待補完整書目</span>）</span><span class="en">(source of the Hill n, K&frac12; and t&frac12; parameters, <span class="todo">full citation TBD</span>)</span></span></li>
+        <li>Castillo-Hair, S.M., Baerman, E.A., Fujita, M., Igoshin, O.A., &amp; Tabor, J.J. (2019). Optogenetic control of <i>Bacillus subtilis</i> gene expression. <i>Nature Communications</i> 10: 3099. <span class="note"><span class="zh">（Hill n、K½、t½ 參數來源）</span><span class="en">(source of the Hill n, K&frac12; and t&frac12; parameters)</span></span></li>
+        <li>Romann, P., <i>et al.</i> (2024). Co-current filtrate flow in TFF perfusion processes: decoupling transmembrane pressure from crossflow to improve product sieving. <i>Biotechnology and Bioengineering</i> 121(2): 640&ndash;654.</li>
+        <li>Maiorella, B., Dorin, G., Carion, A., &amp; Harano, D. (1991). Crossflow microfiltration of animal cells. <i>Biotechnology and Bioengineering</i> 37(2): 121&ndash;126.</li>
         <li>Yeh, M.-S., Wei, Y.-H., &amp; Chang, J.-S. (2006). Enhanced production of surfactin from <i>Bacillus subtilis</i> by addition of solid carriers. <i>Process Biochemistry</i> 41: 1799&ndash;1805.</li>
       </ol>
     </div>

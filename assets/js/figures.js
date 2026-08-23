@@ -746,8 +746,210 @@
     draw();
   }
 
+
+  /* ═══════════════════════════════════ FIGURE · module hydraulics 2026-08-16 ═ */
+  function figHydro(host) {
+    var H = D.hyd, m = H.meta, R = H.rec;
+    var st = frame(host, { views: true });
+    var view = 'dp';
+    var gv = group(st.bar, [
+      { k: 'dp',    zh: '壓降對流量',   en: 'Pressure drop vs flow' },
+      { k: 'ratio', zh: '扣掉管路之後', en: 'After subtracting the rig' },
+      { k: 'win',   zh: '操作視窗',     en: 'Operating window' }
+    ], view, function (k) { view = k; markCurrent(gv, k); draw(); }, 'view');
+
+    function curve(x, y, a, b, q0, q1) {
+      var d = '';
+      for (var q = q0; q <= q1 + .01; q += 2)
+        d += (d ? 'L' : 'M') + fmt(x(q), 1) + ' ' + fmt(y(a * q + b * q * q), 1);
+      return d;
+    }
+
+    /* ---- view 1: the two configurations, and the module by difference ---- */
+    function drawDP() {
+      var W = 900, Ht = 470, M = { l: 66, r: 30, t: 30, b: 62 };
+      var svg = stageSvg(st.stage, W, Ht);
+      var root = el('g', {}, svg);
+      var x = lin(0, 480, M.l, W - M.r), y = lin(0, 0.48, Ht - M.b, M.t);
+
+      axes(root, x, y, {
+        xlab: ['交叉流量 Q（mL/min）', 'Cross-flow rate Q (mL/min)'],
+        ylab: ['壓降 ΔP（bar）', 'Pressure drop ΔP (bar)'], ydp: 2, xdp: 0, xn: 7, yn: 7
+      });
+
+      el('path', { d: curve(x, y, H.hf.a, H.hf.b, 0, 460), fill: 'none', stroke: C.bd, 'stroke-width': 1.6 }, root);
+      el('path', { d: curve(x, y, H.bg.a, H.bg.b, 0, 460), fill: 'none', stroke: C.ref, 'stroke-width': 1.6, 'stroke-dasharray': '6 4' }, root);
+      el('path', { d: curve(x, y, H.net.a, H.net.b, 0, 460), fill: 'none', stroke: C.ph, 'stroke-width': 2.2 }, root);
+
+      H.hf.q.forEach(function (q, i) {
+        el('rect', { x: x(q) - 4, y: y(H.hf.p[i]) - 4, width: 8, height: 8, fill: '#fff', stroke: C.bd, 'stroke-width': 1.5 }, root);
+      });
+      H.bg.q.forEach(function (q, i) {
+        el('circle', { cx: x(q), cy: y(H.bg.p[i]), r: 4, fill: '#fff', stroke: C.ref, 'stroke-width': 1.5 }, root);
+      });
+      H.hf.q.forEach(function (q, i) {
+        el('circle', { cx: x(q), cy: y(H.net.p[i]), r: 3.6, fill: C.ph }, root);
+      });
+
+      /* how much of the total the rig itself accounts for */
+      var qm = 275, tot = H.hf.a * qm + H.hf.b * qm * qm, bg = H.bg.a * qm + H.bg.b * qm * qm;
+      el('line', { x1: x(qm), x2: x(qm), y1: y(0), y2: y(tot), stroke: '#171717', 'stroke-width': 1, 'stroke-dasharray': '3 3' }, root);
+      el('path', { d: 'M' + (x(qm) + 6) + ' ' + y(bg) + 'L' + (x(qm) + 6) + ' ' + y(tot), stroke: '#171717', 'stroke-width': 3 }, root);
+      txt(root, x(qm) - 12, y((bg + tot) / 2) + 4, '模組本身只佔一半', 'the module is only half of it',
+        { anchor: 'end', size: 11.5, weight: 650, fill: '#171717' });
+      txt(root, x(qm) - 12, y(bg / 2) + 4, '另一半是閥、接頭、比色管', 'the rest is valves, fittings, the cuvette',
+        { anchor: 'end', size: 11.5, fill: C.ref });
+
+      legend(root, M.l + 16, M.t + 22, [
+        { c: C.bd, mark: 'square', open: true, zh: '裝了模組（HFM）', en: 'Module installed (HFM)' },
+        { c: C.ref, open: true, zh: '換成矽膠管的空跑（背景）', en: 'Silicone jumper, no module (background)' },
+        { c: C.ph, zh: '相減得到的模組淨壓降', en: 'Module, by difference' }
+      ]);
+
+      var bx = W - M.r - 250;
+      el('rect', { x: bx, y: Ht - M.b - 78, width: 244, height: 72, fill: '#fff', stroke: C.grid, rx: 4 }, root);
+      txt(root, bx + 12, Ht - M.b - 60, 'ΔP = aQ + bQ²，強制過原點', 'ΔP = aQ + bQ², forced through the origin', { size: 11.5, weight: 700, fill: '#171717' });
+      txt(root, bx + 12, Ht - M.b - 44, 'HFM　　R² ' + H.hf.r2.toFixed(4) + '，殘差 SD ' + H.hf.sd.toFixed(4) + ' bar',
+                                        'HFM　　R² ' + H.hf.r2.toFixed(4) + ', residual SD ' + H.hf.sd.toFixed(4) + ' bar', { size: 11, fill: C.bd });
+      txt(root, bx + 12, Ht - M.b - 29, '背景　　R² ' + H.bg.r2.toFixed(4) + '，殘差 SD ' + H.bg.sd.toFixed(4) + ' bar',
+                                        'Background R² ' + H.bg.r2.toFixed(4) + ', residual SD ' + H.bg.sd.toFixed(4) + ' bar', { size: 11, fill: C.ref });
+      txt(root, bx + 12, Ht - M.b - 14, '每點 n = 1，8 個 PWM 設定', 'n = 1 per point, 8 PWM settings', { size: 11, fill: '#737373' });
+
+      hover(svg, root, x, y, function (mx) {
+        var q = x.inv(mx), i = 0;
+        H.hf.q.forEach(function (v, j) { if (Math.abs(v - q) < Math.abs(H.hf.q[i] - q)) i = j; });
+        return { i: i, px: x(H.hf.q[i]), py: y(H.hf.p[i]) };
+      }, function (h) {
+        var i = h.i;
+        return '<b>' + H.hf.q[i].toFixed(0) + ' mL/min</b>' +
+          ' &nbsp;<span style="color:' + C.bd + '">HFM <b>' + H.hf.p[i].toFixed(4) + '</b> bar</span>' +
+          ' &nbsp;<span style="color:' + C.ph + '">淨值 / net <b>' + H.net.p[i].toFixed(4) + '</b></span>' +
+          ' &nbsp;<span class="dim">γ̇ ' + H.gamma[i] + ' s⁻¹ · Re ' + H.re[i] + '</span>';
+      }, st.read);
+    }
+
+    /* ---- view 2: does the module behave like eleven 1 mm tubes? ---------- */
+    function drawRatio() {
+      var W = 900, Ht = 450, M = { l: 66, r: 200, t: 34, b: 62 };
+      var svg = stageSvg(st.stage, W, Ht);
+      var root = el('g', {}, svg);
+      var x = lin(80, 480, M.l, W - M.r), y = lin(0.6, 1.45, Ht - M.b, M.t);
+
+      el('rect', { x: M.l, y: y(1.0), width: (W - M.r) - M.l, height: y(0.85) - y(1.0), fill: C.band }, root);
+      el('rect', { x: x(R.qCeil), y: M.t, width: (W - M.r) - x(R.qCeil), height: (Ht - M.b) - M.t, fill: C.fault, opacity: .55 }, root);
+
+      axes(root, x, y, {
+        xlab: ['交叉流量 Q（mL/min）', 'Cross-flow rate Q (mL/min)'],
+        ylab: ['淨壓降 ÷ Hagen–Poiseuille 理論值', 'Net ΔP ÷ Hagen–Poiseuille prediction'], ydp: 1, xdp: 0, xn: 6, yn: 6
+      });
+
+      el('line', { x1: M.l, x2: W - M.r, y1: y(1), y2: y(1), stroke: '#171717', 'stroke-width': 1.2 }, root);
+      txt(root, M.l + 8, y(1) - 7, '理論值', 'theory', { size: 11, fill: '#171717' });
+
+      var d = '';
+      H.hf.q.forEach(function (q, i) { d += (i ? 'L' : 'M') + fmt(x(q), 1) + ' ' + fmt(y(H.net.ratio[i]), 1); });
+      el('path', { d: d, fill: 'none', stroke: C.ph, 'stroke-width': 1.6 }, root);
+      H.hf.q.forEach(function (q, i) {
+        var inBand = q <= R.qCeil;
+        el('circle', { cx: x(q), cy: y(H.net.ratio[i]), r: 5, fill: inBand ? C.ph : '#fff', stroke: C.ph, 'stroke-width': 1.6 }, root);
+      });
+
+      txt(root, x(370), M.t + 18, '> 300 mL/min', null, { anchor: 'middle', size: 11.5, weight: 700, fill: '#9a3d22' });
+      txt(root, x(370), M.t + 33, '模組頭部的局部損失開始主導', 'header minor losses take over', { anchor: 'middle', size: 11, fill: '#9a3d22' });
+
+      var bx = W - M.r + 14;
+      txt(root, bx, M.t + 22, '113–263 mL/min', null, { size: 12, weight: 700, fill: '#171717' });
+      txt(root, bx, M.t + 42, '比值 0.90–0.96', 'ratio 0.90–0.96', { size: 11.5, fill: '#404040' });
+      txt(root, bx, M.t + 59, '模組行為和 11 根 1 mm', 'the module behaves like eleven', { size: 11.5, fill: '#404040' });
+      txt(root, bx, M.t + 74, '管子並聯一致', '1 mm tubes in parallel', { size: 11.5, fill: '#404040' });
+      txt(root, bx, M.t + 104, '有效纖維數 n_eff ≈ 11', 'effective fibre count n_eff ≈ 11', { size: 12, weight: 700, fill: C.ph });
+      txt(root, bx, M.t + 122, '標稱 11 根，沒有阻塞', 'nominal 11, none blocked', { size: 11.5, fill: '#404040' });
+      txt(root, bx, M.t + 152, '獨立交叉檢查', 'independent cross-check', { size: 12, weight: 700, fill: '#171717' });
+      txt(root, bx, M.t + 170, '由流量算的 γ̇ 與由壓降算的', 'γ̇ from flow and τ_w from pressure', { size: 11.5, fill: '#404040' });
+      txt(root, bx, M.t + 185, 'τ_w 只差 2.8 %', 'agree to 2.8 %', { size: 11.5, fill: '#404040' });
+
+      hover(svg, root, x, y, function (mx) {
+        var q = x.inv(mx), i = 0;
+        H.hf.q.forEach(function (v, j) { if (Math.abs(v - q) < Math.abs(H.hf.q[i] - q)) i = j; });
+        return { i: i, px: x(H.hf.q[i]), py: y(H.net.ratio[i]) };
+      }, function (h) {
+        var i = h.i;
+        return '<b>' + H.hf.q[i].toFixed(0) + ' mL/min</b> &nbsp;淨值 / net <b>' + H.net.p[i].toFixed(4) +
+          '</b> bar &nbsp;理論 / theory <b>' + H.net.theo[i].toFixed(4) + '</b> &nbsp;比值 / ratio <b>' + H.net.ratio[i].toFixed(2) + '</b>';
+      }, st.read);
+    }
+
+    /* ---- view 3: where the module may actually be run ------------------- */
+    function drawWin() {
+      var W = 900, Ht = 460, M = { l: 66, r: 76, t: 40, b: 62 };
+      var svg = stageSvg(st.stage, W, Ht);
+      var root = el('g', {}, svg);
+      var x = lin(80, 480, M.l, W - M.r);
+      var yg = lin(0, 7600, Ht - M.b, M.t);           /* shear rate */
+      var yn = lin(0, 76, Ht - M.b, M.t);             /* axial non-uniformity, % */
+
+      el('rect', { x: x(R.qCeil), y: M.t, width: (W - M.r) - x(R.qCeil), height: (Ht - M.b) - M.t, fill: C.fault, opacity: .55 }, root);
+      el('rect', { x: M.l, y: yg(6000), width: (W - M.r) - M.l, height: yg(2000) - yg(6000), fill: C.band }, root);
+
+      axes(root, x, yg, {
+        xlab: ['交叉流量 Q（mL/min）', 'Cross-flow rate Q (mL/min)'],
+        ylab: ['壁面剪切率 γ̇_w（s⁻¹）', 'Wall shear rate γ̇_w (s⁻¹)'], ydp: 0, xdp: 0, xn: 6, yn: 5
+      });
+
+      txt(root, M.l + 10, yg(6000) - 8, '廠商校準帶 2000–6000 s⁻¹', 'vendor-calibrated band, 2000–6000 s⁻¹',
+        { size: 11, weight: 600, fill: C.ph });
+
+      var dg = '', dn = '';
+      H.hf.q.forEach(function (q, i) {
+        dg += (i ? 'L' : 'M') + fmt(x(q), 1) + ' ' + fmt(yg(H.gamma[i]), 1);
+        dn += (i ? 'L' : 'M') + fmt(x(q), 1) + ' ' + fmt(yn(H.net.p[i] / R.tmp * 100), 1);
+      });
+      el('path', { d: dg, fill: 'none', stroke: C.ph, 'stroke-width': 2 }, root);
+      el('path', { d: dn, fill: 'none', stroke: C.bd, 'stroke-width': 2, 'stroke-dasharray': '5 4' }, root);
+      H.hf.q.forEach(function (q, i) {
+        el('circle', { cx: x(q), cy: yg(H.gamma[i]), r: 4, fill: C.ph }, root);
+        el('rect', { x: x(q) - 3.5, y: yn(H.net.p[i] / R.tmp * 100) - 3.5, width: 7, height: 7, fill: C.bd }, root);
+      });
+
+      /* the right-hand axis belongs to the non-uniformity trace */
+      [0, 20, 40, 60].forEach(function (v) {
+        txt(root, W - M.r + 10, yn(v) + 4, v + ' %', null, { size: 11, mono: true, fill: C.bd });
+      });
+      txt(root, W - M.r + 58, (M.t + Ht - M.b) / 2, '軸向 TMP 非均勻度（TMP 0.30 bar）', 'Axial TMP non-uniformity at TMP 0.30 bar',
+        { anchor: 'middle', size: 11.5, weight: 600, fill: C.bd, rotate: 90 });
+      el('line', { x1: M.l, x2: W - M.r, y1: yn(20), y2: yn(20), stroke: C.bd, 'stroke-width': .8, 'stroke-dasharray': '2 3' }, root);
+      txt(root, M.l + 10, yn(20) - 6, '20 % 以下可視為均勻', 'below 20 % counts as uniform', { size: 10.5, fill: C.bd });
+
+      el('line', { x1: x(R.q), x2: x(R.q), y1: M.t, y2: Ht - M.b, stroke: '#171717', 'stroke-width': 1.6 }, root);
+      txt(root, x(R.q) - 8, M.t + 14, '建議操作點 263 mL/min', 'recommended, 263 mL/min', { anchor: 'end', size: 11.5, weight: 700, fill: '#171717' });
+      txt(root, x(R.q) - 8, M.t + 29, 'γ̇ 4 060 s⁻¹ · TMP 0.30 bar · 非均勻度 28 %', 'γ̇ 4 060 s⁻¹ · TMP 0.30 bar · 28 % non-uniform',
+        { anchor: 'end', size: 10.5, fill: '#525252' });
+      txt(root, x(R.qCeil) + 8, Ht - M.b - 14, '300 mL/min 以上不建議', 'not recommended above 300 mL/min',
+        { size: 11, weight: 600, fill: '#9a3d22' });
+
+      legend(root, M.l + 10, Ht - M.b - 46, [
+        { c: C.ph, zh: '壁面剪切率（左軸）', en: 'wall shear rate (left)' },
+        { c: C.bd, mark: 'square', zh: '軸向 TMP 非均勻度（右軸）', en: 'axial TMP non-uniformity (right)' }
+      ]);
+
+      hover(svg, root, x, yg, function (mx) {
+        var q = x.inv(mx), i = 0;
+        H.hf.q.forEach(function (v, j) { if (Math.abs(v - q) < Math.abs(H.hf.q[i] - q)) i = j; });
+        return { i: i, px: x(H.hf.q[i]), py: yg(H.gamma[i]) };
+      }, function (h) {
+        var i = h.i;
+        return '<b>' + H.hf.q[i].toFixed(0) + ' mL/min</b> &nbsp;γ̇ <b>' + H.gamma[i] + '</b> s⁻¹' +
+          ' &nbsp;τ_w <b>' + H.tau[i].toFixed(2) + '</b> Pa &nbsp;Re <b>' + H.re[i] + '</b>' +
+          ' &nbsp;<span class="dim">非均勻度 / non-uniformity ' + (H.net.p[i] / R.tmp * 100).toFixed(0) + ' %</span>';
+      }, st.read);
+    }
+
+    function draw() { view === 'dp' ? drawDP() : view === 'ratio' ? drawRatio() : drawWin(); }
+    draw();
+  }
+
   /* ------------------------------------------------------------- mount --- */
-  var MAP = { growth: figGrowth, trials: figTrials, cal: figCal };
+  var MAP = { growth: figGrowth, trials: figTrials, cal: figCal, hydro: figHydro };
   document.querySelectorAll('[data-fig]').forEach(function (host) {
     var f = MAP[host.dataset.fig];
     if (f) f(host);
