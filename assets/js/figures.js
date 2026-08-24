@@ -562,8 +562,9 @@
         ylab: ['讀值 OD₆₀₀', 'Reading, OD₆₀₀'], ydp: 1, xdp: 0, xn: 7, yn: 6
       });
 
-      txt(root, x(46), y(0.42), '> 30 mg', null, { anchor: 'middle', size: 12, weight: 700, fill: '#9a3d22' });
-      txt(root, x(46), y(0.30), '光度計壓縮，BioDrop 跳動', 'photometer compresses, BioDrop scatters',
+      txt(root, x(46), y(0.42), '超出 BioDrop 規格', 'past BioDrop’s specification',
+        { anchor: 'middle', size: 12, weight: 700, fill: '#9a3d22' });
+      txt(root, x(46), y(0.30), '光度計平滑壓縮，BioDrop 開始跳', 'ours compresses smoothly, BioDrop starts to jump',
         { anchor: 'middle', size: 11.5, fill: '#9a3d22' });
 
       /* fitted lines over the band each was fitted on, dashed where extrapolated */
@@ -596,10 +597,10 @@
       txt(box, W - M.r - 238, H - M.b - 74, '2–30 mg 線性', 'Linear over 2–30 mg', { size: 11.5, weight: 700, fill: '#171717' });
       txt(box, W - M.r - 238, H - M.b - 58, '光度計 R² ' + fitPh.r2.toFixed(4) + ' · 殘差 SD ' + fitPh.sd.toFixed(3), 'photometer R² ' + fitPh.r2.toFixed(4) + ' · resid SD ' + fitPh.sd.toFixed(3), { size: 11, fill: C.ph });
       txt(box, W - M.r - 238, H - M.b - 43, 'BioDrop R² ' + fitBd.r2.toFixed(4) + ' · 殘差 SD ' + fitBd.sd.toFixed(3), 'BioDrop R² ' + fitBd.r2.toFixed(4) + ' · resid SD ' + fitBd.sd.toFixed(3), { size: 11, fill: C.bd });
-      txt(box, W - M.r - 238, H - M.b - 26, '> 30 mg：光度計系統性偏低，最多 −0.57',
-                                            '> 30 mg: photometer bends low, up to −0.57', { size: 11, fill: C.ph });
-      txt(box, W - M.r - 238, H - M.b - 11, 'BioDrop 隨機跳動，SD 0.12，最大回退 −0.385',
-                                            'BioDrop jumps, SD 0.12, worst reversal −0.385', { size: 11, fill: C.bd });
+      txt(box, W - M.r - 238, H - M.b - 26, '> 30 mg：光度計仍單調，平均低 0.230',
+                                            '> 30 mg: ours stays monotone, 0.230 low on average', { size: 11, fill: C.ph });
+      txt(box, W - M.r - 238, H - M.b - 11, 'BioDrop 45 步階裡 5 次倒退，最大 −0.385',
+                                            'BioDrop reverses on 5 of 45 steps, worst −0.385', { size: 11, fill: C.bd });
 
       hover(svg, root, x, y, function (mx) {
         var mv = x.inv(mx), best = 0;
@@ -632,7 +633,8 @@
 
       /* the working band: this is where B. subtilis cultures actually sit */
       el('rect', { x: x(0), y: y(1.2), width: x(1.2) - x(0), height: y(0) - y(1.2), fill: C.band }, root);
-      txt(root, x(0.06), y(1.14), '培養實際會用到的範圍', 'the band a culture actually occupies', { size: 11, weight: 600, fill: C.ph });
+      txt(root, x(0.06), y(1.14), '培養實際會用到的範圍', 'where cultures actually live',
+        { size: 11, weight: 600, fill: C.ph });
 
       el('line', {
         x1: x(0), x2: x(1.2),
@@ -658,9 +660,9 @@
       ].forEach(function (l, k) {
         txt(box, bx, M.t + 48 + k * 17, l[0], l[1], { size: 11.5, mono: !l[1], fill: '#404040' });
       });
-      txt(box, bx, M.t + 132, 'OD > 1.2', null, { size: 12, weight: 700, fill: '#171717' });
-      txt(box, bx, M.t + 152, '光度計系統性偏低 0.198 ± 0.133', 'photometer runs 0.198 ± 0.133 low', { size: 11.5, fill: C.bd });
-      txt(box, bx, M.t + 170, '兩台都可疑，見下一個檢視', 'both suspect — see the next view', { size: 11.5, fill: '#737373' });
+      txt(box, bx, M.t + 132, 'OD > 1.2　超出 BioDrop 規格', 'OD > 1.2, past BioDrop’s spec', { size: 12, weight: 700, fill: '#171717' });
+      txt(box, bx, M.t + 152, '兩台差 0.198 ± 0.133', 'the two differ by 0.198 ± 0.133', { size: 11.5, fill: C.bd });
+      txt(box, bx, M.t + 170, '刻意測到這裡，看各自怎麼壞', 'measured on purpose, to see how each fails', { size: 11.5, fill: '#737373' });
 
       legend(root, bx, M.t + 206, [
         { c: C.ph, zh: '工作範圍內', en: 'inside the working band' },
@@ -724,7 +726,7 @@
       txt(root, bx, M.t + 78, (mLow - 1.96 * sLow).toFixed(3) + ' … +' + (mLow + 1.96 * sLow).toFixed(3), null, { size: 11.5, mono: true, fill: '#404040' });
       txt(root, bx, M.t + 108, 'OD > 1.2，n = ' + (pair.length - lowD.length), 'OD > 1.2, n = ' + (pair.length - lowD.length), { size: 12, weight: 700, fill: '#171717' });
       txt(root, bx, M.t + 128, '偏差 −0.198，SD 0.133', 'bias −0.198, SD 0.133', { size: 11.5, fill: C.bd });
-      txt(root, bx, M.t + 145, '這一段兩台都不該相信', 'neither instrument is trustworthy here', { size: 11.5, fill: C.bd });
+      txt(root, bx, M.t + 145, 'BioDrop 規格外，兩台都在外插', 'past BioDrop’s spec; both extrapolating', { size: 11.5, fill: C.bd });
 
       hover(svg, root, x, y, function (mx, my) {
         var best = 0, bb = 1e9;

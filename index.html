@@ -689,40 +689,63 @@
     <article class="instr" id="i4">
       <header class="instr__head">
         <span class="instr__no">04</span>
-        <h3 class="instr__title"><span class="zh">線上分光光度計與 TiO₂ 校正</span><span class="en">In-line photometer, calibrated with TiO₂</span></h3>
+        <h3 class="instr__title"><span class="zh">學生自製的線上分光光度計</span><span class="en">The photometer the students built</span></h3>
         <span class="chip chip--done">Record example tests</span>
       </header>
       <details class="instr__more">
-        <summary><span class="zh"><b>結果：</b>8/23 做完 45 點濃度序列。OD ≤ 1.2 這一段對 BioDrop 的斜率 1.018、R² 0.995、殘差 SD 0.024。OD > 1.2 兩台都不該相信。</span><span class="en"><b>Result:</b> a 45-point series on 23 August. Below OD 1.2 the slope against BioDrop is 1.018, R² 0.995, residual SD 0.024. Above OD 1.2 neither instrument should be trusted.</span></summary>
+        <summary><span class="zh"><b>結果：</b>8/23 做完 45 點 TiO₂ 序列。培養實際會走的範圍內，對 BioDrop 的斜率 1.018、R² 0.995、殘差 SD 0.024 OD。而且它每 10 分鐘給一個讀值，連續給了 434 小時。</span><span class="en"><b>Result:</b> a 45-point TiO&#8322; series on 23 August. Across the band a culture actually occupies, the slope against BioDrop is 1.018 with R² 0.995 and a residual SD of 0.024 OD. And it returns a reading every ten minutes, which it did for 434 hours straight.</span></summary>
         <div class="instr__body">
 
         <div class="field">
           <b><span class="zh">起因</span><span class="en">Why</span></b>
           <p class="zh">5/16 的一句話：「我們需要能測流速，也能測有多少 B. sub。」一台要連續運轉、將來交給農民的裝置，
-          靠取樣送桌上型分光光度計不成立。7/19 第一次校正只有單點，我們讀 0.100、BioDrop 讀 0.149；
-          一個點證明不了線性、範圍或重複性，所以 8/23 重做了整條序列。</p>
+          靠取樣送桌上型分光光度計不成立。從那句話到現在，光路、鏡座、外殼、韌體都是學生自己做的。
+          7/19 第一次校正只有單點，我們讀 0.100、BioDrop 讀 0.149；一個點證明不了線性、範圍或重複性，
+          所以 8/23 重做了整條序列。</p>
           <p class="en">One line on 16 May: we need to measure flow rate, and how much <i>B. subtilis</i>. For a device
           meant to run continuously and eventually be handed to a farmer, carrying samples to a benchtop
-          spectrophotometer does not work. The first calibration on 19 July gave one point, 0.100 against
+          spectrophotometer does not work. Everything since then, the optical path, the mounts, the housing and the
+          firmware, the students built themselves. The first calibration on 19 July gave one point, 0.100 against
           BioDrop&rsquo;s 0.149, which says nothing about linearity, range or repeatability. So on 23 August we ran the
           whole series.</p>
+        </div>
+
+        <div class="two">
+          <figure class="fig">
+            <img src="assets/img/photometer-build.jpg" alt="3D 列印的光學平台，上面裝著透鏡座，可以看見整條光路。" />
+            <figcaption><b><span class="zh">圖 8.</span><span class="en">Figure 8.</span></b>
+              <span class="zh">2026-07-02，光學平台。透鏡座與整條光路都看得到，機構是自己畫自己印的。</span>
+              <span class="en">2 July 2026, the optical bench. The lens mount and the whole beam line are visible; the
+              mechanics were drawn and printed in house.</span></figcaption>
+          </figure>
+          <figure class="fig">
+            <img src="assets/img/photometer-inloop.jpg" alt="完成的光度計立在培養箱裡的反應器迴路上，管線接進接出，旁邊是麵包板與蠕動泵。" />
+            <figcaption><b><span class="zh">圖 9.</span><span class="en">Figure 9.</span></b>
+              <span class="zh">2026-08-03，同一台裝在培養箱的反應器迴路上。菌液從管路直接流過比色管，不用開蓋、不用取樣。</span>
+              <span class="en">3 August 2026, the same instrument in the reactor loop inside the incubator. Culture
+              flows straight through the cuvette; nothing is opened and nothing is drawn off.</span></figcaption>
+          </figure>
         </div>
 
         <div class="field">
           <b><span class="zh">方法</span><span class="en">Method</span></b>
           <p class="zh">用 TiO₂ 粉末當散射標準，不是菌：它不生長、不太沉降、批次之間一致，
           所以量到的是儀器的線性，不是菌數的準確度。400 mL 迴路持續攪拌循環，從 2 mg 每次加 1 mg 到 60 mg，
-          每點同時記兩台讀值，BioDrop 量到 46 mg。</p>
+          每點同時記兩台讀值。</p>
+          <p class="zh">BioDrop 的規格大約到 OD 1 就會開始偏，我們知道，但還是刻意一路加到 60 mg，
+          想看看兩台在超出規格之後各自會怎麼壞。BioDrop 量到 46 mg，我們的量到 60 mg。</p>
           <p class="en">TiO&#8322; powder as a scattering standard rather than cells: it does not grow, settles slowly and
           is consistent between batches, so this measures linearity and not accuracy against a cell count. A stirred,
-          recirculating 400 mL loop, 1 mg at a time from 2 mg to 60 mg, both instruments read at every point, BioDrop
-          to 46 mg.</p>
+          recirculating 400 mL loop, 1 mg at a time from 2 mg to 60 mg, both instruments read at every point.</p>
+          <p class="en">BioDrop is specified only to about OD 1 and starts to deviate past it. We knew that and kept
+          adding anyway, to see how each instrument fails once it is outside its specification. BioDrop was read to
+          46 mg and ours to 60 mg.</p>
         </div>
 
         <figure class="fig fig--plot">
           <div data-fig="cal"></div>
-          <figcaption><b><span class="zh">圖 8.</span><span class="en">Figure 8.</span></b>
-            <span class="zh">2026-08-24，TiO₂ 累積添加序列。三個檢視：對質量的線性、兩台儀器直接對照、以及差值對平均。
+          <figcaption><b><span class="zh">圖 10.</span><span class="en">Figure 10.</span></b>
+            <span class="zh">2026-08-23，TiO₂ 累積添加序列。三個檢視：對質量的線性、兩台儀器直接對照、以及差值對平均。
             第二、三個檢視裡的實心點是 OD ≤ 1.2，也就是 <i>B. subtilis</i> 培養實際會走過的範圍。</span>
             <span class="en">The TiO&#8322; addition series of 23 August. Three views: linearity against mass, the two
             instruments against each other, and difference against mean. Filled points in the second and third views
@@ -745,61 +768,61 @@
 
         <div class="field">
           <b><span class="zh">這條曲線可以支撐什麼</span><span class="en">What the curve supports</span></b>
-          <p class="zh">OD 1.2 以下兩台在同一條 1:1 線上，殘差 SD 0.024 OD，和 <a href="#i1">圖 3</a>
-          除故障段以外的散布同一個量級（0.019–0.030）。這一段就是培養實際會走的範圍。</p>
-          <p class="en">Below OD 1.2 the two sit on the same 1:1 line, residual SD 0.024 OD, the same size as the
-          scatter in <a href="#i1">Figure 3</a> outside its fault window (0.019&ndash;0.030). That band is where
-          cultures live.</p>
-          <p class="zh">30 mg 以上兩條線分開，我們讀得比 BioDrop 低 0.198 ± 0.133。以加入的質量當獨立軸看，
-          兩台是用不同的方式壞掉的：我們這台系統性壓縮，讀值仍然平滑單調但相對 2–30 mg 擬合線平均低 0.230，
-          到 60 mg 低 17.8 %；BioDrop 隨機跳動，平均還壓在線上（+0.067）但散布 SD 0.117，45 個步階裡 5 次讀值倒退。
-          壓縮可以校正，跳動不行。在我們有辦法處理之前，OD 1.2 以上兩台的讀值都不要當數據用。</p>
-          <p class="en">Above 30 mg the two separate and we read 0.198 ± 0.133 low. Against the added mass as an
-          independent axis they fail differently: ours compresses, staying smooth and monotone but falling 0.230 below
-          the 2&ndash;30 mg fit on average and 17.8 % low by 60 mg; BioDrop jumps, averaging on the line (+0.067) with a
-          scatter of 0.117 SD and 5 reversals in 45 steps. Compression can be corrected, jumps cannot. Until we can
-          handle either, no reading above OD 1.2 counts as data.</p>
+          <p class="zh">OD 1.2 以下，一台學生自己做的儀器和一台商用儀器落在同一條 1:1 線上，斜率 1.018、殘差 SD 0.024 OD。
+          這個 0.024 和 <a href="#i1">圖 3</a> 那條 434 小時曲線除故障段以外的散布同一個量級（0.019–0.030）。
+          這一段就是培養實際會走的範圍，所以生長曲線可以照著讀。</p>
+          <p class="zh">超出 BioDrop 規格的那一段，兩台是用不同的方式壞掉的。我們這台是系統性壓縮：讀值仍然平滑單調，
+          59 個步階裡只有 1 個下降，最大 −0.011，只是相對 2–30 mg 擬合線平均低 0.230。BioDrop 是隨機跳動：
+          平均還壓在線上，但 45 個步階裡有 5 次讀值倒退，最大一次 −0.385。壓縮是可以校正回來的，跳動不行。</p>
+          <p class="zh">還有一件 BioDrop 做不到的事：它每量一次就要有人取樣、滴片、按鍵。我們這台每 10 分鐘自己給一個讀值，
+          連續給了 434 小時、2 671 筆，中間沒有人碰過反應器。<a href="#i1">圖 3</a> 那條曲線就是這樣來的。</p>
+          <p class="en">Below OD 1.2 an instrument the students built and a commercial one sit on the same 1:1 line,
+          slope 1.018, residual SD 0.024 OD. That 0.024 is the same size as the scatter in the 434-hour trace outside
+          its fault window (0.019&ndash;0.030, <a href="#i1">Figure 3</a>). That band is where cultures live, so the
+          growth curve can be read at face value.</p>
+          <p class="en">Past BioDrop&rsquo;s specification the two fail differently. Ours compresses systematically: the
+          trace stays smooth and monotone, 1 of 59 steps negative and that one only &minus;0.011, sitting on average
+          0.230 below the 2&ndash;30 mg line. BioDrop jumps: on average still on the line, but 5 of 45 steps reverse and
+          the worst is &minus;0.385. Compression can be corrected for; jumps cannot.</p>
+          <p class="en">And one thing BioDrop cannot do at all: every reading needs somebody to draw a sample, pipette
+          it and press a button. Ours returns a reading every ten minutes on its own, and did so for 434 hours and
+          2 671 rows without anyone touching the reactor. That is where <a href="#i1">Figure 3</a> comes from.</p>
         </div>
 
         <figure class="fig">
           <img src="assets/img/tio2-calibration.jpg" alt="一位穿實驗衣的學生把 TiO2 懸浮液加入攪拌中的瓶子，管路接到桌上的光度計與 Arduino；指導老師在旁邊看著手寫紀錄表。" />
-          <figcaption><b><span class="zh">圖 9.</span><span class="en">Figure 9.</span></b>
-            <span class="zh">2026-08-24，做圖 8 那條序列。TiO₂ 逐次加入攪拌中的 400 mL 迴路，經流通比色管循環回來，
+          <figcaption><b><span class="zh">圖 11.</span><span class="en">Figure 11.</span></b>
+            <span class="zh">2026-08-23，做圖 10 那條序列。TiO₂ 逐次加入攪拌中的 400 mL 迴路，經流通比色管循環回來，
             指導老師 Chars 在旁邊逐點記錄。序列是累加的，所以誤差會沿著序列累積，這一點寫在下面的已知誤差裡。</span>
-            <span class="en">23 August 2026, running the series in Figure 8. TiO&#8322; goes into the stirred 400 mL loop
+            <span class="en">23 August 2026, running the series in Figure 10. TiO&#8322; goes into the stirred 400 mL loop
             one addition at a time and circulates back through the flow cuvette, with Chars recording each point
             alongside. The additions are cumulative, so error accumulates along the series; that is in the known-error
             field below.</span></figcaption>
         </figure>
 
         <div class="field field--caveat">
-          <b><span class="zh">已知誤差</span><span class="en">Known error</span></b>
-          <p class="zh">四件。TiO₂ 不是菌，這條曲線給的是線性，不是「讀值等於多少菌」；要接上菌數還需要一條菌的稀釋序列
-          對乾重或平板計數。每個質量點只做一次，所以上面每個殘差 SD 都是擬合的散布，不是重複量測的標準差。
-          序列是累加的，秤量與殘留的誤差會沿著序列往後帶。還是沒有偵測極限，最低的點是 0.08 OD，再往下沒量過。
-          前兩件排在 9 月上旬。另外兩個更早就知道的失效模式也還在：流路氣泡造成讀值跳動，以及早期光學支架的公差堆疊。</p>
-          <p class="en">Four. TiO&#8322; is not cells, so this gives linearity and not a reading-to-cell-count conversion;
-          connecting the two needs a dilution series of cells against dry weight or plate counts. Each mass point was
-          run once, so every residual SD above is the spread about a fit rather than the SD of repeats. The additions
-          are cumulative, so weighing and carry-over error propagates along the series. And there is still no limit of
-          detection: the lowest point is 0.08 OD and we have never measured below it. The first two are scheduled for
-          early September. Two failure modes named earlier are also still open: bubbles in the flow path, and tolerance
-          stack-up in the early optical mount.</p>
-        </div>
-
-        <div class="field">
-          <b><span class="zh">已經產生的用途</span><span class="en">What it has been good for</span></b>
-          <p class="zh">434 小時那次紀錄裡，參考通道在第 240 到 300 小時掉到 9.3 lux，還有數十筆讀到 0，
-          它因此標出了自己這一段不可信（<a href="#i1">圖 3</a>）。</p>
-          <p class="en">In the 434-hour log the reference channel fell to 9.3 lux between hours 240 and 300, with dozens
-          of rows reading zero, so the instrument flagged its own readings there as untrustworthy
-          (<a href="#i1">Figure 3</a>).</p>
+          <b><span class="zh">已知誤差，還有下一步</span><span class="en">Known error, and what comes next</span></b>
+          <p class="zh">TiO₂ 不是菌。這條曲線給的是儀器的線性，不是「讀值等於多少菌」。
+          接下來做光控 <i>B. subtilis</i> 實驗的時候，我們會在運轉中抽幾個時間點的菌液去 BioDrop 量，
+          直接拿菌把兩台的關係擬合起來，補上這一段。</p>
+          <p class="zh">另外，每個質量點目前只做一次，所以上面的殘差 SD 是擬合的散布不是重複量測的標準差；
+          學生下禮拜會再跑一輪完整的 TiO₂ 序列，把重複性補起來。序列是累加的，秤量與殘留的誤差會沿著序列往後帶；
+          還沒有偵測極限，最低的點是 0.08 OD。兩個更早就知道的失效模式也還在：流路氣泡造成讀值跳動，
+          以及早期光學支架的公差堆疊。</p>
+          <p class="en">TiO&#8322; is not cells. This curve gives the instrument&rsquo;s linearity, not a
+          reading-to-cell-count conversion. During the optogenetic <i>B. subtilis</i> runs we will draw culture at
+          several timepoints mid-run and read it on BioDrop, fitting the two instruments against each other on cells
+          themselves.</p>
+          <p class="en">Each mass point was also run once, so the residual SDs above are the spread about a fit rather
+          than the SD of repeats; the students run the full TiO&#8322; series again next week to supply repeatability.
+          The additions are cumulative, so weighing and carry-over error propagates along the series, and there is no
+          limit of detection yet, the lowest point being 0.08 OD. Two failure modes named earlier are also still open:
+          bubbles in the flow path, and tolerance stack-up in the early optical mount.</p>
         </div>
       </div>
     </details>
     </article>
 
-    <!-- ─────────────────────────────────────────────────────────── card 06 ── -->
     <article class="instr" id="i5">
       <header class="instr__head">
         <span class="instr__no">05</span>
@@ -840,7 +863,7 @@
 
         <figure class="fig">
           <img src="assets/img/do-ph-sensors.jpg" alt="兩位學生在實驗桌上測試溶氧與 pH 感測器。" />
-          <figcaption><b><span class="zh">圖 10.</span><span class="en">Figure 10.</span></b>
+          <figcaption><b><span class="zh">圖 12.</span><span class="en">Figure 12.</span></b>
             <span class="zh">2026-08-05，兩支感測器第一次接上讀值。</span>
             <span class="en">5 August 2026, the first readings off both probes.</span></figcaption>
         </figure>
@@ -1052,7 +1075,7 @@
 
     <figure class="fig fig--wide">
       <img src="assets/img/design-full.png" alt="生物反應器的完整系統設計圖。" />
-      <figcaption><b><span class="zh">圖 11.</span><span class="en">Figure 11.</span></b>
+      <figcaption><b><span class="zh">圖 13.</span><span class="en">Figure 13.</span></b>
         <span class="zh">2026-08-04 的完整系統設計。</span>
         <span class="en">The full system as of 4 August 2026.</span></figcaption>
     </figure>
@@ -1101,7 +1124,7 @@
 
     <figure class="fig">
       <img src="assets/img/students-design.jpg" alt="學生與指導老師在白板前討論反應器腔體設計。" />
-      <figcaption><b><span class="zh">圖 12.</span><span class="en">Figure 12.</span></b>
+      <figcaption><b><span class="zh">圖 14.</span><span class="en">Figure 14.</span></b>
         <span class="zh">2026-08-15，討論下一代腔體設計。</span>
         <span class="en">15 August 2026, working through the next chamber design.</span></figcaption>
     </figure>
@@ -1124,8 +1147,8 @@
         <div class="track__when">9/1 – 9/14</div>
         <div class="track__what">
           <b><span class="zh">B · 量測</span><span class="en">B &middot; Measurement</span></b>
-          <p class="zh">TiO₂ 那條做完了（<a href="#i4">圖 8</a>）。剩下菌體的稀釋序列對乾重或平板計數，還有每點做重複。</p>
-          <p class="en">The TiO&#8322; series is done (<a href="#i4">Figure 8</a>). Left: a dilution series of cells against dry weight or plate counts, and replicates at every point.</p>
+          <p class="zh">TiO₂ 那條做完了（<a href="#i4">圖 10</a>）。剩下菌體的稀釋序列對乾重或平板計數，還有每點做重複。</p>
+          <p class="en">The TiO&#8322; series is done (<a href="#i4">Figure 10</a>). Left: a dilution series of cells against dry weight or plate counts, and replicates at every point.</p>
           <p class="track__crit"><b><span class="zh">驗收：</span><span class="en">Acceptance:</span></b>
             <span class="zh">一條 OD 0.05–1.2 的菌體校正曲線，附殘差、R²、每點重複標準差，n ≥ 3，並給出偵測極限。
             TiO₂ 給線性，這一條把讀值接到菌數，兩條都齊了 Best Measurement 才站得住。</span>
