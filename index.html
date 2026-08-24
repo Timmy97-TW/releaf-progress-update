@@ -91,38 +91,42 @@
 
 <section class="spread">
   <div class="spread__inner">
-    <div class="spread__pair">
+    <p class="spread__kicker">
+      <span class="zh">7 月到 8 月，學生去了兩間公司、一塊田，和自己的實驗桌。</span>
+      <span class="en">July and August: two companies, one field, and their own bench.</span>
+    </p>
+    <div class="spread__grid">
       <figure>
         <img src="assets/img/chbiotech.jpg" alt="正瀚科技的研究員向 ReLeaf 學生說明研究海報，右側架上是他們的植物保護劑產品。" />
         <figcaption>
-          <span class="zh">2026-07-09，正瀚科技。研究員說明他們的植物保護劑，右邊架上是實際的產品。</span>
-          <span class="en">9 July 2026, CH Biotech. A researcher explains their plant protectants; the shelves on the
-          right hold the products themselves.</span>
-        </figcaption>
-      </figure>
-      <figure>
-        <img src="assets/img/farmer-chen.jpg" alt="陳惠雯老師在田裡提著竹籃，向兩位 GEMS 學生說明。" />
-        <figcaption>
-          <span class="zh">2026-07-21，拜訪陳惠雯老師。她提著剛採的作物，跟我們講今年的雨和收成。</span>
-          <span class="en">21 July 2026, visiting the farmer Chen Hui-wen. She talked us through this year&rsquo;s rain
-          and this year&rsquo;s harvest, basket in hand.</span>
+          <span class="zh">2026-07-09　正瀚科技。研究員說明他們的植物保護劑，右邊架上是實際的產品。</span>
+          <span class="en">9 July 2026 &middot; CH Biotech. A researcher explains their plant protectants; the shelves on
+          the right hold the products themselves.</span>
         </figcaption>
       </figure>
       <figure>
         <img src="assets/img/yesheath.jpg" alt="源鮮智慧農場十幾層高的水耕牆，學生抬頭看著。" />
         <figcaption>
-          <span class="zh">2026-08-11，源鮮智慧農場。十幾層的水耕牆，集中生產的另一端。</span>
-          <span class="en">11 August 2026, YesHealth. A hydroponic wall more than a dozen tiers high, the other end of
-          the scale.</span>
+          <span class="zh">2026-08-11　源鮮智慧農場。十幾層的水耕牆，集中生產的另一端。</span>
+          <span class="en">11 August 2026 &middot; YesHealth. A hydroponic wall more than a dozen tiers high, the other
+          end of the scale.</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/farmer-chen.jpg" alt="陳惠雯老師在田裡提著竹籃，向兩位 GEMS 學生說明。" />
+        <figcaption>
+          <span class="zh">2026-07-21　拜訪陳惠雯老師。她提著剛採的作物，跟我們講今年的雨和收成。</span>
+          <span class="en">21 July 2026 &middot; visiting the farmer Chen Hui-wen. She talked us through this year&rsquo;s
+          rain and this year&rsquo;s harvest, basket in hand.</span>
         </figcaption>
       </figure>
       <figure>
         <img src="assets/img/building-reactor.jpg" alt="學生與指導老師在實驗桌前組裝反應器，桌邊亮著綠色燈條，筆電螢幕顯示即時生長曲線。" />
         <figcaption>
-          <span class="zh">2026-08-08，為了拍比賽影片暫時組起來的。綠燈是 520 nm，實際運轉時只纏血清瓶；
+          <span class="zh">2026-08-08　為了拍比賽影片暫時組起來的。綠燈是 520 nm，實際運轉時只纏血清瓶；
           筆電上是線上光度計即時畫的曲線。</span>
-          <span class="en">8 August 2026, assembled temporarily for the competition video. The green is 520 nm; in a
-          real run it only wraps the serum bottle. The laptop shows the in-line photometer drawing live.</span>
+          <span class="en">8 August 2026 &middot; assembled temporarily for the competition video. The green is 520 nm;
+          in a real run it only wraps the serum bottle. The laptop shows the in-line photometer drawing live.</span>
         </figcaption>
       </figure>
     </div>
@@ -1152,6 +1156,7 @@
             secreted fraction says how much enzyme stayed inside the cells, the pH ratio how far the assay is from the
             reactor.</p>
           </details>
+        </div>
       </div>
       <div class="track__row">
         <div class="track__when">9/15 – 10/5</div>
@@ -1274,19 +1279,25 @@
 
     <article class="qcard" id="q5">
       <p class="qcard__no">Q5</p>
-      <p class="qcard__q zh">我們的模型說膜不會先壞，先壞的是供電和控制迴路。實務上是這樣嗎？成本的大頭又在哪？</p>
-      <p class="qcard__q en">Our model says the membrane is not what breaks first, power and the control loop are. Does that match practice, and where does the cost sit?</p>
-      <p class="qcard__ctx zh">複製到 10 倍與 100 倍時，剪切率、通量、臨界通量餘裕、跨膜壓力完全不變（<a href="#scale">4.2</a>），
-      θ/τ 從 0.67 走到 2.53，供電從 0.9 片 45 W 板變成 14.9 片。成本這邊我們的直覺是膜模組與泵，
-      但那只涵蓋買得到的東西：無菌操作的人力、故障停機、耗材更換頻率都還沒進到成本模型。
-      目標使用者是半公頃上下的小農。</p>
-      <p class="qcard__ctx en">Replicating to 10× and 100×, shear, flux, critical-flux margin and TMP do not move
-      (<a href="#scale">4.2</a>), θ/τ goes from 0.67 to 2.53, and the panel count from 0.9 to 14.9. On cost our instinct
-      says the module and the pumps, but that only covers things you can buy: the labour of aseptic operation, downtime
-      and change-out frequency are all missing from our model. The intended user farms around half a hectare.</p>
+      <p class="qcard__q zh">評審每年都會問「你們要怎麼放大」。做生物製程的人，會想看到哪些證據？</p>
+      <p class="qcard__q en">Judges ask every year how a team plans to scale. What evidence do people who actually run bioprocesses want to see?</p>
+      <p class="qcard__ctx zh">我們的做法是先帶學生去問。正瀚科技和源鮮智慧農場都去了，回來把產業在意的量整理出來，
+      再讓學生自己算：放大之後哪幾個數字必須守住、守不住的時候是什麼先出問題。
+      算出來的結果在 <a href="#scale">4.2</a>，重點是剪切率、通量、臨界通量餘裕、跨膜壓力在 1 倍到 100 倍完全不動，
+      先撐不住的是供電和控制迴路的 θ/τ。</p>
+      <p class="qcard__ctx zh">我們不確定的是，這樣算夠不夠。以您的經驗，生物製程的專業人士看一個放大主張時，
+      會先問哪些數字？我們手上這組還缺什麼、還能多做什麼，會讓這個主張更站得住？</p>
+      <p class="qcard__ctx en">Our approach was to send the students to ask. They went to CH Biotech and to YesHealth,
+      came back with the quantities industry actually watches, and worked out for themselves which numbers have to hold
+      as the system grows and what gives way first when they do not. The result is in <a href="#scale">4.2</a>: shear,
+      flux, critical-flux margin and TMP do not move from 1× to 100×, and what runs out first is power and the control
+      loop&rsquo;s θ/τ.</p>
+      <p class="qcard__ctx en">What we cannot judge is whether that is enough. In your experience, which numbers does a
+      bioprocess professional look for first in a scale-up claim? What is missing from ours, and what else could we do
+      to make it stand up?</p>
       <p class="qcard__why"><b><span class="zh">會改變什麼：</span><span class="en">What it changes:</span></b>
-        <span class="zh">V6 往一台大的還是很多台小的走，以及規格取捨從哪一端開始砍。這個決定現在就要下。</span>
-        <span class="en">Whether V6 goes towards one large machine or many small ones, and which end of the specification we cut. We have to decide now.</span></p>
+        <span class="zh">10/21 之前還來得及補的量測，以及 V6 往一台大的還是很多台小的走。</span>
+        <span class="en">Which measurements we can still add before 21 October, and whether V6 goes towards one large machine or many small ones.</span></p>
     </article>
 
     <article class="qcard" id="q6">
@@ -1317,23 +1328,14 @@
 
   <!-- ═══════════════════════════════════════════════════════ 8  VISIT ═════ -->
   <section class="sec sec--visit" id="visit">
-    <h2><span class="sec__no">8</span><span class="zh">想到東海拜訪您</span><span class="en">We would like to visit you at Tunghai</span></h2>
+    <h2><span class="sec__no">8</span><span class="zh">學生和老師想到東海拜訪您</span><span class="en">Our students and instructors would like to visit you at Tunghai</span></h2>
 
     <p class="lede">
-      <span class="zh">最後再說一次：謝謝校長 6 月 18 日來 GEMS 指導我們。那次之後這 67 天做出來的東西，
-      這頁都在上面了。</span>
-      <span class="en">Once more, thank you for coming to GEMS on 18 June to advise us. Everything the past 67 days
-      produced is on this page.</span>
+      <span class="zh">我們希望帶 4 到 6 位學生、2 到 3 位老師一起到東海大學您的實驗室，參訪並向您請教。
+      不知道您什麼時候方便？</span>
+      <span class="en">We would like to bring four to six students and two or three instructors to your laboratory at
+      Tunghai, to see it and to ask these questions in person. When might suit you?</span>
     </p>
-
-    <p class="zh">我們希望有機會帶 4 到 6 位學生、2 到 3 位老師一起到東海大學您的實驗室，參訪並向您請教。
-    本來想等反應器組完、ACCD 實驗做完再來，但那邊還有未知數，可能再延。與其帶著做完的東西來報告，
-    不如在動手之前先請教，這樣您的意見還來得及改變我們接下來做什麼。不知道您什麼時候方便？可以在 LINE 群組裡討論。</p>
-    <p class="en">We would like to bring four to six students and two or three instructors to your laboratory at
-    Tunghai, to see it and to ask these questions in person. We had planned to come once the reactor was assembled and
-    the ACC deaminase run was done, but there are unknowns there and it may slip. Rather than arrive with finished
-    work, we would rather consult you while your view can still change what we do next. When might suit you? We can
-    settle it in the LINE group.</p>
 
     <dl class="visit__dl">
       <dt><span class="zh">時間</span><span class="en">When</span></dt>

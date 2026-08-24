@@ -478,25 +478,32 @@ dl.spec dd { margin: 0; font-family: var(--font-mono); font-size: .9em; color: v
 .crit__more p { margin: .5rem 0 0; font-size: var(--text-xs); line-height: 1.65; color: var(--gray-600); }
 
 /* ====================================================== opening spread =====
-   Four photographs between the hero and the report: the product as it exists
-   today, the two ends of who would use ours, and ours on the bench.
-   Not numbered; the evidence figures keep their numbering.
+   Four photographs on a 2x2, large enough to look at rather than glance past:
+   two companies on the top row, the field and the bench underneath.
+   Deliberately unnumbered; the evidence figures keep their numbering.
    ========================================================================== */
 .spread { background: var(--leaf-50); border-bottom: 1px solid var(--leaf-200); }
-.spread__inner { max-width: var(--max); margin: 0 auto; padding: var(--sp-6) var(--sp-5); }
+.spread__inner { max-width: 1080px; margin: 0 auto; padding: var(--sp-7) var(--sp-5); }
 @media (min-width: 640px) { .spread__inner { padding-left: var(--sp-6); padding-right: var(--sp-6); } }
-.spread__pair { display: grid; gap: var(--sp-5); grid-template-columns: repeat(4, 1fr); }
-@media (max-width: 900px) { .spread__pair { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 520px) { .spread__pair { grid-template-columns: 1fr; gap: var(--sp-4); } }
+.spread__kicker {
+  margin: 0 0 var(--sp-5);
+  font-size: var(--text-xs); font-weight: 700; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--leaf-700);
+}
+.spread__kicker .zh { letter-spacing: .04em; }
+.spread__grid { display: grid; gap: var(--sp-5) var(--sp-5); grid-template-columns: 1fr 1fr; }
+@media (max-width: 640px) { .spread__grid { grid-template-columns: 1fr; gap: var(--sp-5); } }
 .spread figure { margin: 0; }
 .spread img {
-  display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
-  border-radius: var(--radius-sm); background: var(--gray-200);
+  display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover;
+  border-radius: var(--radius); background: var(--gray-200);
+  box-shadow: 0 1px 2px rgb(20 64 43 / .10), 0 8px 20px -12px rgb(20 64 43 / .35);
 }
-.spread figure:nth-child(2) img { object-position: 42% 50%; }
+.spread figure:nth-child(3) img { object-position: 44% 46%; }
+.spread figure:nth-child(4) img { object-position: 50% 62%; }
 .spread figcaption {
-  margin-top: var(--sp-2);
-  font-size: var(--text-xs); line-height: 1.65; color: var(--gray-600);
+  margin-top: var(--sp-3);
+  font-size: var(--text-sm); line-height: 1.7; color: var(--gray-700);
 }
 .spread figcaption a { color: var(--leaf-700); }
-@media (max-width: 560px) { .spread__inner { padding: var(--sp-5) var(--sp-4); } }
+@media (max-width: 560px) { .spread__inner { padding: var(--sp-6) var(--sp-4); } }
