@@ -43,8 +43,13 @@
     </h1>
 
     <p class="hero2__sub">
-      <span class="zh">一台會回應逆境的光遺傳學生物反應器，為植物做精準保護。</span>
-      <span class="en">A stress-responsive optogenetic bioreactor for precision plant protection.</span>
+      <span class="zh">學界越來越重視用 bioprotectant 幫作物撐過逆境，但這類東西的生產、儲存、運輸成本都很高，
+      高到真正需要的人買不起。我們做一台反應器，讓個人農戶、區域耕作者，到集中生產的垂直農場，
+      都可以自己生產自己要用的 bioprotectant。</span>
+      <span class="en">Bioprotectants are getting serious attention as a way to carry crops through stress, and they
+      are expensive to make, store and ship. Expensive enough that the people who need them cannot buy them. We are
+      building a reactor that lets a single farm, a regional grower, or a vertical farm producing at scale make its
+      own.</span>
     </p>
 
     <ul class="chain">
@@ -76,7 +81,7 @@
         <li><a href="#versions"><span class="zh">更新反應器進度：從您看到的 V2 到現在的 V5</span><span class="en">Update the reactor: from the V2 you saw to today&rsquo;s V5</span></a></li>
         <li><a href="#instruments"><span class="zh">分享反應器的實驗數據，包含 434 小時生長曲線與 TiO₂ 校正</span><span class="en">Share the reactor data: a 434-hour growth curve and the TiO&#8322; calibration</span></a></li>
         <li><a href="#milestones"><span class="zh">分享專案進度，以及 10/21 wiki freeze、11/13 巴黎比賽之前的目標</span><span class="en">Share where the project stands and the targets before the 21 Oct wiki freeze and Paris on 13 Nov</span></a></li>
-        <li><a href="#questions"><span class="zh">請教您七個問題</span><span class="en">Ask you seven questions</span></a></li>
+        <li><a href="#questions"><span class="zh">請教您六個問題</span><span class="en">Ask you six questions</span></a></li>
         <li><a href="#visit"><span class="zh">請問您什麼時候方便，讓幾位學生和老師一起到東海大學您的實驗室參訪交流</span><span class="en">Ask when you might be free for a few of us to visit your laboratory at Tunghai</span></a></li>
       </ol>
 
@@ -140,8 +145,8 @@
         <span class="stat__n">DO<small> · pH</small></span>
         <span class="stat__l zh">兩支感測器測完了，都還沒能裝上去</span>
         <span class="stat__l en">Both probes tested, neither deployable yet</span>
-        <span class="stat__m zh">這是<a href="#q3">問題 3</a></span>
-        <span class="stat__m en">That is <a href="#q3">Question 3</a></span>
+        <span class="stat__m zh">這是<a href="#q2">問題 2</a></span>
+        <span class="stat__m en">That is <a href="#q2">Question 2</a></span>
       </a>
     </div>
 
@@ -220,7 +225,7 @@
           <tr>
             <td class="q"><span class="zh">基因線路</span><span class="en">Genetic circuit</span></td>
             <td><span class="zh">組成型啟動子持續表現兩個蛋白，過量生產造成菌自身的內部逆境；綠光還是藍光；生長曲線餵給硬體。</span><span class="en">A constitutive promoter running both proteins puts the cell under internal stress; green or blue; the growth curve feeds the hardware.</span></td>
-            <td><span class="zh">生長曲線已是硬體的即時輸入。內部逆境正是我們想用 CRISPRi 抑制 <i>dnaA</i> 的原因（<a href="#q5">問題 5</a>）。</span><span class="en">The growth curve is now a live hardware input. The internal-stress point is why we are considering CRISPRi on <i>dnaA</i> (<a href="#q5">Question 5</a>).</span></td>
+            <td><span class="zh">生長曲線已是硬體的即時輸入。內部逆境正是我們想用 CRISPRi 抑制 <i>dnaA</i> 的原因（<a href="#q4">問題 4</a>）。</span><span class="en">The growth curve is now a live hardware input. The internal-stress point is why we are considering CRISPRi on <i>dnaA</i> (<a href="#q4">Question 4</a>).</span></td>
             <td><span class="chip chip--wip"><span class="zh">進行中</span><span class="en">In progress</span></span></td>
           </tr>
           <tr class="is-open">
@@ -269,11 +274,9 @@
             <span class="v__no">V1–V2</span>
             <span class="v__when zh">6/18 您看到的</span><span class="v__when en">What you saw</span>
             <ul>
-              <li><span class="zh">中空纖維膜、儲槽、蠕動泵</span><span class="en">Hollow fibre, reservoir, peristaltic pump</span></li>
-              <li><span class="zh">Luer 閥取樣</span><span class="en">Luer valve sampler</span></li>
-              <li><span class="zh">磁石攪拌</span><span class="en">Magnetic stir</span></li>
+              <li class="v--ok"><span class="zh">中空纖維膜、儲槽、蠕動泵</span><span class="en">Hollow fibre, reservoir, peristaltic pump</span></li>
+              <li class="v--ok"><span class="zh">Luer 閥取樣、磁石攪拌</span><span class="en">Luer valve sampler, magnetic stir</span></li>
             </ul>
-            <ul class="gain"><li><span class="zh">取樣不污染、攪拌防沉澱</span><span class="en">Sampling without contamination; stirring against settling</span></li></ul>
           </li>
 
           <li class="v v--divider"><span><span class="zh">6/18 拜訪</span><span class="en">18 Jun visit</span></span></li>
@@ -281,16 +284,16 @@
           <li class="v v--new">
             <span class="v__no">V3</span>
             <span class="v__when zh">6/18 之後</span><span class="v__when en">After 18 Jun</span>
-            <ul><li><span class="zh">線上分光光度計</span><span class="en">In-line photometer</span></li></ul>
-            <ul class="gain"><li><span class="zh">連續 7 天以上不中斷取樣</span><span class="en">Nonstop sampling, 7 days and beyond</span></li></ul>
+            <ul><li class="v--ok"><span class="zh">線上分光光度計</span><span class="en">In-line photometer</span></li></ul>
+            <ul class="gain"><li><span class="zh">連續 7 天以上不中斷取樣</span><span class="en">Nonstop sampling beyond 7 days</span></li></ul>
           </li>
 
           <li class="v v--new">
             <span class="v__no">V4</span>
             <span class="v__when zh">6/18 之後</span><span class="v__when en">After 18 Jun</span>
             <ul>
-              <li><span class="zh">壓力感測器 + 夾管閥</span><span class="en">Pressure sensor + pinch valve</span></li>
-              <li class="v__drop"><span class="zh">磁力泵：試過，最大流量 &lt; 200 mL/min，不夠用</span><span class="en">Magnetic pump: tried, tops out under 200 mL/min, not enough</span></li>
+              <li class="v--ok"><span class="zh">壓力感測器 + 夾管閥</span><span class="en">Pressure sensor + pinch valve</span></li>
+              <li class="v--no"><span class="zh">磁力泵，最大流量 &lt; 200 mL/min</span><span class="en">Magnetic pump, tops out under 200 mL/min</span></li>
             </ul>
             <ul class="gain"><li><span class="zh">量測並控制跨膜壓力</span><span class="en">Measure and control TMP</span></li></ul>
           </li>
@@ -299,47 +302,50 @@
             <span class="v__no">V5</span>
             <span class="v__when zh">目前</span><span class="v__when en">Now</span>
             <ul>
-              <li><span class="zh">整合所有感測器的控制面板</span><span class="en">Control panel, all sensors</span></li>
-              <li class="v__drop"><span class="zh">溶氧與 pH 感測器：買了、測了，還沒辦法部署</span><span class="en">DO and pH probes: bought and tested, not deployable yet</span></li>
+              <li class="v--ok"><span class="zh">整合三個感測器的控制面板</span><span class="en">One control panel, three sensors</span></li>
+              <li class="v--no"><span class="zh">溶氧與 pH 感測器，測了但裝不上去</span><span class="en">DO and pH probes, tested but not deployable</span></li>
             </ul>
-            <ul class="gain"><li><span class="zh">壓力、流速、菌體濃度三條線同一個面板</span><span class="en">Pressure, flow and cell density on one panel</span></li></ul>
+            <ul class="gain"><li><span class="zh">壓力、流速、菌體濃度同一個畫面</span><span class="en">Pressure, flow and cell density on one screen</span></li></ul>
           </li>
 
           <li class="v v--build">
             <span class="v__no">V6</span>
-            <span class="v__when zh">組裝中</span><span class="v__when en">In assembly</span>
+            <span class="v__when zh">正在組裝</span><span class="v__when en">Being assembled</span>
             <ul>
-              <li><span class="zh">改孔徑讓感測器穿過瓶蓋</span><span class="en">Resized cap holes for the sensors</span></li>
-              <li class="v__drop"><span class="zh">電腦水冷腔體：跟著磁力泵一起擱置</span><span class="en">PC cooling chamber: shelved with the magnetic pump</span></li>
+              <li class="v--ok"><span class="zh">改孔徑讓感測器穿過瓶蓋</span><span class="en">Resized cap holes for the sensors</span></li>
+              <li class="v--no"><span class="zh">電腦水冷腔體，跟著磁力泵一起擱置</span><span class="en">PC cooling chamber, shelved with the pump</span></li>
             </ul>
-            <ul class="gain"><li><span class="zh">商業化單元的機構基礎</span><span class="en">The chassis for the commercial unit</span></li></ul>
+            <ul class="gain"><li><span class="zh">第一台交得出去的機器</span><span class="en">The first unit we could hand over</span></li></ul>
           </li>
 
           <li class="v v--theory">
             <span class="v__no">V7</span>
-            <span class="v__when zh">理論</span><span class="v__when en">Theoretical</span>
+            <span class="v__when zh">還在紙上</span><span class="v__when en">Still on paper</span>
             <ul>
-              <li><span class="zh">生物防護四層（見 <a href="#containment">4.3</a>）</span><span class="en">Four containment layers (see <a href="#containment">4.3</a>)</span></li>
-              <li><span class="zh">零件收進機箱、補充包插槽</span><span class="en">Parts inside one box, refill slot</span></li>
-              <li><span class="zh">自清潔</span><span class="en">Self-cleaning</span></li>
+              <li><span class="zh">生物防護四層（<a href="#containment">4.3</a>）</span><span class="en">Four containment layers (<a href="#containment">4.3</a>)</span></li>
+              <li><span class="zh">零件收進機箱、補充包插槽、自清潔</span><span class="en">Parts in one box, refill slot, self-cleaning</span></li>
             </ul>
             <ul class="gain"><li><span class="zh">農民可自行操作的目標形態</span><span class="en">The form a farmer could run</span></li></ul>
           </li>
 
         </ol>
       </div>
-      <p class="vrail__hint"><span class="zh">← 橫向捲動 →</span><span class="en">&larr; scroll sideways &rarr;</span></p>
+      <p class="vrail__hint">
+        <span class="zh">← 橫向捲動 →　✓ 做出來了　✗ 試過，決定不做</span>
+        <span class="en">&larr; scroll sideways &rarr;　✓ built　✗ tried, decided against</span>
+      </p>
     </div>
 
-    <p class="note">
-      <span class="zh">兩個劃掉的是我們試過然後放棄的。磁力泵最大流量不到 200 mL/min，而
-      <a href="#i2">圖 5</a> 量出來的建議操作點是 263 mL/min，泵根本推不到那裡，所以退回蠕動泵；
-      V6 的電腦水冷腔體本來是配著磁力泵設計的，就一起擱置了。</span>
-      <span class="en">The two struck-through lines are things we tried and gave up on. The magnetic pump tops out
-      below 200 mL/min while the operating point measured in <a href="#i2">Figure 5</a> is 263 mL/min, so it cannot
-      reach where the module wants to run and we went back to the peristaltic pump. V6&rsquo;s PC cooling chamber was
-      designed around that pump, so it was shelved with it.</span>
-    </p>
+    <figure class="fig">
+      <img src="assets/img/v6-whiteboard.jpg" alt="白板上的 V6 商業化反應器設計草圖：電源分配、零件清單、機箱配置。" />
+      <figcaption><b><span class="zh">圖 2.</span><span class="en">Figure 2.</span></b>
+        <span class="zh">2026-08-23，正在組裝的 V6 商業化單元。白板上是電源樹（110 VAC → 12 V → 5 V）、
+        零件清單（打勾的已經到手）、以及機箱配置：防漏底板、7 吋螢幕、洞洞板、可開的門。</span>
+        <span class="en">23 August 2026, the V6 commercial unit now being assembled. The whiteboard carries the power
+        tree (110 VAC &rarr; 12 V &rarr; 5 V), the parts list with ticks against what has arrived, and the enclosure
+        layout: a drip tray, a 7-inch screen, a pegboard back and a door.</span>
+      </figcaption>
+    </figure>
 
     <h3 id="instruments"><span class="zh">3.1　五件工作的證據</span><span class="en">3.1　Evidence for the five</span></h3>
 
@@ -354,7 +360,7 @@
         <h3 class="instr__title"><span class="zh">22 °C、434 小時生長曲線</span><span class="en">434 hours at 22 °C</span></h3>
         <span class="chip chip--done">Expand testing time</span>
       </header>
-      <details class="instr__more" open>
+      <details class="instr__more">
         <summary><span class="zh"><b>結果：</b>18 天不中斷。菌會長，但比 37 °C 慢 28 倍；平台落在 OD 1.454，和 37 °C 五小時就到的平台幾乎一樣高。</span><span class="en"><b>Result:</b> eighteen unbroken days. It grows, 28&times; slower than at 37 °C, and plateaus at OD 1.454, within a few percent of the ceiling a 37 °C flask reaches in five hours.</span></summary>
         <div class="instr__body">
 
@@ -379,7 +385,7 @@
 
         <figure class="fig fig--plot">
           <div data-fig="growth"></div>
-          <figcaption><b><span class="zh">圖 2.</span><span class="en">Figure 2.</span></b>
+          <figcaption><b><span class="zh">圖 3.</span><span class="en">Figure 3.</span></b>
             <span class="zh"><i>B. subtilis</i> 168 於 22 °C 的 434 小時連續曲線，自製線上光度計，每 10 分鐘一筆，n = 2 671。
             粉色區為光學通道故障期。底部紅色刻度是通道讀到 0、讀值被凍住的那 49 筆。</span>
             <span class="en">434 hours of <i>B. subtilis</i> 168 at 22 °C on our own in-line photometer, one reading
@@ -389,11 +395,11 @@
           <p class="srcline">
             <span class="zh"><b>擬合窗口</b>（依滑動 12 小時視窗的瞬時 μ 穩定與否而定）：7–40 h，μ 0.0329 h⁻¹，R² 0.891，n = 204；
             160–205 h，μ 0.0165 h⁻¹，R² 0.986，n = 270；平台 210–300 h，OD 1.454（中位數 1.470）；
-            衰減 300–434 h，μ −0.00265 h⁻¹，R² 0.960。120–160 h 那段下降 0.21 不在任何擬合裡，是 <a href="#q2">問題 2</a>。</span>
+            衰減 300–434 h，μ −0.00265 h⁻¹，R² 0.960。120–160 h 那段下降 0.21 不在任何擬合裡，是 <a href="#q1">問題 1</a>。</span>
             <span class="en"><b>Fit windows</b>, chosen where a sliding 12-hour instantaneous μ is steady:
             7&ndash;40 h, μ 0.0329 h⁻¹, R² 0.891, n = 204; 160&ndash;205 h, μ 0.0165 h⁻¹, R² 0.986, n = 270; plateau
             210&ndash;300 h, OD 1.454 (median 1.470); decline 300&ndash;434 h, μ &minus;0.00265 h⁻¹, R² 0.960. The 0.21
-            OD drop over 120&ndash;160 h is in no fit and is <a href="#q2">Question 2</a>.</span>
+            OD drop over 120&ndash;160 h is in no fit and is <a href="#q1">Question 1</a>.</span>
           </p>
         </figure>
 
@@ -413,7 +419,7 @@
 
         <figure class="fig fig--plot">
           <div data-fig="trials"></div>
-          <figcaption><b><span class="zh">圖 3.</span><span class="en">Figure 3.</span></b>
+          <figcaption><b><span class="zh">圖 4.</span><span class="en">Figure 4.</span></b>
             <span class="zh">六次 <i>B. subtilis</i> 168 培養的比生長速率與平台值。全部是批次、定容、無 fed-batch。
             μ 由 ln OD 對時間的最小平方擬合取得，擬合窗口標在點上。</span>
             <span class="en">Specific growth rate and plateau for six <i>B. subtilis</i> 168 cultures, all batch,
@@ -446,15 +452,15 @@
           the instrument and threw the optical axis off. So the scatter is the instrument, not the culture. The photometer having logged that window as untrustworthy is how we could go back and match a
           cause to it.</p>
           <p class="zh">另外兩件：參考通道全程從 26.9 漂到 21.4 lux，約 20 %，共模的部分會在比值裡抵消，
-          但沒量過抵消得多乾淨。120–160 h 的下降完全沒有歸因，寫成了 <a href="#q2">問題 2</a>。</p>
+          但沒量過抵消得多乾淨。120–160 h 的下降完全沒有歸因，寫成了 <a href="#q1">問題 1</a>。</p>
           <p class="en">Two more: the reference channel drifts from 26.9 to 21.4 lux over the run, about 20 %, and the
           common-mode part cancels in the ratio though we have never measured how cleanly. The 120&ndash;160 h drop has
-          no attribution at all, which is <a href="#q2">Question 2</a>.</p>
+          no attribution at all, which is <a href="#q1">Question 1</a>.</p>
         </div>
 
         <figure class="fig">
           <img src="assets/img/incubator-overview.jpg" alt="培養箱內的反應器與光度計配置，旁邊擺著測試用的植物。" />
-          <figcaption><b><span class="zh">圖 4.</span><span class="en">Figure 4.</span></b>
+          <figcaption><b><span class="zh">圖 5.</span><span class="en">Figure 5.</span></b>
             <span class="zh">2026-08-03，長時間試驗的配置：反應器、線上光度計、植物同在一個培養箱。</span>
             <span class="en">3 August 2026: reactor, in-line photometer and plants in one incubator.</span></figcaption>
         </figure>
@@ -469,7 +475,7 @@
         <h3 class="instr__title"><span class="zh">200 cm² 模組與它的水力特性</span><span class="en">The 200 cm² module, characterised</span></h3>
         <span class="chip chip--done">Record example tests</span>
       </header>
-      <details class="instr__more" open>
+      <details class="instr__more">
         <summary><span class="zh"><b>結果：</b>8/16 量了壓降對流量。扣掉管路本身之後，模組的行為和 11 根 1 mm 管子並聯的理論值差 0.90–0.96 倍，沒有纖維阻塞。建議操作點 263 mL/min。</span><span class="en"><b>Result:</b> pressure drop against flow, 16 August. With the rig&rsquo;s own contribution subtracted, the module sits at 0.90&ndash;0.96 of the eleven-parallel-tube prediction and no fibre is blocked. Recommended operating point 263 mL/min.</span></summary>
         <div class="instr__body">
 
@@ -509,7 +515,7 @@
 
         <figure class="fig fig--plot">
           <div data-fig="hydro"></div>
-          <figcaption><b><span class="zh">圖 5.</span><span class="en">Figure 5.</span></b>
+          <figcaption><b><span class="zh">圖 6.</span><span class="en">Figure 6.</span></b>
             <span class="zh">200 cm² 模組的水力特性，2026-08-16。三個檢視：兩組原始壓降與扣除、扣掉管路後與理論值的比較、
             以及可以操作的流量範圍。粉色區是不建議操作的區間。</span>
             <span class="en">Hydraulic characterisation of the 200 cm² module, 16 August 2026. Three views: the two
@@ -584,7 +590,7 @@
         <span class="chip chip--done">Make UI</span>
       </header>
       <details class="instr__more">
-        <summary><span class="zh"><b>結果：</b>7/12 起可即時量測跨膜壓力。8/16 兩支一起量完整條 ΔP–Q 曲線（<a href="#i2">圖 5</a>），而且互相驗證。壓力訊號上疊著泵脈動，流速計型號還沒登錄。</span><span class="en"><b>Result:</b> live TMP since 12 July; on 16 August the two together produced the whole ΔP&ndash;Q curve (<a href="#i2">Figure 5</a>) and cross-validated each other. The pressure trace carries pump pulsation and the flow meter&rsquo;s model number is unrecorded.</span></summary>
+        <summary><span class="zh"><b>結果：</b>7/12 起可即時量測跨膜壓力。8/16 兩支一起量完整條 ΔP–Q 曲線（<a href="#i2">圖 6</a>），而且互相驗證。壓力訊號上疊著泵脈動，流速計型號還沒登錄。</span><span class="en"><b>Result:</b> live TMP since 12 July; on 16 August the two together produced the whole ΔP&ndash;Q curve (<a href="#i2">Figure 6</a>) and cross-validated each other. The pressure trace carries pump pulsation and the flow meter&rsquo;s model number is unrecorded.</span></summary>
         <div class="instr__body">
 
         <div class="field">
@@ -618,7 +624,7 @@
 
         <figure class="fig">
           <img src="assets/img/pressure-testing.jpg" alt="學生與指導老師測試反應器上的壓力感測器。" />
-          <figcaption><b><span class="zh">圖 6.</span><span class="en">Figure 6.</span></b>
+          <figcaption><b><span class="zh">圖 7.</span><span class="en">Figure 7.</span></b>
             <span class="zh">2026-08-13，壓力感測器在反應器上測試。</span>
             <span class="en">13 August 2026, the pressure sensor under test on the reactor.</span></figcaption>
         </figure>
@@ -649,7 +655,7 @@
         <h3 class="instr__title"><span class="zh">線上分光光度計與 TiO₂ 校正</span><span class="en">In-line photometer, calibrated with TiO₂</span></h3>
         <span class="chip chip--done">Record example tests</span>
       </header>
-      <details class="instr__more" open>
+      <details class="instr__more">
         <summary><span class="zh"><b>結果：</b>8/23 做完 45 點濃度序列。OD ≤ 1.2 這一段對 BioDrop 的斜率 1.018、R² 0.995、殘差 SD 0.024。OD > 1.2 兩台都不該相信。</span><span class="en"><b>Result:</b> a 45-point series on 23 August. Below OD 1.2 the slope against BioDrop is 1.018, R² 0.995, residual SD 0.024. Above OD 1.2 neither instrument should be trusted.</span></summary>
         <div class="instr__body">
 
@@ -702,10 +708,10 @@
 
         <div class="field">
           <b><span class="zh">這條曲線可以支撐什麼</span><span class="en">What the curve supports</span></b>
-          <p class="zh">OD 1.2 以下兩台在同一條 1:1 線上，殘差 SD 0.024 OD，和 <a href="#i1">圖 2</a>
+          <p class="zh">OD 1.2 以下兩台在同一條 1:1 線上，殘差 SD 0.024 OD，和 <a href="#i1">圖 3</a>
           除故障段以外的散布同一個量級（0.019–0.030）。這一段就是培養實際會走的範圍。</p>
           <p class="en">Below OD 1.2 the two sit on the same 1:1 line, residual SD 0.024 OD, the same size as the
-          scatter in <a href="#i1">Figure 2</a> outside its fault window (0.019&ndash;0.030). That band is where
+          scatter in <a href="#i1">Figure 3</a> outside its fault window (0.019&ndash;0.030). That band is where
           cultures live.</p>
           <p class="zh">30 mg 以上兩條線分開，我們讀得比 BioDrop 低 0.198 ± 0.133。以加入的質量當獨立軸看，
           兩台是用不同的方式壞掉的：我們這台系統性壓縮，讀值仍然平滑單調但相對 2–30 mg 擬合線平均低 0.230，
@@ -747,11 +753,11 @@
         <div class="field">
           <b><span class="zh">已經產生的用途</span><span class="en">What it has been good for</span></b>
           <p class="zh">434 小時那次紀錄裡，參考通道在第 240 到 300 小時掉到 9.3 lux，還有數十筆讀到 0，
-          它因此標出了自己這一段不可信（<a href="#i1">圖 2</a>）。會回報自己健康狀況的儀器，
+          它因此標出了自己這一段不可信（<a href="#i1">圖 3</a>）。會回報自己健康狀況的儀器，
           比只給漂亮曲線的儀器有用。</p>
           <p class="en">In the 434-hour log the reference channel fell to 9.3 lux between hours 240 and 300, with dozens
           of rows reading zero, so the instrument flagged its own readings there as untrustworthy
-          (<a href="#i1">Figure 2</a>). One that reports its own health is more use than one that only produces a clean
+          (<a href="#i1">Figure 3</a>). One that reports its own health is more use than one that only produces a clean
           curve.</p>
         </div>
       </div>
@@ -810,13 +816,13 @@
           瓶蓋鑽孔加 O-ring 壓緊、探頭先泡 70 % 酒精或次氯酸再插入、或改成外循環流通池讓探頭完全不進瓶。
           V6 把瓶蓋孔徑改大是為了讓探頭穿過去，但那只解決機械問題，沒解決無菌問題。</p>
           <p class="zh">因為兩支卡在同一件事上，我們才會想問校長 pH 能不能在這個場景下取代溶氧
-          （<a href="#q3">問題 3</a>）。能的話就只要解決一支。</p>
+          （<a href="#q2">問題 2</a>）。能的話就只要解決一支。</p>
           <p class="en">Neither probe body survives autoclaving and the serum bottle closes with a rubber septum. Three
           routes so far, none tested: drill the cap and seal with an O-ring; soak the probe in 70 % ethanol or
           hypochlorite before inserting; or move to a flow cell on the loop so the probe never enters the vessel.
           V6&rsquo;s enlarged cap holes let the probes through, which solves the mechanics and not the sterility.</p>
           <p class="en">Because both are stuck on the same thing, we want to ask whether pH can stand in for dissolved
-          oxygen here (<a href="#q3">Question 3</a>). If it can, there is only one probe to solve.</p>
+          oxygen here (<a href="#q2">Question 2</a>). If it can, there is only one probe to solve.</p>
         </div>
 
         <div class="field field--caveat">
@@ -853,8 +859,8 @@
 
     <h3><span class="zh">4.0　量到的：200 cm² 模組的操作點</span><span class="en">4.0　Measured: the operating point of the 200 cm² module</span></h3>
 
-    <p class="zh">全部來自 <a href="#i2">圖 5</a>，22 °C 純水，八個流量點。</p>
-    <p class="en">All from <a href="#i2">Figure 5</a>: pure water at 22 °C, eight flow points.</p>
+    <p class="zh">全部來自 <a href="#i2">圖 6</a>，22 °C 純水，八個流量點。</p>
+    <p class="en">All from <a href="#i2">Figure 6</a>: pure water at 22 °C, eight flow points.</p>
 
     <div class="kn">
       <div><b>263 mL/min</b><span class="zh">建議交叉流量，上限 300</span><span class="en">Recommended cross-flow, ceiling 300</span></div>
@@ -875,66 +881,51 @@
       device and the experiments ahead.</span>
     </p>
 
-    <p class="zh">六個裡只有一個沒有餘裕：軸向非均勻度 28 %，也就是進口端的 TMP 比出口端高。
-    20 % 以下算均勻，超過 50 % 出口端可能已經沒有淨過濾、臨界通量就測不準。選 263 mL/min 是為了把它壓在 28 %；
-    要再低只能降流量，但降流量同時降剪切率。這是目前最實在的一個取捨。</p>
-    <p class="en">One of the six has no margin: 28 % axial non-uniformity, meaning TMP is higher at the inlet than at
-    the outlet. Below 20 % counts as uniform; above 50 % the outlet may have no net filtration at all and a
-    critical-flux determination would be invalid. We picked 263 mL/min to hold it at 28 %. Going lower means lowering
+    <p class="zh">六個裡只有一個沒有餘裕：軸向非均勻度 28 %（20 % 以下才算均勻），也就是進口端的 TMP 比出口端高。
+    選 263 mL/min 就是為了把它壓在 28 %；要再低只能降流量，但降流量同時降剪切率。這是目前最實在的一個取捨。</p>
+    <p class="en">One of the six has no margin: 28 % axial non-uniformity, where below 20 % counts as uniform, meaning
+    TMP is higher at the inlet than the outlet. We picked 263 mL/min to hold it at 28 %; going lower means lowering
     flow, which lowers shear with it. That is the most concrete trade-off we have.</p>
 
     <p class="note">
-      <span class="zh">積垢判準也定了：看 R = ΔP<sub>net</sub>/Q 而不是 ΔP（ΔP 上升有可能只是流量上升），
-      R 超過基準線 2 倍就停機清洗；通量一律換算到 25 °C 再比，不然 3 °C 的室溫飄移會被誤讀成積垢。</span>
-      <span class="en">The fouling criterion is settled too: watch R = ΔP<sub>net</sub>/Q rather than ΔP, since a rise
-      in ΔP may only be a rise in flow, and clean when R passes twice baseline. Flux is normalised to 25 °C before any
-      comparison, or a 3 °C drift in room temperature reads as fouling.</span>
+      <span class="zh">積垢判準也定了：看 R = ΔP<sub>net</sub>/Q 而不是 ΔP，超過基準線 2 倍就停機清洗；
+      通量一律換算到 25 °C 再比，不然室溫飄個 3 °C 會被誤讀成積垢。</span>
+      <span class="en">The fouling criterion is settled too: watch R = ΔP<sub>net</sub>/Q rather than ΔP and clean when
+      it passes twice baseline. Flux is normalised to 25 °C first, or a 3 °C drift in room temperature reads as
+      fouling.</span>
     </p>
 
     <h3><span class="zh">4.1　算出來的：操作點與放大</span><span class="en">4.1　Computed: operating point and scale</span></h3>
 
     <p class="lede">
-      <span class="zh">下面來自我們自己寫的
+      <span class="zh">下面來自學生自己寫的
       <a href="https://timmy97-tw.github.io/releaf-invariant-explorer/">Bioreactor Invariant Explorer</a>，
-      幾何固定為<b>舊的</b> 150 cm² 模組（N = 8、dᵢ = 1.0 mm、L = 595.7 mm）。新模組是 11 根纖維，
-      所以 4.0 的實測值和下面這組不能直接對照，等 permeate 流量 Q<sub>p</sub> 定下來會整組重算。</span>
-      <span class="en">These come from our own
-      <a href="https://timmy97-tw.github.io/releaf-invariant-explorer/">Bioreactor Invariant Explorer</a>, with geometry
-      fixed to the <b>old</b> 150 cm² module (N = 8, d&#7522; = 1.0 mm, L = 595.7 mm). The new module has 11 fibres, so
-      4.0&rsquo;s measured values and these computed ones are not directly comparable. The set gets recomputed once the
-      permeate flow Q<sub>p</sub> is fixed.</span>
-    </p>
-
-    <p class="note">
-      <span class="zh">操作點：交叉流 250 mL/min、permeate 2.5 mL/min、菌密度 2×10⁹/mL、工作體積 400 mL、
-      比耗氧率 8 mmol/g/h、目標溶氧 30 % sat、可提供 k<sub>L</sub>a 60 h⁻¹、C_w/C_b = 4、太陽能板 45 W。</span>
-      <span class="en">Operating point: cross-flow 250 mL/min, permeate 2.5 mL/min, 2&times;10&#8313; cells/mL,
-      400 mL working volume, q<sub>O₂</sub> 8 mmol/g/h, DO target 30 % sat, deliverable k<sub>L</sub>a 60 h⁻¹,
-      C_w/C_b = 4, 45 W panel.</span>
+      幾何固定為<b>舊的</b> 150 cm² 模組。新模組是 11 根纖維不是 8 根，所以這組和 4.0 的實測值不能直接對照，
+      等 permeate 流量 Q<sub>p</sub> 定下來會整組重算。</span>
+      <span class="en">These come from the
+      <a href="https://timmy97-tw.github.io/releaf-invariant-explorer/">Bioreactor Invariant Explorer</a> the students
+      wrote, with geometry fixed to the <b>old</b> 150 cm² module. The new one has 11 fibres rather than 8, so these
+      are not directly comparable with the measured values in 4.0, and the set gets recomputed once the permeate flow
+      Q<sub>p</sub> is fixed.</span>
     </p>
 
     <div class="kn">
-      <div><b>663</b><span class="zh">Re，層流帶（&lt; 2100）</span><span class="en">Re, laminar (&lt; 2100)</span></div>
-      <div><b>5 305 s⁻¹</b><span class="zh">壁面剪切率，落在廠商校準的 2000–6000 帶內</span><span class="en">Wall shear, inside the vendor-calibrated 2000&ndash;6000 band</span></div>
-      <div><b>26 %</b><span class="zh">J / J<sub>crit</sub>：10.0 對 37.8 LMH，餘裕 74 %</span><span class="en">J / J<sub>crit</sub>: 10.0 vs 37.8 LMH, 74 % margin</span></div>
-      <div><b>18 kPa</b><span class="zh">跨膜壓力估計值，模組額定 250 kPa</span><span class="en">Estimated TMP against a 250 kPa rating</span></div>
-      <div><b>76 %</b><span class="zh">所需 k<sub>L</sub>a 45.7 對可提供 60 h⁻¹</span><span class="en">k<sub>L</sub>a required 45.7 against 60 h⁻¹ deliverable</span></div>
-      <div class="warn"><b>4.5 pL</b><span class="zh">CSPR / cell / day，低於灌流常用的 20–150 pL 區間</span><span class="en">CSPR per cell per day, below the 20&ndash;150 pL band used in perfusion practice</span></div>
+      <div><b>663</b><span class="zh">Re，層流帶</span><span class="en">Re, laminar</span></div>
+      <div><b>26 %</b><span class="zh">J / J<sub>crit</sub>，餘裕 74 %</span><span class="en">J / J<sub>crit</sub>, 74 % margin</span></div>
+      <div><b>76 %</b><span class="zh">所需 k<sub>L</sub>a 45.7 對可提供 60 h⁻¹</span><span class="en">k<sub>L</sub>a 45.7 required against 60 h⁻¹</span></div>
+      <div class="warn"><b>4.5 pL</b><span class="zh">CSPR / cell / day，比灌流常用的 20–150 pL 低一個數量級</span><span class="en">CSPR per cell per day, an order of magnitude below the usual 20&ndash;150 pL</span></div>
     </div>
 
-    <p class="zh">前五個有餘裕，第六個沒有：每個細胞每天分到的灌流量只有 4.5 pL，
-    比 CHO 灌流常用的 20–150 pL 低一個數量級。那個區間適不適用於 <i>B. subtilis</i>，我們沒把握，
-    列在<a href="#q1">問題 1</a>。</p>
-    <p class="en">The first five have margin, the sixth does not: each cell gets 4.5 pL of perfusion per day, an order
-    of magnitude below the 20&ndash;150 pL band used in CHO perfusion. Whether that band transfers to
-    <i>B. subtilis</i> we cannot say, so it sits in <a href="#q1">Question 1</a>.</p>
+    <p class="zh">前三個有餘裕，第四個沒有。那個 20–150 pL 的區間是 CHO 灌流的經驗，
+    適不適用於枯草桿菌我們沒把握。</p>
+    <p class="en">The first three have margin and the fourth does not. That 20&ndash;150 pL band comes from CHO
+    perfusion practice and we cannot say whether it transfers to <i>B. subtilis</i>.</p>
 
     <h3 id="scale"><span class="zh">4.2　複製模組到 10 倍與 100 倍</span><span class="en">4.2　Replicating to 10&times; and 100&times;</span></h3>
 
-    <p class="zh">固定 γ̇<sub>w</sub> 與 J、複製固定幾何的模組（van Reis 線性放大），犧牲整體系統的幾何相似性。
-    工作體積與 permeate 流量隨模組數等比放大，模型給的結果：</p>
-    <p class="en">Hold γ̇<sub>w</sub> and J and replicate fixed-geometry modules (van Reis linear scaling), sacrificing
-    whole-system geometric similarity. Scaling working volume and permeate flow with module count, the model says:</p>
+    <p class="zh">固定 γ̇<sub>w</sub> 與 J、複製固定幾何的模組（van Reis 線性放大），工作體積與 permeate 流量隨模組數等比放大：</p>
+    <p class="en">Hold γ̇<sub>w</sub> and J, replicate fixed-geometry modules (van Reis linear scaling), and scale
+    working volume and permeate flow with module count:</p>
 
     <div class="tablewrap">
       <table class="t">
@@ -956,22 +947,14 @@
 
     <aside class="callout callout--borrowed">
       <b class="callout__label"><span class="zh">模型給的答案</span><span class="en">What the model says</span></b>
-      <p class="zh">膜不會先壞：剪切率、通量、臨界通量餘裕、跨膜壓力在三個尺度下完全相同，van Reis 線性放大站得住。
-      先出問題的是供電（10 倍時就要三倍以上的板子）和控制迴路（θ/τ 在 10 倍到 100 倍之間越過 1，
-      CcaSR 的響應時間開始長過系統滯留時間）。</p>
+      <p class="zh">膜不會先壞：剪切率、通量、臨界通量餘裕、跨膜壓力在三個尺度下完全相同。
+      先出問題的是供電（10 倍時就要三倍以上的板子）和控制迴路（θ/τ 越過 1，CcaSR 的響應時間開始長過系統滯留時間）。
+      表裡的 θ、TMP、q<sub>O₂</sub> 是估的不是量的，之後要換掉。</p>
       <p class="en">The membrane is not what breaks: shear, flux, critical-flux margin and TMP are identical at all
-      three scales, so van Reis linear scaling holds. Power goes first (more than triple the panel area by 10×), and
-      the control loop after it, crossing θ/τ = 1 between 10× and 100× where the CcaSR response time grows longer than
-      the system residence time.</p>
+      three scales. Power goes first (more than triple the panel area by 10×), then the control loop, as θ/τ crosses 1
+      and the CcaSR response time grows longer than the system residence time. θ, TMP and q<sub>O₂</sub> in the table
+      are estimated rather than measured.</p>
     </aside>
-
-    <p class="note">
-      <span class="zh">表底下的假設：θ 取 CcaSR 的 t½ON ≈ 105 分鐘加上每個模組 3 分鐘管路延遲；TMP 依通量估算；
-      q<sub>O₂</sub> 與 C_w/C_b 是文獻典型值，不是菌株專屬。都要用實測換掉。</span>
-      <span class="en">Assumptions underneath: θ takes the CcaSR t&frac12;ON of about 105 minutes plus three minutes of
-      line delay per module; TMP is estimated from flux; q<sub>O₂</sub> and C_w/C_b are literature-typical rather than
-      strain-specific. All want replacing with measurements.</span>
-    </p>
 
     <h3 id="containment"><span class="zh">4.3　生物防護</span><span class="en">4.3　Containment</span></h3>
 
@@ -981,9 +964,8 @@
     it completely. But it is a <b>cellular</b> barrier, not a molecular one: ACC deaminase (~36 kDa) is meant to pass,
     and small OMVs (roughly 20&ndash;200 nm) and cell debris pass with it.</p>
 
-    <p class="zh">膜之後我們評估了四個做法。第一個我們自己否掉了，剩下三個都是「偵測到就停機」，不是「擋住」。</p>
-    <p class="en">Past the membrane we looked at four options. We ruled the first one out ourselves; the other three
-    detect and shut down rather than block.</p>
+    <p class="zh">膜之後評估了四個做法，第一個我們自己否掉了。</p>
+    <p class="en">Past the membrane we looked at four options and ruled the first one out ourselves.</p>
 
     <div class="tablewrap">
       <table class="t">
@@ -998,46 +980,40 @@
           <tr class="is-open">
             <td class="q"><span class="zh">Shell 側再串一顆濾器</span><span class="en">A second filter on the shell side</span></td>
             <td><span class="zh">穿過膜的菌</span><span class="en">Cells that get through the membrane</span></td>
-            <td><span class="zh">否掉。這種濾器過一定體積就塞：乾淨的化學藥品大概 200–300 mL，
-            髒一點的（像 Hay infusion）3 mL 就塞住。放在連續運轉的裝置上不成立。</span>
-            <span class="en">Ruled out. It blocks after a certain volume: maybe 200&ndash;300 mL of clean chemicals, as
-            little as 3 mL of something dirty like a hay infusion. Not viable on a device that runs continuously.</span></td>
+            <td><span class="zh">否掉。乾淨液體過 200–300 mL 就塞，髒的（像 Hay infusion）3 mL 就塞。連續運轉不可能。</span>
+            <span class="en">Ruled out. It blocks after 200&ndash;300 mL of clean liquid, or 3 mL of something dirty like
+            a hay infusion. Impossible on a continuous run.</span></td>
           </tr>
           <tr>
             <td class="q"><span class="zh">跨膜壓異常偵測</span><span class="en">TMP anomaly detection</span></td>
             <td><span class="zh">中空纖維破損</span><span class="en">A broken hollow fibre</span></td>
-            <td><span class="zh">最先做。跨膜壓不正常下降就停機跳警告。感測器已經在線上，只要改程式。</span>
-            <span class="en">First to build. An abnormal drop in TMP stops the machine and alarms. The sensor is
-            already in the loop, so it is a firmware change.</span></td>
+            <td><span class="zh">最先做。感測器已經在線上，只要改程式。</span>
+            <span class="en">First to build. The sensor is already in the loop, so it is a firmware change.</span></td>
           </tr>
           <tr>
             <td class="q"><span class="zh">底盤漏液偵測</span><span class="en">Leak detection under the chassis</span></td>
             <td><span class="zh">管路、接頭、瓶身漏液</span><span class="en">Leaks from tubing, fittings or the vessel</span></td>
-            <td><span class="zh">降雨偵測器鋪在反應器底下，偵測到液體就停機跳警告。零件便宜、原理單純。</span>
-            <span class="en">A rain sensor under the reactor: liquid on it stops the machine and alarms. Cheap and
-            simple.</span></td>
+            <td><span class="zh">降雨偵測器鋪在底下，零件便宜、原理單純。</span>
+            <span class="en">A rain sensor under the chassis. Cheap and simple.</span></td>
           </tr>
           <tr>
             <td class="q"><span class="zh">Shell 側儲槽濁度計</span><span class="en">A turbidimeter in the shell-side reservoir</span></td>
             <td><span class="zh">菌漏到 shell 側並開始生長，或 shell 側被汙染</span><span class="en">Cells reaching the shell side and growing, or shell-side contamination</span></td>
-            <td><span class="zh">同一顆順便看 protectant 有沒有因為汙染而降解。要多裝一支感測器，排最後。</span>
-            <span class="en">The same instrument also shows whether contamination is degrading the protectant. It needs
-            another sensor fitted, so it comes last.</span></td>
+            <td><span class="zh">同一顆順便看 protectant 有沒有降解。要多裝一支，排最後。</span>
+            <span class="en">The same instrument also shows the protectant degrading. Needs another sensor, so it comes last.</span></td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <p class="note">
-      <span class="zh">後三個都是「發生了會知道」，不是「不會發生」。真正把菌擋在裡面的還是那張 0.2 µm 的膜。
-      這個取捨對不對、有沒有第五個做法，是<a href="#q1">問題 1</a>。防護要寫成數字才算數：
-      對數截留值 LRV = log₁₀(C<sub>feed</sub>/C<sub>permeate</sub>)，以及每次部署預期逃逸的菌數
-      = C<sub>feed</sub> × V<sub>permeate</sub> × 10⁻ᴸᴿⱽ。這兩個我們還沒量。</span>
-      <span class="en">The last three tell you it happened; they do not stop it happening. What keeps cells inside
-      is still the 0.2 µm membrane. Whether that trade is right, and whether there is a fifth option, is
-      <a href="#q1">Question 1</a>. And containment only counts as a number:
-      a log reduction value LRV = log₁₀(C<sub>feed</sub>/C<sub>permeate</sub>), and expected escaped cells per
-      deployment = C<sub>feed</sub> &times; V<sub>permeate</sub> &times; 10⁻ᴸᴿⱽ. We have measured neither.</span>
+      <span class="zh">後三個都是「發生了會知道」，不是「不會發生」，真正擋菌的還是那張 0.2 µm 的膜。
+      我們覺得這個取捨可以接受，但想聽聽您的看法。另外，防護要寫成數字才算數，
+      對數截留值 LRV 和每次部署預期逃逸的菌數我們都還沒量。</span>
+      <span class="en">The last three tell you it happened; they do not stop it happening, and what keeps cells inside
+      is still the 0.2 µm membrane. We think that trade is acceptable and would like your view. Containment also only
+      counts as a number, and we have measured neither the log reduction value nor the expected escaped cells per
+      deployment.</span>
     </p>
 
     <figure class="fig fig--wide">
@@ -1080,11 +1056,11 @@
 
     <p class="note">
       <span class="zh">還沒定的五項：可服務的株數或面積、耗材更換週期、沒人看著的時候無菌怎麼顧、單位成本目標，
-      以及模組數要往一台大的還是很多台小的走。您對<a href="#q4">問題 4</a>和<a href="#q6">問題 6</a>的回答會直接改寫這幾項。
+      以及模組數要往一台大的還是很多台小的走。您對<a href="#q3">問題 3</a>和<a href="#q5">問題 5</a>的回答會直接改寫這幾項。
       膜面積與工作體積要等 permeate 流量 Q<sub>p</sub> 定下來，那也是 <a href="#calc">4.1</a> 重算的前提。</span>
       <span class="en">Five things are open: plants or area served, change-out interval, how sterility is met with
       nobody watching, target unit cost, and whether module count grows into one large machine or many small ones. Your
-      answers to <a href="#q4">Question 4</a> and <a href="#q6">Question 6</a> rewrite most of them. Membrane area and
+      answers to <a href="#q3">Question 3</a> and <a href="#q5">Question 5</a> rewrite most of them. Membrane area and
       working volume wait on the permeate flow Q<sub>p</sub>, which is also what <a href="#calc">4.1</a> needs before it
       can be recomputed.</span>
     </p>
@@ -1101,12 +1077,6 @@
   <section class="sec" id="milestones">
     <h2><span class="sec__no">6</span><span class="zh">到 10/21</span><span class="en">To 21 October</span></h2>
 
-    <p class="lede">
-      <span class="zh">每項里程碑寫成可驗收條件，不是動詞短語。條件沒達到就是沒達到。</span>
-      <span class="en">Each milestone is an acceptance criterion, not a verb phrase. If the criterion is not met, it
-      is not met.</span>
-    </p>
-
     <p class="note">
       <span class="zh">Wiki freeze 10/21，巴黎 Grand Jamboree 11/13。10/21 因此同時是我們的內部截止日和硬期限：
       那天之後 wiki 不能再動，所有要給評審看的東西必須在那天以前寫完。從 11/13 往回算，中間只剩三週做展示與答辯準備。</span>
@@ -1116,20 +1086,6 @@
     </p>
 
     <div class="track">
-      <div class="track__row">
-        <div class="track__when">8/24 – 8/31</div>
-        <div class="track__what">
-          <b><span class="zh">A · 硬體</span><span class="en">A &middot; Hardware</span></b>
-          <p class="zh">補 60–120 mL/min 的點，每點三次；完整性測試；消毒前後各量一次水通量；流速計規格與體積法比對；填裝流程書面化。</p>
-          <p class="en">Flow points at 60&ndash;120 mL/min, three each; an integrity test; water permeability before and
-          after sanitisation; the flow meter&rsquo;s spec and a volumetric check; the fill procedure written down.</p>
-          <p class="track__crit"><b><span class="zh">驗收：</span><span class="en">Acceptance:</span></b>
-            <span class="zh">消毒<b>之後</b>的水通量與完整性數據成為正式基準線（順序不能顛倒，見 <a href="#i2">02</a>）；
-            一份任何組員照著做都能重現的填裝 SOP。</span>
-            <span class="en">The post-sanitisation permeability and integrity numbers become the official baseline; that
-            order cannot be reversed (see <a href="#i2">02</a>). Plus a fill SOP any team member can reproduce.</span></p>
-        </div>
-      </div>
       <div class="track__row">
         <div class="track__when">9/1 – 9/14</div>
         <div class="track__what">
@@ -1149,27 +1105,23 @@
           <p class="zh">ACC deaminase 在 <i>B. subtilis</i> WB800 內組成型表現，permeate 側測到活性。</p>
           <p class="en">Constitutive ACC deaminase in <i>B. subtilis</i> WB800, with activity on the permeate side.</p>
           <p class="track__crit"><b><span class="zh">驗收：</span><span class="en">Acceptance:</span></b>
-            <span class="zh">10/5 前，ACCD 於 <i>B. subtilis</i> WB800 以組成型 P<sub>veg</sub> 表現，
-            cell-free permeate 於 pH 8.5 標準 DNPH assay（≥ 2 h incubation）測得體積活性
-            <b>≥ 1 mU/mL</b>（= 60 nmol α-ketobutyrate mL⁻¹ h⁻¹），n = 3，
-            且 ≥ 3× empty-vector permeate 與 minus-ACC blank。同時報告三件：
-            (a) 以 permeate Bradford 蛋白量正規化後的比活性，對照 Penrose–Glick 的 20 nmol α-KB mg⁻¹ h⁻¹ 門檻；
-            (b) 同一批培養的 lysate 活性與分泌比例 f<sub>sec</sub>；(c) 反應器實際 pH 下的活性比 f<sub>pH</sub>。</span>
-            <span class="en">By 5 October, ACC deaminase expressed from a constitutive P<sub>veg</sub> in
-            <i>B. subtilis</i> WB800, with cell-free permeate giving a volumetric activity of <b>&ge; 1 mU/mL</b>
-            (= 60 nmol α-ketobutyrate mL⁻¹ h⁻¹) in the standard DNPH assay at pH 8.5 with &ge; 2 h incubation, n = 3,
-            and &ge; 3&times; both the empty-vector permeate and the minus-ACC blank. Three things reported alongside:
-            (a) specific activity normalised to permeate Bradford protein, against the Penrose&ndash;Glick threshold of
-            20 nmol α-KB mg⁻¹ h⁻¹; (b) lysate activity from the same culture and the secreted fraction
-            f<sub>sec</sub>; (c) the activity ratio f<sub>pH</sub> at the reactor&rsquo;s actual pH.</span></p>
-          <p class="note">
-            <span class="zh">(b) 和 (c) 是為了讓這個數字可以被質疑：分泌比例說明多少酵素留在細胞裡沒送出去，
-            pH 比說明 assay 的 pH 8.5 離反應器實際多遠。少了這兩個，1 mU/mL 只是最佳條件下的一個數字。</span>
-            <span class="en">(b) and (c) exist so the number can be argued with: the secreted fraction says how much
-            enzyme stayed inside the cells, the pH ratio how far the assay&rsquo;s pH 8.5 is from the reactor. Without
-            them, 1 mU/mL is a number from the friendliest conditions.</span>
-          </p>
-        </div>
+            <span class="zh">10/5 前，cell-free permeate 的體積活性 ≥ 1 mU/mL（= 60 nmol α-ketobutyrate mL⁻¹ h⁻¹），
+            n = 3，且 ≥ 3× empty-vector permeate 與 minus-ACC blank。</span>
+            <span class="en">By 5 October, cell-free permeate at &ge; 1 mU/mL (= 60 nmol α-ketobutyrate mL⁻¹ h⁻¹),
+            n = 3, and &ge; 3&times; both the empty-vector permeate and the minus-ACC blank.</span></p>
+          <details class="crit__more">
+            <summary><span class="zh">完整的 assay 條件與三個附帶報告項</span><span class="en">Full assay conditions and the three ratios reported alongside</span></summary>
+            <p class="zh">pH 8.5 標準 DNPH assay，incubation ≥ 2 h。同時報告：(a) 以 permeate Bradford 蛋白量正規化的比活性，
+            對照 Penrose–Glick 的 20 nmol α-KB mg⁻¹ h⁻¹ 門檻；(b) 同一批培養的 lysate 活性與分泌比例 f<sub>sec</sub>；
+            (c) 反應器實際 pH 下的活性比 f<sub>pH</sub>。(b) 和 (c) 是為了讓這個數字可以被質疑：
+            分泌比例說明多少酵素留在細胞裡沒送出去，pH 比說明 assay 的 pH 8.5 離反應器實際多遠。</p>
+            <p class="en">Standard DNPH assay at pH 8.5, incubation &ge; 2 h. Reported alongside: (a) specific activity
+            normalised to permeate Bradford protein, against the Penrose&ndash;Glick threshold of 20 nmol α-KB mg⁻¹ h⁻¹;
+            (b) lysate activity from the same culture and the secreted fraction f<sub>sec</sub>; (c) the activity ratio
+            f<sub>pH</sub> at the reactor&rsquo;s actual pH. (b) and (c) exist so the number can be argued with: the
+            secreted fraction says how much enzyme stayed inside the cells, the pH ratio how far the assay is from the
+            reactor.</p>
+          </details>
       </div>
       <div class="track__row">
         <div class="track__when">9/15 – 10/5</div>
@@ -1179,8 +1131,8 @@
           <p class="en">Optogenetic control in the loop, green on and red off, logged throughout.</p>
           <p class="track__crit"><b><span class="zh">驗收：</span><span class="en">Acceptance:</span></b>
             <span class="zh">一次 ≥ 14 天的連續運轉，三條曲線無中斷，光照切換與蛋白產出的時間關係可在同一張圖上讀出。
-            14 天來自 <a href="#i1">圖 2</a>：22 °C 下要 200 小時以上才進平台。</span>
-            <span class="en">One run of &ge; 14 days with unbroken traces and the timing between light switching and product legible on one plot. The 14 days comes from <a href="#i1">Figure 2</a>: at 22 °C the culture needs over 200 hours to plateau.</span></p>
+            14 天來自 <a href="#i1">圖 3</a>：22 °C 下要 200 小時以上才進平台。</span>
+            <span class="en">One run of &ge; 14 days with unbroken traces and the timing between light switching and product legible on one plot. The 14 days comes from <a href="#i1">Figure 3</a>: at 22 °C the culture needs over 200 hours to plateau.</span></p>
         </div>
       </div>
       <div class="track__row">
@@ -1196,18 +1148,6 @@
       </div>
     </div>
 
-    <h3><span class="zh">6.1　10/21 要拿得出手的三件事</span><span class="en">6.1　Three things to show on 21 October</span></h3>
-    <ol class="zh">
-      <li>一台會自己回報狀態的反應器：三條連續曲線，加上它標出自己什麼時候不可信的那一段。</li>
-      <li>一份完整的模組水力特性：扣掉管路背景、對得上理論、剪切率兩條路線互相驗證，加上消毒後定下來的通量基準線。</li>
-      <li>一條從逆境到蛋白的完整因果鏈：光照切換與 permeate 側活性出現的時間關係，在同一張圖上。</li>
-    </ol>
-    <ol class="en">
-      <li>A reactor that reports its own state: three continuous traces, plus the stretch where it flagged its own readings as untrustworthy.</li>
-      <li>A full hydraulic characterisation: the rig subtracted, agreement with theory, two routes to shear rate cross-validating, and a permeability baseline set after sanitisation.</li>
-      <li>One unbroken chain from stress to protein: light switching and permeate-side activity on the same plot.</li>
-    </ol>
-
     <aside class="callout callout--unproven">
       <b class="callout__label"><span class="zh">如果 C 軌沒做出來</span><span class="en">If track C fails</span></b>
       <p class="zh">若 10/5 前 permeate 側量不到活性，替代證據是以純化蛋白加入 permeate 端做遞送端的獨立驗證，
@@ -1220,7 +1160,7 @@
 
   <!-- ═══════════════════════════════════════════════════ 7  QUESTIONS ═════ -->
   <section class="sec" id="questions">
-    <h2><span class="sec__no">7</span><span class="zh">七個問題</span><span class="en">Seven questions</span></h2>
+    <h2><span class="sec__no">7</span><span class="zh">六個問題</span><span class="en">Six questions</span></h2>
 
     <p class="lede">
       <span class="zh">每題附我們目前的想法，讓您可以修正而不必從零講起，並註明您的答案會改變什麼。</span>
@@ -1232,69 +1172,44 @@
 
     <article class="qcard" id="q1">
       <p class="qcard__no">Q1</p>
-      <p class="qcard__q zh">我們的生物防護只有膜是真的「擋」，其他三層都只是「發生了會知道」。這樣夠嗎？</p>
-      <p class="qcard__q en">Only the membrane actually blocks anything in our containment. The other three layers just tell us it happened. Is that enough?</p>
-      <p class="qcard__ctx zh">四層的內容與我們自己的判斷寫在 <a href="#containment">4.3</a>。
-      shell 側再串一顆濾器我們否掉了，因為那種濾器過個幾百 mL 就阻塞，髒一點的液體 3 mL 就塞住，
-      放在連續運轉的裝置上不成立。剩下三層是跨膜壓異常、底盤漏液、shell 側濁度，都是偵測不是阻擋。
-      另外相關的一件：CSPR 只有 4.5 pL/cell/day，比灌流常用區間低一個數量級，我們不確定那個區間適不適用於枯草桿菌。</p>
-      <p class="qcard__ctx en">The four layers and how we judged each are in <a href="#containment">4.3</a>. We ruled out a
-      second filter on the shell side: that kind of filter blocks after a few hundred mL, or as little as 3 mL of
-      something dirty, which does not work on a device meant to run continuously. The three that remain are TMP
-      anomaly, chassis leak and shell-side turbidity, all detection rather than blocking. One related thing: CSPR sits
-      at 4.5 pL/cell/day, an order of magnitude under the usual perfusion band, and we are not sure that band transfers
-      to <i>B. subtilis</i>.</p>
+      <p class="qcard__q zh">434 小時那條曲線中間掉了一塊：OD 從 0.93 掉到 0.72，四十小時後又長回來並且超過。這是什麼？</p>
+      <p class="qcard__q en">The 434-hour trace dips in the middle: OD falls from 0.93 to 0.72, then forty hours later climbs back past where it was. What is that?</p>
+      <p class="qcard__ctx zh">第 120 到 160 小時（<a href="#i1">圖 3</a>），幅度 0.21 OD，遠大於當時的散布（局部殘差 SD 0.022）。
+      光學通道正常，所以不是儀器。定容批次、沒有補料。我們最先想到汙染，但找不到證據：菌液結束時聞起來還是枯草桿菌，
+      四區劃線的 colony 形態和 168 一樣。剩下的可能是自溶後被剩下的菌吃回去、孢子化與再萌發、生物膜剝落，分不出來。
+      這個實驗會用持續表現 ACCD 的 WB800 加抗生素再跑一次。</p>
+      <p class="qcard__ctx en">Hours 120 to 160 (<a href="#i1">Figure 3</a>), a span of 0.21 OD against a local residual
+      SD of 0.022. The optical channel is healthy, so it is not the instrument. Fixed-volume batch, no feed.
+      Contamination was our first thought and we cannot find evidence for it: the culture still smelled like
+      <i>B. subtilis</i> at the end and streaking gave the same colony morphology as 168. That leaves lysis followed by
+      cryptic growth, sporulation and germination, or biofilm sloughing, and we cannot separate them. We will repeat the
+      run with ACCD-expressing WB800 plus antibiotic selection.</p>
       <p class="qcard__why"><b><span class="zh">會改變什麼：</span><span class="en">What it changes:</span></b>
-        <span class="zh">V6 現在要不要多做一層真正的阻擋，還是三層偵測加膜就可以送到田邊。</span>
-        <span class="en">Whether V6 needs a real fourth barrier now, or whether the membrane plus three detectors is enough to put at the edge of a field.</span></p>
+        <span class="zh">下次長時間運轉要加什麼取樣，要不要記錄培養箱溫度。</span>
+        <span class="en">What sampling the next long run adds, and whether we log incubator temperature.</span></p>
     </article>
 
     <article class="qcard" id="q2">
       <p class="qcard__no">Q2</p>
-      <p class="qcard__q zh">434 小時那條曲線中間掉了一塊：OD 從 0.93 掉到 0.72，四十小時後又長回來並且超過。這是什麼？</p>
-      <p class="qcard__q en">The 434-hour trace has a dip in the middle: OD falls from 0.93 to 0.72, then forty hours later climbs back past where it was. What is that?</p>
-      <p class="qcard__ctx zh">第 120 到 160 小時（<a href="#i1">圖 2</a>），幅度 0.21 OD，遠大於當時的散布（局部殘差 SD 0.022）。
-      光學通道正常、參考通道還在 26.7 lux，所以不是儀器。定容批次、沒有補料。</p>
-      <p class="qcard__ctx zh">我們自己最先想到的是汙染，但找不到證據支持：實驗結束後菌液聞起來還是枯草桿菌的味道，
-      取菌液做四區劃線，colony 形態和 <i>B. subtilis</i> 168 一樣。剩下的可能是一部分菌自溶後又被剩下的吃回去、
-      孢子化與再萌發、生物膜從管壁剝落，手上的數據分不出來。這個實驗我們會用持續表現 ACCD 的 WB800 加抗生素再跑一次。</p>
-      <p class="qcard__ctx en">Hours 120 to 160 (<a href="#i1">Figure 2</a>), a span of 0.21 OD against a local residual
-      SD of 0.022. The optical channel is healthy and the reference channel still at 26.7 lux, so it is not the
-      instrument. Fixed-volume batch, no feed.</p>
-      <p class="qcard__ctx en">Contamination was our first thought and we cannot find evidence for it: the culture still
-      smelled like <i>B. subtilis</i> at the end, and streaking it out gave colonies with the same morphology as
-      <i>B. subtilis</i> 168. That leaves lysis followed by cryptic growth on the debris, sporulation and germination,
-      or biofilm sloughing off the tubing, and the data cannot separate them. We will repeat the run with ACCD-expressing
-      WB800 plus antibiotic selection.</p>
+      <p class="qcard__q zh">生物反應器運轉的場景下，pH 計能不能取代溶氧感測器？</p>
+      <p class="qcard__q en">In a running bioreactor, can a pH meter stand in for a dissolved-oxygen probe?</p>
+      <p class="qcard__ctx zh">兩支探頭卡在同一件事：本體不耐高壓蒸氣滅菌，血清瓶又是橡膠塞封口，
+      我們還沒找到放進去又不帶污染進去的做法（<a href="#i5">05</a>）。如果 pH 的走勢在我們這個尺度上看得出氧的狀況，
+      就只要解決一支。溶氧在 <a href="#calc">4.1</a> 裡本來就是最可能先撐不住的限制，k<sub>L</sub>a 需求 45.7 對可提供 60 h⁻¹，
+      而那個 60 是估的不是量的。</p>
+      <p class="qcard__ctx en">Both probes are stuck on the same thing: neither body survives autoclaving, the serum
+      bottle closes with a rubber septum, and we have not found a way in that does not carry contamination with it
+      (<a href="#i5">05</a>). If the pH trend tracks oxygen at our scale, there is one probe to solve instead of two.
+      Oxygen is already the constraint most likely to bind first in <a href="#calc">4.1</a>: k<sub>L</sub>a required is
+      45.7 against a deliverable 60 h⁻¹, and that 60 is estimated, not measured.</p>
       <p class="qcard__why"><b><span class="zh">會改變什麼：</span><span class="en">What it changes:</span></b>
-        <span class="zh">下次長時間運轉要加什麼取樣，以及要不要記錄培養箱溫度。</span>
-        <span class="en">What sampling the next long run adds, and whether we log incubator temperature.</span></p>
+        <span class="zh">V6 的瓶蓋為一支還是兩支探頭設計，以及溶氧能不能進到 10 月那次整機運轉。</span>
+        <span class="en">Whether V6&rsquo;s cap is designed for one probe or two, and whether oxygen makes it into October&rsquo;s full-system run.</span></p>
     </article>
 
     <article class="qcard" id="q3">
       <p class="qcard__no">Q3</p>
-      <p class="qcard__q zh">生物反應器運轉的場景下，pH 計能不能取代溶氧感測器？</p>
-      <p class="qcard__q en">In a running bioreactor, can a pH meter stand in for a dissolved-oxygen probe?</p>
-      <p class="qcard__ctx zh">問這題是因為兩支探頭都卡在同一件事：本體不耐高壓蒸氣滅菌，血清瓶又是橡膠塞封口，
-      我們還沒找到把它們放進去又不帶污染進去的做法（<a href="#i5">05</a>）。想過瓶蓋鑽孔加 O-ring、
-      探頭先泡 70 % 酒精或次氯酸、改成外循環流通池讓探頭不進瓶，都不確定撐不撐得過連續兩三週。</p>
-      <p class="qcard__ctx zh">如果 pH 的走勢在我們這個尺度上看得出氧的狀況，就只要解決一支探頭。溶氧在 <a href="#calc">4.1</a> 裡本來就是最可能先撐不住的限制，k<sub>L</sub>a 需求 45.7 對可提供 60 h⁻¹，
-      而那個 60 是估的不是量的。</p>
-      <p class="qcard__ctx en">We ask because both probes are stuck on the same thing: neither body survives
-      autoclaving, the serum bottle closes with a rubber septum, and we have not found a way to get them in without
-      carrying contamination in with them (<a href="#i5">05</a>). We have considered drilling the cap and sealing with
-      an O-ring, soaking the probe in 70 % ethanol or hypochlorite, and moving to a flow cell on the loop so the probe
-      never enters the vessel; none of them obviously survives two or three weeks.</p>
-      <p class="qcard__ctx en">If the pH trend tracks oxygen at our scale, there is one probe to solve instead of two. Oxygen is already the constraint most likely to bind first in <a href="#calc">4.1</a>:
-      k<sub>L</sub>a required is 45.7 against a deliverable 60 h⁻¹, and that 60 is estimated, not measured.</p>
-      <p class="qcard__why"><b><span class="zh">會改變什麼：</span><span class="en">What it changes:</span></b>
-        <span class="zh">V6 的瓶蓋要為一支還是兩支探頭重新設計，以及溶氧能不能進到 10 月那次整機運轉。</span>
-        <span class="en">Whether V6&rsquo;s cap is redesigned for one probe or two, and whether oxygen makes it into October&rsquo;s full-system run.</span></p>
-    </article>
-
-    <article class="qcard" id="q4">
-      <p class="qcard__no">Q4</p>
-      <p class="qcard__q zh">實際運轉中的反應器，無菌填裝怎麼做？運行中怎麼顧？結束後怎麼清洗、怎麼進到下一次？</p>
+      <p class="qcard__q zh">實際運轉中的反應器，無菌填裝怎麼做？運行中怎麼顧？結束後怎麼洗、怎麼進到下一次？</p>
       <p class="qcard__q en">How is a working reactor filled aseptically, tended during a run, and cleaned for the next one?</p>
       <p class="qcard__ctx zh">這是我們書面資料最查不到的一段。現在是學生在無菌操作台前逐步進行，沒有 CIP／SIP 的概念，
       也還沒想清楚膜模組該洗還是該換。V7 我們寫了「自清潔」，但那目前只是一個詞。</p>
@@ -1303,58 +1218,67 @@
       &ldquo;self-cleaning&rdquo;, which is currently just a word.</p>
       <p class="qcard__why"><b><span class="zh">會改變什麼：</span><span class="en">What it changes:</span></b>
         <span class="zh">直接寫進 8 月底那份填裝 SOP，並決定 V6 的耗材更換週期。</span>
-        <span class="en">It goes straight into the end-of-August SOP and sets V6&rsquo;s change-out interval.</span></p>
+        <span class="en">It goes into the end-of-August SOP and sets V6&rsquo;s change-out interval.</span></p>
     </article>
 
-    <article class="qcard" id="q5">
-      <p class="qcard__no">Q5</p>
-      <p class="qcard__q zh">想用 translation coupling 在 protectant 後面接一個色澤蛋白，用線上光度計即時看蛋白產出。這樣可行嗎？</p>
-      <p class="qcard__q en">We want to translation-couple a chromoprotein downstream of the protectant and read protein output live on the in-line photometer. Does that work?</p>
+    <article class="qcard" id="q4">
+      <p class="qcard__no">Q4</p>
+      <p class="qcard__q zh">想在 protectant 後面接一個色澤蛋白，用線上光度計即時看蛋白產出。這樣可行嗎？</p>
+      <p class="qcard__q en">We want to couple a chromoprotein downstream of the protectant and read protein output live on the in-line photometer. Does that work?</p>
       <p class="qcard__ctx zh">同一台已經在迴路裡的儀器就能同時回報菌體濃度與蛋白產出，不用多裝東西。
       我們沒把握的是兩個訊號會不會互相干擾，以及色澤蛋白的吸收峰要離 600 nm 多遠才分得開。</p>
-      <p class="qcard__ctx zh">原本這題還有另一半，用 CRISPRi 抑制 <i>dnaA</i> 來調控生長。我們把它砍了：
-      dCas9 就 4 kb，整組基因迴路會膨脹到 15–16 kb，構築難度太高，而且就算做出來也很難送進枯草桿菌。
-      您 6/18 提的「組成型啟動子讓菌自己承受內部逆境」那個問題還在，我們現在沒有解法。</p>
+      <p class="qcard__ctx zh">原本這題還有另一半，用 CRISPRi 抑制 <i>dnaA</i> 調控生長，我們把它砍了：
+      dCas9 就 4 kb，整組迴路會膨脹到 15–16 kb，難構築也難送進枯草桿菌。您 6/18 提的
+      「組成型啟動子讓菌自己承受內部逆境」那題還在，我們沒有解法。</p>
       <p class="qcard__ctx en">One instrument already in the loop would report both cell density and protein output with
-      nothing extra fitted. What we cannot judge is whether the two signals interfere, and how far a chromoprotein&rsquo;s
-      absorbance peak has to sit from 600 nm to be separable.</p>
+      nothing extra fitted. What we cannot judge is whether the two signals interfere, and how far a
+      chromoprotein&rsquo;s absorbance peak has to sit from 600 nm to be separable.</p>
       <p class="qcard__ctx en">This question used to have a second half, CRISPRi knockdown of <i>dnaA</i> to tune growth.
-      We killed it: dCas9 alone is 4 kb, the whole circuit would reach 15&ndash;16 kb, which is hard to build and harder
-      to get into <i>B. subtilis</i>. The problem you raised on 18 June, a constitutive promoter putting the cell under
-      its own internal stress, is still open and we have no answer to it.</p>
+      We killed it: dCas9 alone is 4 kb, the circuit would reach 15&ndash;16 kb, and that is hard to build and harder to
+      get into <i>B. subtilis</i>. The problem you raised on 18 June, a constitutive promoter putting the cell under its
+      own internal stress, is still open and we have no answer.</p>
       <p class="qcard__why"><b><span class="zh">會改變什麼：</span><span class="en">What it changes:</span></b>
-        <span class="zh">色澤蛋白排不排進 9 月的實驗，以及內部逆境那題要往哪個方向找。</span>
-        <span class="en">Whether the chromoprotein enters September&rsquo;s bench schedule, and which direction to look for the internal-stress problem.</span></p>
+        <span class="zh">色澤蛋白排不排進 9 月的實驗，以及內部逆境那題往哪個方向找。</span>
+        <span class="en">Whether the chromoprotein enters September&rsquo;s bench schedule, and where to look for the internal-stress problem.</span></p>
     </article>
 
     <h3><span class="zh">B · 產業化與放大</span><span class="en">B &middot; Industrialisation</span></h3>
 
-    <article class="qcard" id="q6">
-      <p class="qcard__no">Q6</p>
+    <article class="qcard" id="q5">
+      <p class="qcard__no">Q5</p>
       <p class="qcard__q zh">我們的模型說膜不會先壞，先壞的是供電和控制迴路。實務上是這樣嗎？成本的大頭又在哪？</p>
-      <p class="qcard__q en">Our model says the membrane is not what breaks first, power and the control loop are. Does that match practice, and where does the cost actually sit?</p>
-      <p class="qcard__ctx zh">複製到 10 倍與 100 倍時，剪切率、通量、臨界通量餘裕、跨膜壓力完全不變（見 <a href="#scale">4.2</a>），
+      <p class="qcard__q en">Our model says the membrane is not what breaks first, power and the control loop are. Does that match practice, and where does the cost sit?</p>
+      <p class="qcard__ctx zh">複製到 10 倍與 100 倍時，剪切率、通量、臨界通量餘裕、跨膜壓力完全不變（<a href="#scale">4.2</a>），
       θ/τ 從 0.67 走到 2.53，供電從 0.9 片 45 W 板變成 14.9 片。成本這邊我們的直覺是膜模組與泵，
       但那只涵蓋買得到的東西：無菌操作的人力、故障停機、耗材更換頻率都還沒進到成本模型。
       目標使用者是半公頃上下的小農。</p>
       <p class="qcard__ctx en">Replicating to 10× and 100×, shear, flux, critical-flux margin and TMP do not move
-      (see <a href="#scale">4.2</a>), θ/τ goes from 0.67 to 2.53, and the panel count from 0.9 to 14.9. On cost our
-      instinct says the module and the pumps, but that only covers things you can buy: the labour of aseptic operation,
-      downtime and change-out frequency are all missing from our model. The intended user farms around half a
-      hectare.</p>
+      (<a href="#scale">4.2</a>), θ/τ goes from 0.67 to 2.53, and the panel count from 0.9 to 14.9. On cost our instinct
+      says the module and the pumps, but that only covers things you can buy: the labour of aseptic operation, downtime
+      and change-out frequency are all missing from our model. The intended user farms around half a hectare.</p>
       <p class="qcard__why"><b><span class="zh">會改變什麼：</span><span class="en">What it changes:</span></b>
-        <span class="zh">V6 該往一台大的還是很多台小的走，以及規格取捨從哪一端開始砍。這個決定現在就要下。</span>
-        <span class="en">Whether V6 goes towards one large machine or many small ones, and which end of the specification we start cutting. We have to decide now.</span></p>
+        <span class="zh">V6 往一台大的還是很多台小的走，以及規格取捨從哪一端開始砍。這個決定現在就要下。</span>
+        <span class="en">Whether V6 goes towards one large machine or many small ones, and which end of the specification we cut. We have to decide now.</span></p>
     </article>
 
-    <article class="qcard" id="q7">
-      <p class="qcard__no">Q7</p>
+    <article class="qcard" id="q6">
+      <p class="qcard__no">Q6</p>
       <p class="qcard__q zh">一台裝著基因改造微生物的裝置要進到田間，在台灣要走什麼路？客戶端該是誰？</p>
       <p class="qcard__q en">What is the path for a GMO-containing device to reach a field in Taiwan, and who is the customer?</p>
-      <p class="qcard__ctx zh">我們拜訪過農民與源鮮智慧農場，也做了法規面的初步整理，但「一台含 GMO 的裝置放在田邊」要走什麼流程，我們認識還很表面，也還沒想清楚該賣給農民、農會、農業科技公司，還是根本不該用賣的。</p>
-      <p class="qcard__ctx en">We have visited farmers and YesHealth and done a first pass on the regulations, but our
-      understanding of what it takes to put a GMO-containing device at the edge of a field is shallow, and we have not
-      settled whether it is sold to farmers, to a co-operative, to an agritech company, or not sold at all.</p>
+      <p class="qcard__ctx zh">我們想做的是一台每個人都能自己用的機器。bioprotectant 學界已經在做了，
+      但生產、儲存、運輸的成本讓它很難真的到農民手上；如果反應器可以擺在田邊自己生產，
+      個人農戶、區域耕作者、垂直農場就都能做自己需要的量。這是整個專案的目的。</p>
+      <p class="qcard__ctx zh">卡住的是後面那一段。我們拜訪過農民與源鮮智慧農場，也做了法規面的初步整理，
+      但「一台含 GMO 的裝置放在田邊」要走什麼流程，認識還很表面，也還沒想清楚該賣給農民、農會、
+      農業科技公司，還是根本不該用賣的。</p>
+      <p class="qcard__ctx en">What we want to build is a machine anyone can run. The science on bioprotectants is
+      already moving, and the cost of making, storing and shipping them keeps them away from the farmers who need them.
+      If the reactor can sit at the edge of a field and produce on site, a single farm, a regional grower or a vertical
+      farm can each make what it needs. That is the point of the whole project.</p>
+      <p class="qcard__ctx en">The part we are stuck on is what comes after. We have visited farmers and YesHealth and
+      done a first pass on the regulations, but our understanding of what it takes to put a GMO-containing device at the
+      edge of a field is shallow, and we have not settled whether it is sold to farmers, to a co-operative, to an
+      agritech company, or not sold at all.</p>
       <p class="qcard__why"><b><span class="zh">會改變什麼：</span><span class="en">What it changes:</span></b>
         <span class="zh">寫進 Entrepreneurship 與 Laws &amp; Regulations 兩頁，並決定 V6 為誰而設計。</span>
         <span class="en">It goes into our Entrepreneurship and Laws &amp; Regulations pages, and decides who V6 is for.</span></p>
@@ -1375,14 +1299,13 @@
     </p>
 
     <p class="zh">我們希望有機會帶 4 到 6 位學生、2 到 3 位老師一起到東海大學您的實驗室，參訪並向您請教。
-    我們原本打算等反應器組完、ACCD 實驗做完再來，但那邊還有未知數，有可能再延。
-    與其帶著做完的東西來報告，不如在動手之前先請教，這樣您的意見還來得及改變我們接下來做什麼。
-    不知道您什麼時候方便？時間可以直接在 LINE 群組裡討論。</p>
-    <p class="en">We would like to bring four to six students and two or three instructors to your laboratory at Tunghai University,
-    to see it and to ask you these questions in person. We had planned to come after the reactor was assembled and the
-    ACC deaminase run was done, but there are unknowns there and it may slip. Rather than arrive with finished work, we
-    would rather consult you while your view can still change what we do next. When might suit you? We can settle a
-    time in the LINE group.</p>
+    本來想等反應器組完、ACCD 實驗做完再來，但那邊還有未知數，可能再延。與其帶著做完的東西來報告，
+    不如在動手之前先請教，這樣您的意見還來得及改變我們接下來做什麼。不知道您什麼時候方便？可以在 LINE 群組裡討論。</p>
+    <p class="en">We would like to bring four to six students and two or three instructors to your laboratory at
+    Tunghai, to see it and to ask these questions in person. We had planned to come once the reactor was assembled and
+    the ACC deaminase run was done, but there are unknowns there and it may slip. Rather than arrive with finished
+    work, we would rather consult you while your view can still change what we do next. When might suit you? We can
+    settle it in the LINE group.</p>
 
     <dl class="visit__dl">
       <dt><span class="zh">時間</span><span class="en">When</span></dt>
@@ -1403,16 +1326,11 @@
     <div class="grid">
       <div class="card2">
         <h4><a href="https://timmy97-tw.github.io/releaf-invariant-explorer/">Bioreactor Invariant Explorer</a></h4>
-        <p class="zh">十個參數的互動頁面，4.1 那組數字由它算出。改一個參數，Re、剪切率、通量餘裕、跨膜壓力、
-        k<sub>L</sub>a、CSPR、控制迴路死區比、供電需求會一起更新。背後的設計不變量總表還沒上網。</p>
-        <p class="en">The ten-parameter interactive page the numbers in 4.1 come from. Change one input and Re, wall
-        shear, critical-flux margin, TMP, k<sub>L</sub>a, CSPR, the control dead-time ratio and the power requirement
-        all move together. The dossier behind it is not online.</p>
-      </div>
-      <div class="card2">
-        <h4><span class="zh">模組水力特性報告</span><span class="en">Module hydraulics report</span></h4>
-        <p class="zh">8/16 那組量測的完整報告：模型推導、背景扣除、逐點分析、限制與後續步驟。還沒上網，見面時可以帶。</p>
-        <p class="en">The full write-up of the 16 August measurements. Not online; we can bring a copy.</p>
+        <p class="zh">學生自己寫的互動頁面，4.1 那組數字由它算出。改一個參數，Re、剪切率、通量餘裕、跨膜壓力、
+        k<sub>L</sub>a、CSPR、控制迴路死區比、供電需求會一起更新。</p>
+        <p class="en">An interactive page the students wrote themselves; the numbers in 4.1 come from it. Change one
+        input and Re, wall shear, critical-flux margin, TMP, k<sub>L</sub>a, CSPR, the control dead-time ratio and the
+        power requirement all move together.</p>
       </div>
     </div>
 
@@ -1420,7 +1338,6 @@
       <h2><span class="zh">引用</span><span class="en">References</span></h2>
       <ol>
         <li>van Reis, R., Goodrich, E.M., Yson, C.L., Frautschy, L.N., Dzengeleski, S., &amp; Lutz, H. (1997). Linear scale ultrafiltration. <i>Biotechnology and Bioengineering</i> 55(5): 737&ndash;746.</li>
-        <li>Bland, J.M., &amp; Altman, D.G. (1986). Statistical methods for assessing agreement between two methods of clinical measurement. <i>The Lancet</i> 327(8476): 307&ndash;310.</li>
         <li>Castillo-Hair, S.M., Baerman, E.A., Fujita, M., Igoshin, O.A., &amp; Tabor, J.J. (2019). Optogenetic control of <i>Bacillus subtilis</i> gene expression. <i>Nature Communications</i> 10: 3099. <span class="note"><span class="zh">（Hill n、K½、t½ 參數來源）</span><span class="en">(source of the Hill n, K&frac12; and t&frac12; parameters)</span></span></li>
         <li>Yeh, M.-S., Wei, Y.-H., &amp; Chang, J.-S. (2006). Enhanced production of surfactin from <i>Bacillus subtilis</i> by addition of solid carriers. <i>Process Biochemistry</i> 41: 1799&ndash;1805.</li>
       </ol>

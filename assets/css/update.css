@@ -453,3 +453,22 @@ dl.spec dd { margin: 0; font-family: var(--font-mono); font-size: .9em; color: v
 /* a version item we tried and abandoned: struck through, still on the record */
 .v__drop { text-decoration: line-through; color: var(--gray-400); }
 .v__drop .zh, .v__drop .en { text-decoration: line-through; }
+
+/* version-rail item state: built, or tried and decided against */
+.v ul li.v--ok, .v ul li.v--no { list-style: none; position: relative; padding-left: 1.25rem; }
+.v ul li.v--ok::before { content: "✓"; position: absolute; left: 0; color: var(--leaf-700); font-weight: 700; }
+.v ul li.v--no::before { content: "✗"; position: absolute; left: 0; color: var(--rust-700); font-weight: 700; }
+.v ul li.v--no { color: var(--gray-400); text-decoration: line-through; }
+.v ul li.v--no::before { text-decoration: none; }
+.vrail__hint { white-space: normal; }
+
+/* an acceptance criterion whose full protocol only the bench needs */
+.crit__more { margin: .4rem 0 0; }
+.crit__more > summary {
+  cursor: pointer; list-style: none;
+  font-size: var(--text-xs); color: var(--leaf-700); font-weight: 650;
+}
+.crit__more > summary::-webkit-details-marker { display: none; }
+.crit__more > summary::before { content: "＋ "; }
+.crit__more[open] > summary::before { content: "－ "; }
+.crit__more p { margin: .5rem 0 0; font-size: var(--text-xs); line-height: 1.65; color: var(--gray-600); }
