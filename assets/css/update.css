@@ -56,15 +56,19 @@ html[data-lang="en"] .zh { display: none; }
 
 /* ------------------------------------------------------------- hero ------- */
 .hero2 { position: relative; background: var(--leaf-900); color: var(--white); overflow: hidden; }
-.hero2__img { position: absolute; inset: 0; }
-.hero2__img img { width: 100%; height: 100%; object-fit: cover; opacity: .5; object-position: 50% 38%; }
+.hero2__img { position: absolute; inset: 0 0 0 34%; }
+.hero2__img img { width: 100%; height: 100%; object-fit: cover; opacity: .8; object-position: 52% 58%; }
 .hero2__img::after {
   content: ""; position: absolute; inset: 0;
   background:
-    linear-gradient(100deg, rgb(20 64 43 / .96) 0%, rgb(20 64 43 / .88) 38%, rgb(20 64 43 / .55) 68%, rgb(20 64 43 / .38) 100%),
-    linear-gradient(0deg, rgb(20 64 43 / .75) 0%, rgb(20 64 43 / 0) 45%);
+    linear-gradient(100deg, rgb(20 64 43 / .98) 0%, rgb(20 64 43 / .72) 22%, rgb(20 64 43 / .34) 55%, rgb(20 64 43 / .18) 100%),
+    linear-gradient(0deg, rgb(20 64 43 / .62) 0%, rgb(20 64 43 / 0) 42%);
 }
-@media (max-width: 760px) { .hero2__img::after { background: rgb(20 64 43 / .84); } }
+@media (max-width: 900px) {
+  .hero2__img { inset: 0; }
+  .hero2__img img { opacity: .5; }
+  .hero2__img::after { background: rgb(20 64 43 / .84); }
+}
 .hero2__inner {
   position: relative; max-width: var(--max); margin: 0 auto;
   padding: var(--sp-8) var(--sp-5);
@@ -474,30 +478,25 @@ dl.spec dd { margin: 0; font-family: var(--font-mono); font-size: .9em; color: v
 .crit__more p { margin: .5rem 0 0; font-size: var(--text-xs); line-height: 1.65; color: var(--gray-600); }
 
 /* ====================================================== opening spread =====
-   Two photographs between the hero and the report: who this is for, and what
-   we have built. They are not numbered figures; they are the argument the
-   hero just made, shown rather than stated.
+   Four photographs between the hero and the report: the product as it exists
+   today, the two ends of who would use ours, and ours on the bench.
+   Not numbered; the evidence figures keep their numbering.
    ========================================================================== */
 .spread { background: var(--leaf-50); border-bottom: 1px solid var(--leaf-200); }
-.spread__inner { max-width: var(--max); margin: 0 auto; padding: var(--sp-7) var(--sp-5); }
+.spread__inner { max-width: var(--max); margin: 0 auto; padding: var(--sp-6) var(--sp-5); }
 @media (min-width: 640px) { .spread__inner { padding-left: var(--sp-6); padding-right: var(--sp-6); } }
-.spread__lead {
-  margin: 0 0 var(--sp-6); max-width: 52ch;
-  font-size: var(--text-lede); line-height: 1.55; color: var(--leaf-900); font-weight: 600;
-  letter-spacing: -.005em;
-}
-.spread__pair { display: grid; gap: var(--sp-6); grid-template-columns: 1fr 1fr; }
-@media (max-width: 720px) { .spread__pair { grid-template-columns: 1fr; gap: var(--sp-5); } }
+.spread__pair { display: grid; gap: var(--sp-5); grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .spread__pair { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .spread__pair { grid-template-columns: 1fr; gap: var(--sp-4); } }
 .spread figure { margin: 0; }
 .spread img {
   display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
-  border-radius: var(--radius); background: var(--gray-200);
+  border-radius: var(--radius-sm); background: var(--gray-200);
 }
+.spread figure:nth-child(2) img { object-position: 42% 50%; }
 .spread figcaption {
-  margin-top: var(--sp-3);
-  font-size: var(--text-sm); line-height: 1.7; color: var(--gray-700);
+  margin-top: var(--sp-2);
+  font-size: var(--text-xs); line-height: 1.65; color: var(--gray-600);
 }
-/* keep the farmer centred in the crop */
-.spread figure:first-child img { object-position: 42% 50%; }
 .spread figcaption a { color: var(--leaf-700); }
-@media (max-width: 560px) { .spread__inner { padding: var(--sp-6) var(--sp-4); } }
+@media (max-width: 560px) { .spread__inner { padding: var(--sp-5) var(--sp-4); } }
