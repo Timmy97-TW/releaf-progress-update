@@ -472,3 +472,32 @@ dl.spec dd { margin: 0; font-family: var(--font-mono); font-size: .9em; color: v
 .crit__more > summary::before { content: "＋ "; }
 .crit__more[open] > summary::before { content: "－ "; }
 .crit__more p { margin: .5rem 0 0; font-size: var(--text-xs); line-height: 1.65; color: var(--gray-600); }
+
+/* ====================================================== opening spread =====
+   Two photographs between the hero and the report: who this is for, and what
+   we have built. They are not numbered figures; they are the argument the
+   hero just made, shown rather than stated.
+   ========================================================================== */
+.spread { background: var(--leaf-50); border-bottom: 1px solid var(--leaf-200); }
+.spread__inner { max-width: var(--max); margin: 0 auto; padding: var(--sp-7) var(--sp-5); }
+@media (min-width: 640px) { .spread__inner { padding-left: var(--sp-6); padding-right: var(--sp-6); } }
+.spread__lead {
+  margin: 0 0 var(--sp-6); max-width: 52ch;
+  font-size: var(--text-lede); line-height: 1.55; color: var(--leaf-900); font-weight: 600;
+  letter-spacing: -.005em;
+}
+.spread__pair { display: grid; gap: var(--sp-6); grid-template-columns: 1fr 1fr; }
+@media (max-width: 720px) { .spread__pair { grid-template-columns: 1fr; gap: var(--sp-5); } }
+.spread figure { margin: 0; }
+.spread img {
+  display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  border-radius: var(--radius); background: var(--gray-200);
+}
+.spread figcaption {
+  margin-top: var(--sp-3);
+  font-size: var(--text-sm); line-height: 1.7; color: var(--gray-700);
+}
+/* keep the farmer centred in the crop */
+.spread figure:first-child img { object-position: 42% 50%; }
+.spread figcaption a { color: var(--leaf-700); }
+@media (max-width: 560px) { .spread__inner { padding: var(--sp-6) var(--sp-4); } }
