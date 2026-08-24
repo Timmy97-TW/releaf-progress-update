@@ -87,9 +87,10 @@ html[data-lang="en"] .zh { display: none; }
   font-size: var(--text-lede); line-height: 1.5; color: var(--leaf-200);
 }
 .hero2__ask {
-  margin: var(--sp-7) 0 0; padding: var(--sp-5);
-  max-width: 60ch;
-  background: rgb(255 255 255 / .1); border: 1px solid rgb(255 255 255 / .22);
+  margin: var(--sp-6) 0 0; padding: var(--sp-5);
+  max-width: 62ch;
+  background: rgb(11 40 27 / .72); border: 1px solid rgb(255 255 255 / .18);
+  backdrop-filter: saturate(1.1) blur(3px);
   border-radius: var(--radius);
   font-size: var(--text-base); line-height: 1.65;
 }
@@ -507,3 +508,12 @@ dl.spec dd { margin: 0; font-family: var(--font-mono); font-size: .9em; color: v
 }
 .spread figcaption a { color: var(--leaf-700); }
 @media (max-width: 560px) { .spread__inner { padding: var(--sp-6) var(--sp-4); } }
+
+/* the origin of the idea, closing the opening block */
+.hero2__why {
+  margin: var(--sp-6) 0 0; max-width: 60ch;
+  padding-top: var(--sp-5); border-top: 1px solid rgb(255 255 255 / .22);
+}
+.hero2__why p { margin: 0; font-size: var(--text-base); line-height: 1.75; color: var(--leaf-200); }
+.hero2__why p + p { margin-top: var(--sp-3); }
+.hero2__why b { color: var(--white); font-weight: 650; }
