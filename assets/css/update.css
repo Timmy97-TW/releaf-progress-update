@@ -449,3 +449,7 @@ dl.spec dd { margin: 0; font-family: var(--font-mono); font-size: .9em; color: v
     font-size: var(--text-xs); color: var(--gray-400); text-align: center;
   }
 }
+
+/* a version item we tried and abandoned: struck through, still on the record */
+.v__drop { text-decoration: line-through; color: var(--gray-400); }
+.v__drop .zh, .v__drop .en { text-decoration: line-through; }
