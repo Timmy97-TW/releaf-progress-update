@@ -524,3 +524,19 @@ dl.spec dd { margin: 0; font-family: var(--font-mono); font-size: .9em; color: v
   max-height: 640px; object-fit: contain; background: var(--gray-50);
 }
 .two .fig--tall img { max-height: 480px; }
+
+/* two ways of meeting, offered side by side inside the dark visit panel */
+.opt { display: grid; gap: var(--sp-4); grid-template-columns: 1fr 1fr; margin: var(--sp-6) 0 0; }
+@media (max-width: 720px) { .opt { grid-template-columns: 1fr; } }
+.opt__card {
+  padding: var(--sp-5);
+  background: rgb(255 255 255 / .07); border: 1px solid rgb(255 255 255 / .2);
+  border-radius: var(--radius);
+}
+.opt__no {
+  margin: 0 0 var(--sp-2);
+  font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 700;
+  letter-spacing: .12em; color: var(--leaf-500);
+}
+.opt__h { margin: 0 0 var(--sp-3); font-size: var(--text-h3); font-weight: 700; color: var(--white); line-height: 1.35; }
+.opt__card p:not(.opt__no):not(.opt__h) { margin: 0; font-size: var(--text-sm); line-height: 1.7; color: var(--leaf-200); }
