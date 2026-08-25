@@ -517,3 +517,10 @@ dl.spec dd { margin: 0; font-family: var(--font-mono); font-size: .9em; color: v
 .hero2__why p { margin: 0; font-size: var(--text-base); line-height: 1.75; color: var(--leaf-200); }
 .hero2__why p + p { margin-top: var(--sp-3); }
 .hero2__why b { color: var(--white); font-weight: 650; }
+
+/* a portrait photograph whose subject sits at one end of the frame: show the
+   whole thing rather than a centre crop that removes it                      */
+.fig--tall img {
+  max-height: 640px; object-fit: contain; background: var(--gray-50);
+}
+.two .fig--tall img { max-height: 480px; }
